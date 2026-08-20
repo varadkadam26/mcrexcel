@@ -1,6 +1,6 @@
 /**
  * Mumbai Central Cha Raja - Internationalization (i18n) System
- * Mandal: Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal
+ * Mandal: B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal
  * Languages: Marathi (mr), English (en)
  * 100% Strict Zero-Leakage Translation Engine
  */
@@ -10,7 +10,7 @@ const translations = {
     // Header & Meta
     est_label: "Est. Year: 1988",
     reg_label: "Reg No: E-3892 Mumbai",
-    mandal_full_title: "Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal, Mumbai",
+    mandal_full_title: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai",
     mandal_name_header: "Mumbai Central Cha Raja",
     mandal_sub_header: "Sarvajanik Shri Ganeshotsav Mandal",
 
@@ -32,7 +32,7 @@ const translations = {
     hero_tag: "ESTD 1988 | REG NO. E-3892 MUMBAI",
     hero_title: "Mumbai Central Cha Raja",
     hero_sub_tag: "Faith Beyond Boundaries",
-    hero_subtitle: "Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1988.",
+    hero_subtitle: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1988.",
     btn_hero_live: "Watch Live Darshan",
     btn_hero_donate: "Donate Seva Online",
     countdown_badge: "Ganeshotsav 2026 Arrival",
@@ -49,10 +49,10 @@ const translations = {
     // President Message & Counters
     pres_badge: "President & Executive Message",
     pres_title: "Warm Welcome & Divine Blessings",
-    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal. Serving society with faith, culture, and unity since 1988.",
+    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. Serving society with faith, culture, and unity since 1988.",
     pres_quote: '"Faith, service, and social commitment are the core pillars of Mumbai Central Cha Raja Mandal."',
     pres_name: "Mr. Prakash Sawant",
-    pres_role: "President, Belasis Road B.I.T. Chawl Mandal",
+    pres_role: "President, B.I.T Chawl Belasis Road Mandal",
     stat_year_label: "Founding Year",
     stat_service_label: "Years of Continuous Service",
     stat_prasadam_label: "Daily Mahaprasad Devotees",
@@ -114,7 +114,7 @@ const translations = {
     location_title: "Mandap Darshan Location & Map",
     location_sub: "Progressive Building A/3, Belasis Road, B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
     contact_box_title: "Contact Information",
-    contact_address: "Belasis Road B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
+    contact_address: "B.I.T Chawl Belasis Road, Mumbai Central (E), Mumbai - 400008.",
     contact_reg: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
     visitor_count_label: "Total Devotee Visits:",
 
@@ -143,8 +143,8 @@ const translations = {
     footer_col_location: "Mandap Location & Map",
     footer_address: "Progressive Building A/3, Belasis Road, B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
     footer_reg_tax: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
-    footer_desc: "Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1988). Dedicated to preserving Maharashtrian heritage and serving humanity.",
-    footer_copyright: "© Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
+    footer_desc: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Est. 1988). Dedicated to preserving Maharashtrian heritage and serving humanity.",
+    footer_copyright: "© B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
 
     // Scroll Info Popup
     scroll_popup_badge: "Live Updates",
@@ -163,7 +163,7 @@ const translations = {
     location_title: "Mandap Darshan Location & Map",
     location_sub: "Progressive Building A/3, Belasis Road, B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
     contact_box_title: "Contact Information",
-    contact_address: "Belasis Road B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
+    contact_address: "B.I.T Chawl Belasis Road, Mumbai Central (E), Mumbai - 400008.",
     contact_reg: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
 
     // Social Work section
@@ -172,7 +172,7 @@ const translations = {
     social_section_sub: "Serving humanity through Annadan Mahaprasad, Blood Donation, Free Healthcare, and Student Education support.",
     // Timeline Milestone Cards
     milestone_1988_title: "Mandal Founded & First Idol Consecration",
-    milestone_1988_desc: "Residents of Belasis Road B.I.T. Chawl united to establish the Sarvajanik Ganeshotsav Mandal.",
+    milestone_1988_desc: "Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal.",
     milestone_2000_title: "Annadan Mahaprasad & Social Initiatives",
     milestone_2000_desc: "Expanded social service: Annadan Mahaprasad, student support, and free health camps launched.",
     milestone_2015_title: "Decade Milestone & 18-Foot Royal Form",
@@ -183,7 +183,7 @@ const translations = {
     // About Page
     about_badge: "Historic Heritage & Legacy",
     about_title: "About Us - Mumbai Central Cha Raja",
-    about_sub: "Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Estd. 1988)",
+    about_sub: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Estd. 1988)",
     about_history_title: "Glorious Legacy of the Mandal",
     about_history_p1: "Established in 1988 in the historic BIT Chawl premises on Belasis Road, Mumbai Central, local residents, youth volunteers, and senior mentors joined hands to build a royal Ganeshotsav tradition.",
     about_history_p2: "Over the decades, 'Mumbai Central Cha Raja' became an iconic divine symbol cherished by millions of devotees. The radiant royal face, carved wooden throne, and cultural mandap decor are the mandal's hallmark.",
@@ -217,7 +217,7 @@ const translations = {
     // Header & Meta
     est_label: "स्थापना : १९८८",
     reg_label: "नोंदणी क्र. : ई-३८९२ मुंबई",
-    mandal_full_title: "बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई",
+    mandal_full_title: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई",
     mandal_name_header: "मुंबई सेंट्रलचा राजा",
     mandal_sub_header: "सार्वजनिक श्री गणेशोत्सव मंडळ",
 
@@ -239,7 +239,7 @@ const translations = {
     hero_tag: "ESTD 1988 | REG NO. E-3892 MUMBAI",
     hero_title: "मुंबई सेंट्रलचा राजा",
     hero_sub_tag: "Shraddha & Faith",
-    hero_subtitle: "बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ. १९८८ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
+    hero_subtitle: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ. १९८८ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
     btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",
     countdown_badge: "गणेशोत्सव २०२६ आगमन",
@@ -256,10 +256,10 @@ const translations = {
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",
     pres_title: "हार्दिक स्वागत व श्रींचे आशीर्वाद",
-    pres_desc: "मुंबई सेंट्रलचा राजा, बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळाच्या अधिकृत डिजिटल मंदिर पोर्टलवर आपले हार्दिक स्वागत.",
+    pres_desc: "मुंबई सेंट्रलचा राजा, बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळाच्या अधिकृत डिजिटल मंदिर पोर्टलवर आपले हार्दिक स्वागत.",
     pres_quote: '"भक्ती, सेवा आणि सामाजिक बांधिलकी हेच मंडळाचे मुख्य आधारस्तंभ आहेत."',
     pres_name: "श्री. प्रकाश सावंत",
-    pres_role: "अध्यक्ष, बेलासिस रोड बी.आय.टी. चाळ मंडळ",
+    pres_role: "अध्यक्ष, बी.आय.टी चाळ बेलासिस रोड मंडळ",
     stat_year_label: "स्थापना वर्ष",
     stat_service_label: "अखंड सेवेची वर्षे",
     stat_prasadam_label: "दैनिक महाप्रसाद भाविक",
@@ -319,7 +319,7 @@ const translations = {
     location_title: "मंडप दर्शन स्थान व नकाशा",
     location_sub: "प्रोग्रेसिव्ह बिल्डींग अ /३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
-    contact_address: "बेलासिस रोड बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
+    contact_address: "बी.आय.टी चाळ बेलासिस रोड, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_reg: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
     visitor_count_label: "एकूण दर्शनार्थी भेट :",
 
@@ -348,8 +348,8 @@ const translations = {
     footer_col_location: "मंडप स्थान व नकाशा",
     footer_address: "प्रोग्रेसिव्ह बिल्डींग अ /३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     footer_reg_tax: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
-    footer_desc: "बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९८८). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
-    footer_copyright: "© बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
+    footer_desc: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९८८). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
+    footer_copyright: "© बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
 
     // Scroll Info Popup
     scroll_popup_badge: "ताजी माहिती",
@@ -368,7 +368,7 @@ const translations = {
     location_title: "मंडप दर्शन स्थान व नकाशा",
     location_sub: "प्रोग्रेसिव्ह बिल्डींग अ/३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
-    contact_address: "बेलासिस रोड बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
+    contact_address: "बी.आय.टी चाळ बेलासिस रोड, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_reg: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
 
     // Social Work section
@@ -385,7 +385,7 @@ const translations = {
 
     // Timeline Milestone Cards
     milestone_1988_title: "मंडळ स्थापना व प्रथम श्री स्थापना",
-    milestone_1988_desc: "बेलासिस रोड बी.आय.टी. चाळीतील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली.",
+    milestone_1988_desc: "बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली.",
     milestone_2000_title: "अन्नदान महाप्रसाद व सामाजिक उपक्रम",
     milestone_2000_desc: "सामाजिक सेवेचा विस्तार करत अन्नदान महाप्रसाद, विद्यार्थी मदत आणि मोफत आरोग्य शिबीरांची सुरुवात.",
     milestone_2015_title: "दशकपूर्ती व १८ फूट राजेशाही रूप",
@@ -396,7 +396,7 @@ const translations = {
     // About Page
     about_badge: "इतिहास व भव्य परंपरा",
     about_title: "आमच्याबद्दल - मुंबई सेंट्रलचा राजा",
-    about_sub: "बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९८८)",
+    about_sub: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९८८)",
     about_history_title: "मंडळाचा गौरवशाली इतिहास",
     about_history_p1: "मुंबई सेंट्रल येथील बेलासिस रोडवरील ऐतिहासिक बी.आय.टी. चाळ परिसरात १९८८ साली मंडळाची स्थापना झाली. सुरुवातीपासूनच स्थानिक रहिवासी, तरुण कार्यकर्ते आणि ज्येष्ठ मार्गदर्शकांनी मिळून सार्वजनिक गणेशोत्सवाची भव्य परंपरा सुरू केली.",
     about_history_p2: "वर्षानुवर्षे 'मुंबई सेंट्रलचा राजा' ही मूर्ती हजारो आणि लाखो भाविकांच्या गळ्यातील ताईत बनली. मूर्तीची प्रसन्न राजेशाही मुद्रा, भव्य काष्ठ सिंहासन आणि अनोखा मण्डप शृंगार हे राजाचे वैशिष्ट्य मानले जाते.",

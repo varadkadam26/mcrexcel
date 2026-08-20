@@ -309,7 +309,7 @@ module.exports = {
   renderHomePage(req, res) {
     const status = db.getYatraStatus();
     res.render('index', {
-      title: 'Mumbai Central Cha Raja | Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal',
+      title: 'Mumbai Central Cha Raja | B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal',
       activeTab: 'home',
       yatraStatus: status,
       scheduleData: scheduleData.slice(0, 4),

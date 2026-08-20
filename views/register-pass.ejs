@@ -1,0 +1,156 @@
+<%- include('partials/header') %>
+
+<!-- VIP Pass Header Banner -->
+<section style="background: var(--temple-maroon); padding: 3.5rem 0; text-align: center; border-bottom: 4px solid var(--royal-gold);">
+  <div class="container">
+    <div style="width: 64px; height: 64px; margin: 0 auto 0.6rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));">
+      <img src="/images/logo.png" alt="Mumbai Central Cha Raja Logo" style="width: 100%; height: 100%; object-fit: contain;">
+    </div>
+    <h1 style="font-family: 'Rozha One', 'Noto Sans Devanagari', serif; font-size: 3.2rem; color: #FFFFFF; font-weight: 800; margin: 0;" data-i18n="pass_form_title">
+      व्हीआयपी दर्शन पास नोंदणी 🎟️
+    </h1>
+    <p style="color: #FFF5E6; font-size: 0.95rem; margin-top: 0.5rem;" data-i18n="pass_form_sub">
+      तुमचा विनामूल्य डिजिटल पास आणि क्यूआर कोड मिळवण्यासाठी खालील माहिती भरा.
+    </p>
+  </div>
+</section>
+
+<section style="padding: 4rem 0; background: var(--bg-surface);">
+  <div class="container">
+
+    <% if (typeof error !== 'undefined' && error) { %>
+      <div style="background: #FEE2E2; border: 1px solid #FCA5A5; color: #991B1B; padding: 1rem; border-radius: 8px; max-width: 800px; margin: 0 auto 2rem; text-align: center;">
+        <i class="bi bi-exclamation-triangle-fill"></i> <%= error %>
+      </div>
+    <% } %>
+
+    <div class="form-card" style="max-width: 780px; margin: 0 auto; background: var(--bg-card); padding: 2.5rem; border-radius: var(--radius-lg); border: 2px solid var(--border-light); box-shadow: var(--shadow-md);">
+      <form id="passForm" action="/register-pass" method="POST">
+        <!-- Step 1: Devotee Details -->
+        <div id="step1">
+          <div class="form-group" style="margin-bottom: 1.2rem;">
+            <label class="form-label" for="full_name" style="font-weight: 700;" data-i18n="lbl_full_name">भाविकाचे पूर्ण नाव *</label>
+            <input type="text" id="full_name" name="full_name" class="form-control" placeholder="तुमचे संपूर्ण नाव टाका" data-i18n="ph_full_name" required value="<%= typeof formData !== 'undefined' ? formData.full_name : '' %>">
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="phone" style="font-weight: 700;" data-i18n="lbl_mobile">मोबाईल नंबर *</label>
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="१० अंकी मोबाईल नंबर टाका" data-i18n="ph_mobile" required value="<%= typeof formData !== 'undefined' ? formData.phone : '' %>">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email" style="font-weight: 700;" data-i18n="lbl_email">ईमेल पत्ता (पर्यायी)</label>
+              <input type="email" id="email" name="email" class="form-control" placeholder="पावती मिळवण्यासाठी ईमेल टाका" data-i18n="ph_email" value="<%= typeof formData !== 'undefined' ? formData.email : '' %>">
+            </div>
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="age" style="font-weight: 700;">वय (Age) *</label>
+              <input type="number" id="age" name="age" class="form-control" min="5" max="100" placeholder="उदा. ३४" required value="<%= typeof formData !== 'undefined' ? formData.age : '' %>">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="gender" style="font-weight: 700;">लिंग (Gender) *</label>
+              <select id="gender" name="gender" class="form-select" required>
+                <option value="">Select Gender</option>
+                <option value="Male" <%= typeof formData !== 'undefined' && formData.gender === 'Male' ? 'selected' : '' %>>पुरुष (Male)</option>
+                <option value="Female" <%= typeof formData !== 'undefined' && formData.gender === 'Female' ? 'selected' : '' %>>स्त्री (Female)</option>
+                <option value="Other" <%= typeof formData !== 'undefined' && formData.gender === 'Other' ? 'selected' : '' %>>इतर (Other)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" for="city" style="font-weight: 700;">शहर / परिसर (Location) *</label>
+            <input type="text" id="city" name="city" class="form-control" placeholder="Mumbai Central / Byculla / Dadar" required value="<%= typeof formData !== 'undefined' ? formData.city : '' %>">
+          </div>
+
+          <!-- Devotee Passport Photo Upload -->
+          <div class="form-group" style="margin-bottom: 1.5rem;">
+            <label class="form-label" style="font-weight: 700;">भाविकाचा पासपोर्ट फोटो (Devotee Passport Photo) *</label>
+            <div style="display: flex; align-items: center; gap: 1.2rem;">
+              <input type="file" id="devoteePhotoInput" accept="image/*" class="form-control" style="flex: 1;" onchange="handlePhotoUpload(event)">
+              <div id="photoPreviewBox" style="width: 68px; height: 68px; border-radius: 50%; border: 3px solid var(--chintamani-gold); overflow: hidden; background: #FFF5E6; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); flex-shrink: 0;">
+                <img id="photoPreviewImg" src="/images/logo.png" alt="Devotee Photo Preview" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+            </div>
+            <input type="hidden" id="photo_data" name="photo_data" value="">
+            <small style="color: var(--text-muted); font-size: 0.78rem;">Upload passport size photo for PDF VIP Gate Pass ID badge.</small>
+          </div>
+
+          <div style="text-align: right; margin-top: 2rem;">
+            <button type="button" id="btnStepNext" class="btn btn-chintamani-primary">
+              Next Step &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- Step 2: Access Category & ID Proof -->
+        <div id="step2" style="display: none;">
+          <div class="form-group" style="margin-bottom: 1.2rem;">
+            <label class="form-label" for="batch" style="font-weight: 700;">प्रवेश श्रेणी (Entry Access Category) *</label>
+            <select id="batch" name="batch" class="form-select" required>
+              <option value="VIP Mandap Entry & Aarti Pass">व्हीआयपी दर्शन व आरती पास (VIP Queue Access)</option>
+              <option value="Karyakarta / Sevak Pass">कार्यकर्ते व सेवक पास (Mandal Volunteer)</option>
+              <option value="Senior Citizen & Special Darshan">ज्येष्ठ नागरिक व दिव्यांग भाविक पास</option>
+              <option value="General Devotee Priority Pass">सर्वसाधारण भाविक प्राधान्य पास</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.2rem;">
+            <label class="form-label" for="emergency_contact" style="font-weight: 700;">आपत्कालीन संपर्क नंबर *</label>
+            <input type="tel" id="emergency_contact" name="emergency_contact" class="form-control" placeholder="१० अंकी संपर्क क्रमांक" required value="<%= typeof formData !== 'undefined' ? formData.emergency_contact : '' %>">
+          </div>
+
+          <div class="form-grid-2">
+            <div class="form-group">
+              <label class="form-label" for="id_proof_type" style="font-weight: 700;">ओळखपत्र प्रकार (Govt ID Proof) *</label>
+              <select id="id_proof_type" name="id_proof_type" class="form-select" required>
+                <option value="Aadhaar Card">आधार कार्ड (Aadhaar)</option>
+                <option value="PAN Card">पॅन कार्ड (PAN)</option>
+                <option value="Voter ID">मतदान कार्ड (Voter ID)</option>
+                <option value="Driving License">ड्रायव्हिंग लायसन्स (Driving License)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="id_proof_number" style="font-weight: 700;">ओळखपत्र क्रमांक *</label>
+              <input type="text" id="id_proof_number" name="id_proof_number" class="form-control" placeholder="XXXX-XXXX-4812" required value="<%= typeof formData !== 'undefined' ? formData.id_proof_number : '' %>">
+            </div>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; margin-top: 2rem;">
+            <button type="button" id="btnStepPrev" class="btn btn-chintamani-secondary">
+              &larr; Back
+            </button>
+            <button type="submit" class="btn btn-chintamani-primary">
+              <i class="bi bi-check-circle-fill"></i> <span data-i18n="btn_generate_pass">अधिकृत पास मिळवा</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  function handlePhotoUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      const base64Str = e.target.result;
+      const hiddenInput = document.getElementById('photo_data');
+      const imgPreview = document.getElementById('photoPreviewImg');
+
+      if (hiddenInput) hiddenInput.value = base64Str;
+      if (imgPreview) imgPreview.src = base64Str;
+    };
+    reader.readAsDataURL(file);
+  }
+</script>
+<script src="/js/pass-form.js"></script>
+<%- include('partials/footer') %>

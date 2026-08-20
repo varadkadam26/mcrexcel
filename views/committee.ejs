@@ -1,0 +1,61 @@
+<%- include('partials/header') %>
+
+<section style="background: var(--temple-maroon); color: var(--bg-ivory); padding: 4.5rem 0; border-bottom: 3px solid var(--royal-gold); text-align: center;">
+  <div class="container">
+    <span class="section-badge" style="background: rgba(212, 175, 55, 0.2); color: var(--gold-soft); border-color: var(--royal-gold);">
+      मंडळ नेतृत्व व कार्यकारिणी
+    </span>
+    <h1 style="font-size: 3rem; color: var(--gold-soft); margin-top: 0.5rem;">कार्यकारिणी समिती</h1>
+    <p style="font-size: 1.15rem; color: #E5E7EB; max-width: 750px; margin: 1rem auto 0; line-height: 1.8;">
+      बेलासिस रोड बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९८८)
+    </p>
+  </div>
+</section>
+
+<section style="background: var(--bg-cream); padding: 5rem 0;">
+  <div class="container">
+    
+    <div style="text-align: center; margin-bottom: 3.5rem;">
+      <h2 style="font-size: 2.2rem; color: var(--temple-maroon);">मुख्य पदाधिकारी व विश्वस्त मंडळ</h2>
+      <p style="color: var(--text-muted); font-size: 1.05rem;">
+        मंडळाचे प्रमुख विश्वस्त, पदाधिकारी व ज्येष्ठ मार्गदर्शक
+      </p>
+      <div class="gold-divider"></div>
+    </div>
+
+    <div class="grid-3" style="margin-bottom: 4rem;">
+      <% committeeData.forEach(member => { %>
+        <div class="card-temple" style="text-align: center; padding: 2.5rem 1.8rem;">
+          <div style="width: 110px; height: 110px; border-radius: var(--radius-full); border: 3px solid var(--royal-gold); margin: 0 auto 1.2rem; overflow: hidden; background: var(--bg-ivory); display: flex; align-items: center; justify-content: center; box-shadow: var(--shadow-sm);">
+            <i class="fa-solid fa-user-tie" style="font-size: 3rem; color: var(--temple-maroon);"></i>
+          </div>
+
+          <h3 style="font-size: 1.35rem; color: var(--temple-maroon); margin-bottom: 0.3rem;"><%= member.name %></h3>
+          <p style="font-size: 0.9rem; font-weight: 800; color: var(--primary-saffron); margin-bottom: 0.8rem;"><%= member.designation %></p>
+          <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.2rem;"><%= member.role %></p>
+
+          <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.8rem; font-size: 0.88rem; font-weight: 700; color: var(--text-main);">
+            <i class="fa-solid fa-phone" style="color: var(--primary-saffron); margin-right: 6px;"></i> <%= member.phone %>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+
+    <!-- Youth Wing Karyakartas Banner -->
+    <div style="background: var(--bg-white); border-radius: var(--radius-lg); border: 2px solid var(--royal-gold); padding: 3rem; text-align: center; box-shadow: var(--shadow-md);">
+      <h3 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1rem;">
+        युवा कार्यकर्ते व स्वयंसेवक सेना
+      </h3>
+      <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; max-width: 800px; margin: 0 auto 1.8rem;">
+        १५० हून अधिक समर्पित तरुण कार्यकर्ते २४ तास मंडप दर्शन, सुरक्षा, महाप्रसाद वाटप आणि रुग्ण मदतीसाठी कार्यरत असतात.
+      </p>
+
+      <a href="/contact" class="btn btn-primary">
+        मंडळाशी संपर्क साधा <i class="bi bi-telephone-fill"></i>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<%- include('partials/footer') %>

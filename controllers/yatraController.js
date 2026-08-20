@@ -230,43 +230,77 @@ const socialWorkData = [
   }
 ];
 
-// Committee Members Data
+// Committee Members Data - 2025-26
 const committeeData = [
   {
-    name: 'श्री. प्रकाश आर. सावंत',
-    designation: 'अध्यक्ष (President)',
-    phone: '+91 98200 11111',
-    role: 'Overall Mandal Administration & Management'
+    number: 1,
+    nameMr: 'श्री. संदीप बाबू सावळे',
+    nameEn: 'Shri Sandeep Bapu Sawale',
+    designationMr: 'अध्यक्ष',
+    designationEn: 'President'
   },
   {
-    name: 'श्री. विजय एस. मोर',
-    designation: 'कार्याध्यक्ष (Executive Chairman)',
-    phone: '+91 98200 22222',
-    role: 'Festival Coordination & Public Relations'
+    number: 2,
+    nameMr: 'श्री. महेश रामचंद्र जगताप',
+    nameEn: 'Shri Mahesh Ramchandra Jagtap',
+    designationMr: 'सरचिटणीस',
+    designationEn: 'General Secretary'
   },
   {
-    name: 'श्री. नितीन डी. पाटील',
-    designation: 'प्रमुख सरचिटणीस (General Secretary)',
-    phone: '+91 98200 33333',
-    role: 'Government Permissions & Secretariat Ops'
+    number: 3,
+    nameMr: 'श्री. उर्वेश राजेंद्र शिंदे',
+    nameEn: 'Shri Urvesh Rajendra Shinde',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary'
   },
   {
-    name: 'श्री. सुहास एम. कदम',
-    designation: 'खजिनदार (Treasurer)',
-    phone: '+91 98200 44444',
-    role: 'Financial Accounts & 80G Donation Desk'
+    number: 4,
+    nameMr: 'श्री. अविनाश चंद्रकांत पाथरे',
+    nameEn: 'Shri Avinash Chandrakant Pathare',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary'
   },
   {
-    name: 'श्री. गणेश के. परब',
-    designation: 'सल्लागार प्रमुख (Chief Advisory Board)',
-    phone: '+91 98200 55555',
-    role: 'Senior Trustee Guidance'
+    number: 5,
+    nameMr: 'श्री. प्रसाद विष्णू चव्हाण',
+    nameEn: 'Shri Prasad Vishnu Chavan',
+    designationMr: 'अंतर्गत हिशोब तपासणीस',
+    designationEn: 'Internal Auditor'
   },
   {
-    name: 'श्री. अमित बी. शिंदे',
-    designation: 'युवा विभाग प्रमुख (Youth Wing Head)',
-    phone: '+91 98200 66666',
-    role: 'Volunteer Force & Security Operations'
+    number: 6,
+    nameMr: 'श्री. मुरारी प्रदीप तावडे',
+    nameEn: 'Shri Murari Pradeep Tawde',
+    designationMr: 'उपाध्यक्ष',
+    designationEn: 'Vice President'
+  },
+  {
+    number: 7,
+    nameMr: 'श्री. निलेश पांडुरंग कांबळे',
+    nameEn: 'Shri Nilesh Pandurang Kamble',
+    designationMr: 'खजिनदार',
+    designationEn: 'Treasurer'
+  },
+  {
+    number: 8,
+    nameMr: 'श्री. गोवर्धन जगाभाऊ पाटील',
+    nameEn: 'Shri Govardhan Jagabhau Patil',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary'
+  },
+  {
+    number: 9,
+    nameMr: 'श्री. यश दिनेश पयेर',
+    nameEn: 'Shri Yash Dinesh Payer',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary'
+  },
+  {
+    number: 10,
+    nameMr: 'श्री. दर्शन मंगेश येळवे',
+    nameEn: 'Shri Darshan Mangesh Yelave',
+    designationMr: 'सह अंतर्गत हिशोब तपासणीस',
+    designationEn: 'Joint Internal Auditor'
   }
 ];
 
@@ -330,7 +364,6 @@ module.exports = {
     });
   },
 
-  // Render Committee Page
   renderCommitteePage(req, res) {
     res.render('committee', {
       title: 'कार्यकारिणी समिती | Mumbai Central Cha Raja',

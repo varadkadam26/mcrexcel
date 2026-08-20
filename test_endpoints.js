@@ -251,6 +251,22 @@ async function runTests() {
   }
 }
 
+let testsStarted = false;
+async function triggerTests() {
+  if (testsStarted) return;
+  testsStarted = true;
+  if (startupTimeout) clearTimeout(startupTimeout);
+  try {
+    await runTests();
+    serverProcess.kill();
+    process.exit(0);
+  } catch (err) {
+    console.error(err);
+    serverProcess.kill();
+    process.exit(1);
+  }
+}
+
 // Start server in background process
 const serverProcess = spawn('node', ['server.js'], {
   cwd: path.resolve(__dirname),
@@ -258,16 +274,10 @@ const serverProcess = spawn('node', ['server.js'], {
 });
 
 serverProcess.stdout.on('data', (data) => {
-  const output = data.toString();
-  if (output.includes('Server Started') || output.includes('Connected to MySQL') || output.includes('running with high-performance In-Memory')) {
-    // Server is ready, trigger test execution
-    runTests().then(() => {
-      serverProcess.kill();
-    }).catch(err => {
-      console.error(err);
-      serverProcess.kill();
-      process.exit(1);
-    });
+  const output = data.toString().toLowerCase();
+  console.log(`[Server Stdout] ${data.toString().trim()}`);
+  if (output.includes('server started') || output.includes('connected to mysql') || output.includes('running with high-performance in-memory')) {
+    triggerTests();
   }
 });
 
@@ -275,8 +285,16 @@ serverProcess.stderr.on('data', (data) => {
   console.error(`[Server Error] ${data}`);
 });
 
-setTimeout(() => {
+// Fallback: trigger tests after 3 seconds if stdout matching did not fire due to buffering
+const fallbackTimer = setTimeout(() => {
+  if (!testsStarted) {
+    console.log('⏰ Stdout matching did not fire (likely due to buffering). Running tests using 3-second fallback...');
+    triggerTests();
+  }
+}, 3000);
+
+const startupTimeout = setTimeout(() => {
   console.error('Timeout waiting for server to start');
   serverProcess.kill();
   process.exit(1);
-}, 10000);
+}, 15000);

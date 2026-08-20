@@ -234,8 +234,8 @@ const socialWorkData = [
 const committeeData = [
   {
     number: 1,
-    nameMr: 'श्री. संदीप बाबू सावळे',
-    nameEn: 'Shri Sandeep Bapu Sawale',
+    nameMr: 'श्री. संदीप बाबू सावळ',
+    nameEn: 'Shri Sandeep Bapu Sawal',
     designationMr: 'अध्यक्ष',
     designationEn: 'President'
   },
@@ -297,7 +297,7 @@ const committeeData = [
   },
   {
     number: 10,
-    nameMr: 'श्री. दर्शन मंगेश येळवे',
+    nameMr: 'श्री. दर्शन मंगेश येलवे',
     nameEn: 'Shri Darshan Mangesh Yelave',
     designationMr: 'सह अंतर्गत हिशोब तपासणीस',
     designationEn: 'Joint Internal Auditor'

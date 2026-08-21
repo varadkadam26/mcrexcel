@@ -67,11 +67,6 @@ async function runTests() {
     { method: 'GET', path: '/committee', expectedStatus: 200, name: 'Committee Page' },
     { method: 'GET', path: '/contact', expectedStatus: 200, name: 'Contact Page' },
     
-    // VIP Pass Pages & PDF
-    { method: 'GET', path: '/register-pass', expectedStatus: 200, name: 'Pass Registration View' },
-    { method: 'GET', path: '/pass-status', expectedStatus: 200, name: 'Pass Status View' },
-    { method: 'GET', path: '/download-pass/MCC-2026-8942', expectedStatus: 200, name: 'Download Mock Pass PDF' },
-
     // Donation Pages
     { method: 'GET', path: '/donate', expectedStatus: 200, name: 'Donation View' },
     { method: 'GET', path: '/download-receipt/MCC-REC-2026-101', expectedStatus: 200, name: 'Download Donation PDF Receipt' },
@@ -189,35 +184,6 @@ async function runTests() {
     }
   } catch (err) {
     console.error(`❌ Error testing T-Shirt order confirmation: ${err.message}`);
-    passed = false;
-  }
-
-  // 5. VIP Pass Registration Form Submission
-  try {
-    const res = await request('POST', '/register-pass', new URLSearchParams({
-      full_name: 'Test Pass Devotee',
-      phone: '9123456789',
-      email: 'devotee@example.com',
-      age: '40',
-      gender: 'Male',
-      city: 'Mumbai',
-      batch: 'VIP Mandap Entry & Aarti Pass',
-      emergency_contact: '9123456780',
-      id_proof_type: 'Aadhaar Card',
-      id_proof_number: '123456789012'
-    }).toString(), {
-      'Content-Type': 'application/x-www-form-urlencoded'
-    });
-    
-    // Expected redirect to pass-status on success
-    if (res.statusCode === 302 && res.headers.location.includes('/pass-status')) {
-      console.log(`✅ Passed: POST /register-pass - Registered Devotee Pass (Redirected to: ${res.headers.location})`);
-    } else {
-      console.error(`❌ Failed: POST /register-pass - Expected status 302 redirect, got ${res.statusCode}`);
-      passed = false;
-    }
-  } catch (err) {
-    console.error(`❌ Error testing pass registration: ${err.message}`);
     passed = false;
   }
 

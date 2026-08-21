@@ -7,7 +7,6 @@ const db = require('./config/db');
 const { initCronJobs } = require('./config/cron');
 
 const indexRoutes = require('./routes/indexRoutes');
-const passRoutes = require('./routes/passRoutes');
 const donationRoutes = require('./routes/donationRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const excelRoutes = require('./routes/excelRoutes');
@@ -50,7 +49,6 @@ app.use((req, res, next) => {
 
 // Mount Routes
 app.use('/', indexRoutes);
-app.use('/', passRoutes);
 app.use('/', donationRoutes);
 app.use('/', adminRoutes);
 app.use('/', excelRoutes);

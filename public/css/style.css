@@ -539,7 +539,7 @@ section {
   background: rgba(217, 119, 6, 0.1);
   padding: 0.35rem 1.2rem;
   border-radius: var(--radius-full);
-  border: 1px solid rgba(217, 119, 6, 0.25);
+  border: none;
   margin-bottom: 0.8rem;
 }
 
@@ -1618,6 +1618,16 @@ section {
   text-decoration: none;
   border: none;
   cursor: pointer;
+}
+
+.btn-hero-donate {
+  border-radius: 9999px !important;
+  padding: 0.55rem 1.4rem !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
 }
 
 @keyframes pulseGlow {
@@ -2764,4 +2774,13 @@ section {
     transform: translateX(-250px) scaleX(-1);
   }
 
+}
+
+.donate-square-btn {
+  border-radius: 12px !important;
+  padding: 0.65rem 1.25rem !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
 }

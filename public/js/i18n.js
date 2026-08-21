@@ -34,7 +34,7 @@ const translations = {
     btn_hero_live: "Watch Live Darshan",
     btn_hero_donate: "Donate Seva Online",
     countdown_badge: "Ganeshotsav 2026 Arrival",
-    countdown_title: "Awaiting Divine Arrival!",
+    countdown_title: "Awaiting Divine Arrival",
     label_days: "Days",
     label_hours: "Hours",
     label_mins: "Mins",
@@ -234,12 +234,12 @@ const translations = {
     // Hero & Flip Clock
     hero_tag: "ESTD 1988 | REG NO. E-3892 MUMBAI",
     hero_title: "मुंबई सेंट्रलचा राजा",
-    hero_sub_tag: "Shraddha & Faith",
+    hero_sub_tag: "श्रद्धा आणि विश्वास",
     hero_subtitle: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ. १९८८ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
     btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",
     countdown_badge: "गणेशोत्सव २०२६ आगमन",
-    countdown_title: "श्रींच्या आगमनासाठी उत्सुकता!",
+    countdown_title: "श्रींच्या आगमनासाठी उत्सुकता",
     label_days: "दिवस",
     label_hours: "तास",
     label_mins: "मिनाटे",
@@ -412,7 +412,7 @@ function setLanguage(lang) {
   if (lang !== 'en' && lang !== 'mr') lang = 'mr';
   try {
     if (typeof localStorage !== 'undefined') localStorage.setItem('mcc_lang', lang);
-  } catch (e) {}
+  } catch (e) { }
 
   document.documentElement.lang = lang;
   document.documentElement.setAttribute('data-lang', lang);
@@ -455,7 +455,7 @@ function setLanguage(lang) {
 (function initMccI18n() {
   if (typeof document === 'undefined') return;
   const savedLang = (typeof localStorage !== 'undefined' && localStorage.getItem('mcc_lang')) || 'mr';
-  
+
   // Set attribute on html element immediately
   document.documentElement.lang = savedLang;
   document.documentElement.setAttribute('data-lang', savedLang);

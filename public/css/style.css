@@ -2538,3 +2538,156 @@ section {
     width: 100% !important;
   }
 }
+
+/* ============================================================
+   MUSHak PARADE ANIMATION
+   ============================================================ */
+
+.hero-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animation container */
+.mushak-parade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 145px;
+
+  overflow: hidden;
+
+  pointer-events: none;
+  user-select: none;
+
+  z-index: 30;
+}
+
+/* Individual Mushak */
+.mushak-runner {
+  position: absolute;
+
+  bottom: 4px;
+
+  width: 190px;
+  height: 110px;
+
+  object-fit: contain;
+
+  display: block;
+
+  visibility: visible;
+  opacity: 1;
+
+  filter:
+    drop-shadow(0 5px 6px rgba(0, 0, 0, 0.35));
+
+  will-change: transform;
+
+  animation: mushakMove 13s linear infinite, mushakHop 0.4s ease-in-out infinite alternate;
+}
+
+/* First Mushak */
+.mushak-runner-one {
+  animation-delay: 0s, 0s;
+}
+
+/* Second Mushak */
+.mushak-runner-two {
+  animation-delay: -6.5s, -0.2s;
+}
+
+/* Right → Left */
+@keyframes mushakMove {
+
+  0% {
+    transform: translateX(calc(100vw + 220px)) scaleX(-1);
+  }
+
+  100% {
+    transform: translateX(-240px) scaleX(-1);
+  }
+
+}
+
+@keyframes mushakHop {
+  0% {
+    bottom: 4px;
+    margin-bottom: 0px;
+  }
+  100% {
+    bottom: 22px;
+    margin-bottom: 2px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 769px) {
+
+  .mushak-runner {
+    width: 190px;
+    height: 110px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .mushak-parade {
+    height: 100px;
+  }
+
+  .mushak-runner {
+    width: 125px;
+    height: 78px;
+    bottom: 2px;
+    animation: mushakMoveMobile 13s linear infinite, mushakHopMobile 0.4s ease-in-out infinite alternate;
+  }
+
+  /* First Mushak on Mobile */
+  .mushak-runner-one {
+    animation-delay: 0s, 0s;
+  }
+
+  /* Second Mushak on Mobile */
+  .mushak-runner-two {
+    animation-delay: -6.5s, -0.2s;
+  }
+
+  @keyframes mushakMoveMobile {
+
+    0% {
+      transform: translateX(calc(100vw + 150px)) scaleX(-1);
+    }
+
+    100% {
+      transform: translateX(-170px) scaleX(-1);
+    }
+
+  }
+
+  @keyframes mushakHopMobile {
+    0% {
+      bottom: 2px;
+      margin-bottom: 0px;
+    }
+    100% {
+      bottom: 14px;
+      margin-bottom: 1px;
+    }
+  }
+
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+
+  .mushak-runner {
+    animation: none;
+    transform: translateX(-250px) scaleX(-1);
+  }
+
+}

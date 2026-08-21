@@ -75,7 +75,7 @@ const translations = {
     craft_stat2_label: "Legacy of Pure Devotion",
 
     // Live Stream Section
-    live_badge: "Live Temple Stream",
+    live_badge: "Live Stream",
     live_title: "Ganeshotsav Aarti & Live Stream",
     live_sub: "Watch 24/7 Live Stream and Daily Morning (8:00 AM) & Evening (8:00 PM) Maha Aarti directly from the royal mandap.",
     live_box_title: "Mumbai Central Cha Raja - 24/7 Live Stream",

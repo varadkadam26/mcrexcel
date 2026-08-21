@@ -529,6 +529,73 @@ section {
   margin: 0 auto 3.5rem;
 }
 
+/* Compact & Sleek Page Hero Banner System */
+.page-hero-banner {
+  background: var(--temple-maroon) !important;
+  color: var(--bg-ivory) !important;
+  padding: 1.8rem 1rem !important;
+  border-bottom: 3px solid var(--royal-gold) !important;
+  text-align: center !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero-banner .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.page-hero-banner .section-badge {
+  background: rgba(212, 175, 55, 0.2) !important;
+  color: var(--gold-soft) !important;
+  border: 1px solid var(--royal-gold) !important;
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0.9rem !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 0.2rem !important;
+}
+
+.page-hero-banner h1 {
+  font-size: clamp(1.25rem, 2.5vw, 1.85rem) !important;
+  color: var(--gold-soft) !important;
+  margin: 0.25rem 0 0.2rem !important;
+  font-weight: 800;
+  line-height: 1.25;
+  white-space: nowrap !important;
+  letter-spacing: 0.2px;
+}
+
+.page-hero-banner p {
+  font-size: clamp(0.82rem, 1.35vw, 0.98rem) !important;
+  color: #E5E7EB !important;
+  max-width: 850px !important;
+  margin: 0.25rem auto 0 !important;
+  line-height: 1.5 !important;
+  font-weight: 500;
+}
+
+@media (min-width: 769px) {
+  .page-hero-banner p {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero-banner {
+    padding: 1.3rem 0.6rem !important;
+  }
+  .page-hero-banner h1 {
+    font-size: clamp(1.05rem, 4.5vw, 1.4rem) !important;
+    white-space: nowrap !important;
+  }
+  .page-hero-banner p {
+    font-size: clamp(0.75rem, 3.2vw, 0.88rem) !important;
+    text-wrap: balance;
+    line-height: 1.45 !important;
+  }
+}
+
 .section-badge {
   display: inline-block;
   font-size: 0.8rem;
@@ -554,6 +621,15 @@ section {
   color: var(--text-muted);
   line-height: 1.8;
   margin-top: 0.5rem;
+}
+
+.social-section-subtitle {
+  width: 100%;
+  max-width: none;
+  text-align: center;
+  white-space: nowrap;
+  line-height: 1.5;
+  margin: 0.5rem auto 0;
 }
 
 .gold-divider {
@@ -731,6 +807,13 @@ section {
 
   .hero-actions {
     justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .social-section-subtitle {
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
 }
 
@@ -2054,7 +2137,7 @@ section {
    SCROLL REVEAL (FADE-IN FADE-OUT) SYSTEM
    ========================================================================== */
 .reveal-on-scroll {
-  opacity: 0;
+  opacity: 0.32;
   transform: translateY(35px);
   transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
@@ -2165,7 +2248,7 @@ section {
 
 /* Scroll-Driven Reveal Animations */
 .reveal-on-scroll {
-  opacity: 0;
+  opacity: 0.32;
   transform: translateY(35px);
   transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;

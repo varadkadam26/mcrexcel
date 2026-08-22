@@ -18,7 +18,7 @@ module.exports = {
     try {
       const { quantity, size, color, buyer_name, phone } = req.body;
       const qty = parseInt(quantity, 10) || 1;
-      const pricePerUnit = 499;
+      const pricePerUnit = 320;
       const totalAmount = qty * pricePerUnit;
 
       const tempReceiptNo = `MCC-TSHIRT-2026-${Math.floor(100 + Math.random() * 900)}`;

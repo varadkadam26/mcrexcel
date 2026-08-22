@@ -16,22 +16,22 @@
   <div class="container">
     <div class="grid-2" style="align-items: flex-start;">
       <!-- Product Preview Showcase -->
-      <div class="card-temple" style="text-align: center; padding: 2.5rem;">
-        <div style="background: #111111; border-radius: var(--radius-md); border: 2px solid var(--royal-gold); padding: 2rem; margin-bottom: 1.5rem;">
-          <img src="/images/raja_real_2.png" alt="Tshirt Preview" style="width: 100%; max-height: 350px; object-fit: contain;">
+      <div class="card-temple" style="text-align: center; padding: 2rem;">
+        <div style="background: #111111; border-radius: var(--radius-md); border: 2px solid var(--royal-gold); padding: 1rem; margin-bottom: 1.5rem;">
+          <img src="/images/tshirt_info.png" alt="Official Tshirt Info & Size Chart" style="width: 100%; max-height: 480px; object-fit: contain;">
         </div>
 
         <h3 style="font-size: 1.5rem; color: var(--temple-maroon); margin-bottom: 0.5rem;">
-          ऑफिशियल टी-शर्ट (Royal Maroon & Saffron Emblem)
+          ऑफिशियल कॉलर टी-शर्ट (Official Collar Polo T-Shirt)
         </h3>
         <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
-          १००% कॉटन, सुवर्ण राजमुद्रा व मुंबई सेंट्रलचा राजा प्रिंट.
+          हाफ कॉलर पोलो टी-शर्ट, सुवर्ण राजमुद्रा व अधिकृत लोगो.
         </p>
 
         <div style="display: flex; justify-content: center; gap: 1.5rem; border-top: 1px solid var(--border-subtle); padding-top: 1.2rem;">
           <div>
             <span style="font-size: 0.8rem; color: var(--text-light); text-transform: uppercase;">किंमत per T-shirt</span>
-            <h4 style="font-size: 1.8rem; color: var(--temple-maroon); margin: 0;">₹४९९/-</h4>
+            <h4 style="font-size: 1.8rem; color: var(--temple-maroon); margin: 0;">₹३२०/-</h4>
           </div>
         </div>
       </div>
@@ -63,11 +63,23 @@
                 साईझ निवडा (Size) *
               </label>
               <select id="tshirtSize" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
-                <option value="S">Small (S)</option>
-                <option value="M" selected>Medium (M)</option>
-                <option value="L">Large (L)</option>
-                <option value="XL">Extra Large (XL)</option>
-                <option value="XXL">Double XL (XXL)</option>
+                <!-- Adult Sizes -->
+                <option value="S (36)">S (Size 36)</option>
+                <option value="M (38)" selected>M (Size 38)</option>
+                <option value="L (40)">L (Size 40)</option>
+                <option value="XL (42)">XL (Size 42)</option>
+                <option value="XXL (44)">XXL (Size 44)</option>
+                <option value="3XL (46)">3XL (Size 46)</option>
+                <option value="4XL (48)">4XL (Size 48)</option>
+                <option value="5XL (50)">5XL (Size 50)</option>
+                <!-- Kids Sizes -->
+                <option value="Kids 22 (1-2 Yrs)">Kids 22 (1-2 Yrs)</option>
+                <option value="Kids 24 (3-4 Yrs)">Kids 24 (3-4 Yrs)</option>
+                <option value="Kids 26 (5-7 Yrs)">Kids 26 (5-7 Yrs)</option>
+                <option value="Kids 28 (8-9 Yrs)">Kids 28 (8-9 Yrs)</option>
+                <option value="Kids 30 (10-12 Yrs)">Kids 30 (10-12 Yrs)</option>
+                <option value="Kids 32 (13-14 Yrs)">Kids 32 (13-14 Yrs)</option>
+                <option value="Kids 34 (15-17 Yrs)">Kids 34 (15-17 Yrs)</option>
               </select>
             </div>
 
@@ -76,7 +88,8 @@
                 रंग निवडा (Color) *
               </label>
               <select id="tshirtColor" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
-                <option value="Royal Maroon" selected>रॉयल मरून (Royal Maroon)</option>
+                <option value="Official Cream" selected>अधिकृत क्रीम (Cream Polo & Green Collar)</option>
+                <option value="Royal Maroon">रॉयल मरून (Royal Maroon)</option>
                 <option value="Saffron">भगवा (Saffron)</option>
               </select>
             </div>
@@ -151,7 +164,7 @@
         size: document.getElementById('tshirtSize').value,
         color: document.getElementById('tshirtColor').value,
         quantity: qty,
-        total_amount: qty * 499,
+        total_amount: qty * 320,
         address: addressVal,
         receipt_no: `MCC-TSHIRT-2026-${Math.floor(100 + Math.random() * 900)}`,
         payment_id: `pay_sim_${Date.now()}`,

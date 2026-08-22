@@ -1820,9 +1820,21 @@ section {
     transform 7s ease-out;
 
   filter:
-    brightness(0.62) contrast(1.04) saturate(1.05);
+    brightness(0.7) contrast(1.05) saturate(1.08);
 
   image-rendering: auto;
+}
+
+.hero-img-1 {
+  object-position: center 25%;
+}
+
+.hero-img-2 {
+  object-position: center 15%;
+}
+
+.hero-img-3 {
+  object-position: center 30%;
 }
 
 .hero-slide.active .hero-slide-bg {
@@ -1838,9 +1850,20 @@ section {
   }
 
   .hero-slide-bg {
-    object-position: center center;
     filter:
-      brightness(0.58) contrast(1.04) saturate(1.05);
+      brightness(0.65) contrast(1.05) saturate(1.08);
+  }
+
+  .hero-img-1 {
+    object-position: center 20%;
+  }
+
+  .hero-img-2 {
+    object-position: center 10%;
+  }
+
+  .hero-img-3 {
+    object-position: center 25%;
   }
 
 }

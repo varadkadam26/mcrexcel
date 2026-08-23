@@ -8,7 +8,7 @@
 const translations = {
   en: {
     // Header & Meta
-    est_label: "Est. Year: 1988",
+    est_label: "Est. Year: 1929",
     reg_label: "Reg No: E-3892 Mumbai",
     mandal_full_title: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai",
     mandal_name_header: "Mumbai Central Cha Raja",
@@ -27,10 +27,10 @@ const translations = {
     nav_donate: "Donate Now",
 
     // Hero & Flip Clock
-    hero_tag: "ESTD 1988 | REG NO. E-3892 MUMBAI",
+    hero_tag: "ESTD 1929",
     hero_title: "Mumbai Central Cha Raja",
     hero_sub_tag: "Faith Beyond Boundaries",
-    hero_subtitle: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1988.",
+    hero_subtitle: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1929.",
     btn_hero_live: "Watch Live Darshan",
     btn_hero_donate: "Donate Seva Online",
     countdown_badge: "Ganeshotsav 2026 Arrival",
@@ -47,7 +47,7 @@ const translations = {
     // President Message & Counters
     pres_badge: "President & Executive Message",
     pres_title: "Warm Welcome & Divine Blessings",
-    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. Serving society with faith, culture, and unity since 1988.",
+    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. Serving society with faith, culture, and unity since 1929.",
     pres_quote: '"Faith, service, and social commitment are the core pillars of Mumbai Central Cha Raja Mandal."',
     pres_name: "Mr. Sandeep Sawal",
     pres_role: "President, B.I.T Chawl Belasis Road Mandal",
@@ -58,7 +58,7 @@ const translations = {
 
     // Indie Mandala Timeline
     timeline_badge: "HISTORIC GOLDEN LEGACY",
-    timeline_title: "Golden Journey of Devotion & Heritage Since 1988",
+    timeline_title: "Golden Journey of Devotion & Heritage Since 1929",
     timeline_sub: "Click on any year point below to explore the royal history, idol form, and divine milestones of that year!",
     btn_prev_year: "Previous Year",
     btn_next_year: "Next Year",
@@ -141,7 +141,7 @@ const translations = {
     footer_col_location: "Mandap Location & Map",
     footer_address: "Progressive Building A/3, Belasis Road, B.I.T. Chawl, Mumbai Central (E), Mumbai - 400008.",
     footer_reg_tax: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
-    footer_desc: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Est. 1988). Dedicated to preserving Maharashtrian heritage and serving humanity.",
+    footer_desc: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Dedicated to preserving Maharashtrian heritage and serving humanity.",
     footer_copyright: "© B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
 
     // Scroll Info Popup
@@ -169,8 +169,8 @@ const translations = {
     social_section_title: "Social Work & Seva Initiatives",
     social_section_sub: "Serving humanity through Annadan Mahaprasad, Blood Donation, Free Healthcare, and Student Education support.",
     // Timeline Milestone Cards
-    milestone_1988_title: "Mandal Founded & First Idol Consecration",
-    milestone_1988_desc: "Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal.",
+    milestone_1929_title: "Mandal Founded & First Idol Consecration",
+    milestone_1929_desc: "Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal.",
     milestone_2000_title: "Annadan Mahaprasad & Social Initiatives",
     milestone_2000_desc: "Expanded social service: Annadan Mahaprasad, student support, and free health camps launched.",
     milestone_2015_title: "Decade Milestone & 18-Foot Royal Form",
@@ -181,9 +181,9 @@ const translations = {
     // About Page
     about_badge: "Historic Heritage & Legacy",
     about_title: "About Us - Mumbai Central Cha Raja",
-    about_sub: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Estd. 1988)",
+    about_sub: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Estd. 1929)",
     about_history_title: "Glorious Legacy of the Mandal",
-    about_history_p1: "Established in 1988 in the historic BIT Chawl premises on Belasis Road, Mumbai Central, local residents, youth volunteers, and senior mentors joined hands to build a royal Ganeshotsav tradition.",
+    about_history_p1: "Established in 1929 in the historic BIT Chawl premises on Belasis Road, Mumbai Central, local residents, youth volunteers, and senior mentors joined hands to build a royal Ganeshotsav tradition.",
     about_history_p2: "Over the decades, 'Mumbai Central Cha Raja' became an iconic divine symbol cherished by millions of devotees. The radiant royal face, carved wooden throne, and cultural mandap decor are the mandal's hallmark.",
     about_vision_title: "Our Vision",
     about_vision_desc: "Taking Maharashtra's rich Ganeshotsav tradition to global heights while fostering social unity and brotherhood through devotion.",
@@ -232,10 +232,10 @@ const translations = {
     nav_donate: "देणगी",
 
     // Hero & Flip Clock
-    hero_tag: "ESTD 1988 | REG NO. E-3892 MUMBAI",
+    hero_tag: "स्थापना १९२९",
     hero_title: "मुंबई सेंट्रलचा राजा",
     hero_sub_tag: "श्रद्धा आणि विश्वास",
-    hero_subtitle: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ. १९८८ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
+    hero_subtitle: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ. १९२९ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
     btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",
     countdown_badge: "गणेशोत्सव २०२६ आगमन",
@@ -380,8 +380,8 @@ const translations = {
     btn_all_social: "सर्व सामाजिक उपक्रम पाहा",
 
     // Timeline Milestone Cards
-    milestone_1988_title: "मंडळ स्थापना व प्रथम श्री स्थापना",
-    milestone_1988_desc: "बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली.",
+    milestone_1929_title: "मंडळ स्थापना व प्रथम श्री स्थापना",
+    milestone_1929_desc: "बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली.",
     milestone_2000_title: "अन्नदान महाप्रसाद व सामाजिक उपक्रम",
     milestone_2000_desc: "सामाजिक सेवेचा विस्तार करत अन्नदान महाप्रसाद, विद्यार्थी मदत आणि मोफत आरोग्य शिबीरांची सुरुवात.",
     milestone_2015_title: "दशकपूर्ती व १८ फूट राजेशाही रूप",

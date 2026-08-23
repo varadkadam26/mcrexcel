@@ -76,17 +76,17 @@
       <div class="mandal-top-banner-flex">
         <!-- Top Meta (Est & Reg & Social Links) -->
         <div class="mandal-top-meta">
-          <span data-i18n="est_label"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'स्थापना : १९८८' : 'Est. Year: 1988' %></span>
+          <span class="est-text" data-i18n="est_label"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'स्थापना : १९८८' : 'Est. Year: 1988' %></span>
           
-          <div style="display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap;">
-            <a href="https://www.youtube.com/channel/UCrijB5WpQhGLfWQT1WSySNg" target="_blank" rel="noopener noreferrer" style="color: var(--bg-ivory); font-weight: 700; text-decoration: none; font-size: 0.88rem;">
-              <i class="fa-brands fa-youtube" style="color: #FF0000;"></i> YouTube
+          <div class="mandal-top-meta-actions">
+            <a href="https://www.youtube.com/channel/UCrijB5WpQhGLfWQT1WSySNg" target="_blank" rel="noopener noreferrer" class="social-link yt-link">
+              <i class="fa-brands fa-youtube" style="color: #FF0000;"></i> <span>YouTube</span>
             </a>
-            <a href="https://mumbaicharaja.co/" target="_blank" rel="noopener noreferrer" style="color: var(--bg-ivory); font-weight: 700; text-decoration: none; font-size: 0.88rem;">
-              <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> Facebook
+            <a href="https://mumbaicharaja.co/" target="_blank" rel="noopener noreferrer" class="social-link fb-link">
+              <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> <span>Facebook</span>
             </a>
-            <a href="https://www.instagram.com/mumbaicentralcharajaofficial" target="_blank" rel="noopener noreferrer" style="color: var(--bg-ivory); font-weight: 700; text-decoration: none; font-size: 0.88rem;">
-              <i class="fa-brands fa-instagram" style="color: var(--royal-gold);"></i> @mumbaicentralcharajaofficial
+            <a href="https://www.instagram.com/mumbaicentralcharajaofficial" target="_blank" rel="noopener noreferrer" class="social-link insta-link">
+              <i class="fa-brands fa-instagram" style="color: var(--royal-gold);"></i> <span class="insta-full">@mumbaicentralcharajaofficial</span><span class="insta-short">Instagram</span>
             </a>
             <!-- Language Switcher Pills -->
             <div class="lang-switcher-container">
@@ -95,7 +95,7 @@
             </div>
           </div>
 
-          <span data-i18n="reg_label"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'नोंदणी क्र. : ई-३८९२ मुंबई' : 'Reg No: E-3892 Mumbai' %></span>
+          <span class="reg-text" data-i18n="reg_label"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'नोंदणी क्र. : ई-३८९२ मुंबई' : 'Reg No: E-3892 Mumbai' %></span>
         </div>
 
         <!-- Mandal Devanagari Heading -->

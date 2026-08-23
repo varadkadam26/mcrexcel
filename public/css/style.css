@@ -58,8 +58,8 @@
   --radius-full: 9999px;
 
   --font-en-head: 'Cinzel', 'Playfair Display', serif;
-  --font-mr-head: 'Baloo 2', 'Yatra One', 'Rozha One', 'Noto Serif Devanagari', serif;
-  --font-body: 'Outfit', 'Baloo 2', 'Noto Serif Devanagari', sans-serif;
+  --font-mr-head: 'Yatra One', 'Rozha One', 'Noto Serif Devanagari', serif;
+  --font-body: 'Outfit', 'Noto Serif Devanagari', sans-serif;
 }
 
 * {
@@ -106,7 +106,10 @@ textarea {
 /* Dynamic Font Scaling & Boosting for Marathi Devanagari Script */
 html[lang="mr"],
 body[data-lang="mr"] {
-  font-family: 'Noto Serif Devanagari', 'Yatra One', var(--font-body);
+  --font-mr-head: 'Baloo 2', 'Yatra One', 'Rozha One', 'Noto Serif Devanagari', serif;
+  --font-en-head: 'Baloo 2', 'Cinzel', 'Playfair Display', serif;
+  --font-body: 'Baloo 2', 'Outfit', 'Noto Serif Devanagari', sans-serif;
+  font-family: var(--font-body);
 }
 
 /* ==========================================================================

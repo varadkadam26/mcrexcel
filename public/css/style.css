@@ -5,20 +5,7 @@
    Theme: Modern Maharashtrian Heritage (Temple Maroon, Deep Saffron, Royal Gold)
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Rozha+One&family=Yatra+One&display=swap');
-
-@font-face {
-  font-family: 'Baloo 2';
-  src: url('../font/Baloo2-Bold.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Baloo 2';
-  src: url('../font/Baloo2-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Cinzel:wght@500;600;700;800;900&family=Noto+Serif+Devanagari:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Rozha+One&family=Yatra+One&display=swap');
 
 :root {
   --primary-saffron: #D97706;

@@ -531,13 +531,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnNextYearNode = document.getElementById('btnNextYearNode');
 
   const timelineYearData = {
-    '1988': {
-      yearTag: 'वर्ष १९८८',
+    '1929': {
+      yearTag: 'वर्ष १९२९',
       subhead: 'स्थापना पर्व',
       title: 'मंडळ स्थापना व प्रथम श्री स्थापना',
-      desc: 'बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली. अखंड भक्ती, परंपरा आणि सामाजिक ऐक्याचा ऐतिहासिक पाया १९८८ मध्ये रचला गेला.',
+      desc: 'बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली. अखंड भक्ती, परंपरा आणि सामाजिक ऐक्याचा ऐतिहासिक पाया १९२९ मध्ये रचला गेला.',
       image: '/images/raja_real_1.png',
-      feat1: 'स्थापना: १९८८',
+      feat1: 'स्थापना: १९२९',
       feat2: 'स्थान: बी.आय.टी चाळ बेलासिस रोड',
       feat3: 'संकल्पना: सांस्कृतिक ऐक्य'
     },
@@ -650,7 +650,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '2021': { title: 'गर्भगृह पुष्प शृंगार दर्शन', theme: 'संकल्पना: Royal Velvet & Lotus Geometry', desc: '५०००+ ताजी फुले व जांभळ्या रेशमी पितांबरातील गर्भगृह शृंगार रूप.', img: '/images/raja_real_5.png', badge: 'वर्ष २०२१' },
           '2020': { title: 'आरोग्य संकल्प व सुवर्ण पदकमयी रूप', theme: 'संकल्पना: Arogya Seva & Blood Drive', desc: 'अखंड रक्तदान आणि आरोग्य शिबीरांच्या संकल्पातील सुवर्ण पदकमयी रूप.', img: '/images/gallery_padya_pujan.png', badge: 'वर्ष २०२०' },
           '2018': { title: 'राजवाडा महामंडप व सुवर्ण मेघडंबरी', theme: 'संकल्पना: Fort Raigad & Palace Architecture', desc: 'भव्य मराठा राजवाडा देखावा आणि सुवर्ण मेघडंबरीतील विलोभनीय रूप.', img: '/images/gallery_aagman.png', badge: 'वर्ष २०१८' },
-          '1988': { title: 'मंडळ स्थापना व प्रथम श्री स्थापना', theme: 'संकल्पना: Establishment & Sacred Foundation', desc: 'बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्रित येऊन स्थापन केलेली श्रींची प्रथम प्रतिष्ठापना.', img: '/images/gallery_mandap.png', badge: 'वर्ष १९८८' }
+          '1929': { title: 'मंडळ स्थापना व प्रथम श्री स्थापना', theme: 'संकल्पना: Establishment & Sacred Foundation', desc: 'बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्रित येऊन स्थापन केलेली श्रींची प्रथम प्रतिष्ठापना.', img: '/images/gallery_mandap.png', badge: 'वर्ष १९२९' }
         };
 
         const yearDetailsEn = {
@@ -661,7 +661,7 @@ document.addEventListener('DOMContentLoaded', () => {
           '2021': { title: 'Sanctum Floral Adornment Darshan', theme: 'Theme: Royal Velvet & Lotus Geometry', desc: '5000+ fresh flowers and a royal purple silk pitambar — a breathtaking sanctum adornment.', img: '/images/raja_real_5.png', badge: 'Year 2021' },
           '2020': { title: 'Health Pledge & Golden Medallion Form', theme: 'Theme: Arogya Seva & Blood Drive', desc: 'Continuous blood donation and health camp seva — honoured with a golden medallion idol form.', img: '/images/gallery_padya_pujan.png', badge: 'Year 2020' },
           '2018': { title: 'Royal Mandap & Golden Canopy', theme: 'Theme: Fort Raigad & Palace Architecture', desc: 'Grand Maratha palace-style set and a breathtaking golden canopy mandap decor.', img: '/images/gallery_aagman.png', badge: 'Year 2018' },
-          '1988': { title: 'Mandal Founded & First Idol Consecration', theme: 'Theme: Establishment & Sacred Foundation', desc: 'Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal and first divine installation.', img: '/images/gallery_mandap.png', badge: 'Year 1988' }
+          '1929': { title: 'Mandal Founded & First Idol Consecration', theme: 'Theme: Establishment & Sacred Foundation', desc: 'Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal and first divine installation.', img: '/images/gallery_mandap.png', badge: 'Year 1929' }
         };
 
         const yearDetails = lang === 'mr' ? yearDetailsMr : yearDetailsEn;

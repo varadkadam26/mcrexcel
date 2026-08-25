@@ -554,10 +554,10 @@ document.addEventListener('DOMContentLoaded', () => {
     '2015': {
       yearTag: 'वर्ष २०१५',
       subhead: 'दशकपूर्ती सुवर्ण पर्व',
-      title: 'दशकपूर्ती व १८ फूट राजेशाही रूप',
-      desc: 'प्रसिद्ध मास्टर मूर्तिकार श्री. संतोष कांबळी यांच्या हस्तकलेतून १८ फुटी राजेशाही मूर्तीची परंपरा अधिक समृद्ध झाली. सुवर्ण सिंहासन व विलोभनीय शृंगार अवघ्या मुंबईत प्रसिद्ध झाला.',
+      title: 'दशकपूर्ती व १२ फूट राजेशाही रूप',
+      desc: 'प्रसिद्ध मास्टर मूर्तिकार श्री. संतोष कांबळी यांच्या हस्तकलेतून १२ फुटी राजेशाही मूर्तीची परंपरा अधिक समृद्ध झाली. सुवर्ण सिंहासन व विलोभनीय शृंगार अवघ्या मुंबईत प्रसिद्ध झाला.',
       image: '/images/raja_real_2.png',
-      feat1: 'उंची: १८ फूट',
+      feat1: 'उंची: १२ फूट',
       feat2: 'मूर्तिकार: श्री. संतोष कांबळी',
       feat3: 'शृंगार: सुवर्ण कमान'
     },
@@ -643,10 +643,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const lang = (typeof localStorage !== 'undefined' && localStorage.getItem('mcc_lang')) || 'en';
 
         const yearDetailsMr = {
-          '2025': { title: 'काष्ठ सिंहासन व राजेशाही सुवर्ण शृंगार', theme: 'संकल्पना: Peshwa Era Palace Mandap Architecture', desc: 'पेशवाई नक्षीकामातील भव्य लाकडी सिंहासन आणि रेशमी पितांबर शृंगारातील १८ फुटी राजेशाही रूप दर्शन.', img: '/images/raja_real_1.png', badge: 'वर्ष २०२५' },
+          '2025': { title: 'काष्ठ सिंहासन व राजेशाही सुवर्ण शृंगार', theme: 'संकल्पना: Peshwa Era Palace Mandap Architecture', desc: 'पेशवाई नक्षीकामातील भव्य लाकडी सिंहासन आणि रेशमी पितांबर शृंगारातील १२ फुटी राजेशाही रूप दर्शन.', img: '/images/raja_real_1.png', badge: 'वर्ष २०२५' },
           '2024': { title: 'सुवर्ण सिंहासन व तेज:पुंज पीत पितांबर', theme: 'संकल्पना: Golden Temple Carvings & Lotus Arch', desc: 'हस्तकला नक्षीकामातील भव्य सुवर्ण सिंहासन आणि सुवर्ण मुकुटात विराजमान श्रींचे मनमोहक रूप.', img: '/images/raja_real_2.png', badge: 'वर्ष २०२४' },
           '2023': { title: 'मयूरपंख कमान आगमन सोहळा', theme: 'संकल्पना: Royal Heritage Court Decor', desc: 'मयुरासनी राजेशाही कमान आणि आगमन सोहळ्यातील श्रींचे भव्य रूप दर्शन.', img: '/images/raja_real_3.png', badge: 'वर्ष २०२३' },
-          '2022': { title: 'श्री मुख दर्शन व सुवर्ण मुकुट', theme: 'संकल्पना: Tradition of Pure Devotion', desc: 'विलोभनीय हास्य, दिव्य नयन आणि सुवर्ण मुकुटातील १८ फुटी श्री मूर्ती रूप.', img: '/images/raja_real_4.png', badge: 'वर्ष २०२२' },
+          '2022': { title: 'श्री मुख दर्शन व सुवर्ण मुकुट', theme: 'संकल्पना: Tradition of Pure Devotion', desc: 'विलोभनीय हास्य, दिव्य नयन आणि सुवर्ण मुकुटातील १२ फुटी श्री मूर्ती रूप.', img: '/images/raja_real_4.png', badge: 'वर्ष २०२२' },
           '2021': { title: 'गर्भगृह पुष्प शृंगार दर्शन', theme: 'संकल्पना: Royal Velvet & Lotus Geometry', desc: '५०००+ ताजी फुले व जांभळ्या रेशमी पितांबरातील गर्भगृह शृंगार रूप.', img: '/images/raja_real_5.png', badge: 'वर्ष २०२१' },
           '2020': { title: 'आरोग्य संकल्प व सुवर्ण पदकमयी रूप', theme: 'संकल्पना: Arogya Seva & Blood Drive', desc: 'अखंड रक्तदान आणि आरोग्य शिबीरांच्या संकल्पातील सुवर्ण पदकमयी रूप.', img: '/images/gallery_padya_pujan.png', badge: 'वर्ष २०२०' },
           '2018': { title: 'राजवाडा महामंडप व सुवर्ण मेघडंबरी', theme: 'संकल्पना: Fort Raigad & Palace Architecture', desc: 'भव्य मराठा राजवाडा देखावा आणि सुवर्ण मेघडंबरीतील विलोभनीय रूप.', img: '/images/gallery_aagman.png', badge: 'वर्ष २०१८' },
@@ -654,10 +654,10 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const yearDetailsEn = {
-          '2025': { title: 'Wooden Throne & Royal Golden Adornment', theme: 'Theme: Peshwa Era Palace Mandap Architecture', desc: 'Grand 18-foot royal idol in carved wooden throne and silk pitambar adorned with Peshwai craftsmanship.', img: '/images/raja_real_1.png', badge: 'Year 2025' },
+          '2025': { title: 'Wooden Throne & Royal Golden Adornment', theme: 'Theme: Peshwa Era Palace Mandap Architecture', desc: 'Grand 12-foot royal idol in carved wooden throne and silk pitambar adorned with Peshwai craftsmanship.', img: '/images/raja_real_1.png', badge: 'Year 2025' },
           '2024': { title: 'Golden Throne & Radiant Yellow Pitambar', theme: 'Theme: Golden Temple Carvings & Lotus Arch', desc: 'Grand golden throne carved by artisans, with the idol adorned in a golden crown — mesmerizing millions of devotees.', img: '/images/raja_real_2.png', badge: 'Year 2024' },
           '2023': { title: 'Peacock Feather Arch — Arrival Ceremony', theme: 'Theme: Royal Heritage Court Decor', desc: 'A grand peacock-throne arch and magnificent procession arrival form for the divine idol.', img: '/images/raja_real_3.png', badge: 'Year 2023' },
-          '2022': { title: 'Divine Face & Golden Crown Darshan', theme: 'Theme: Tradition of Pure Devotion', desc: 'Enchanting smile, radiant eyes, and a golden crown — the 18-foot idol in full divine glory.', img: '/images/raja_real_4.png', badge: 'Year 2022' },
+          '2022': { title: 'Divine Face & Golden Crown Darshan', theme: 'Theme: Tradition of Pure Devotion', desc: 'Enchanting smile, radiant eyes, and a golden crown — the 12-foot idol in full divine glory.', img: '/images/raja_real_4.png', badge: 'Year 2022' },
           '2021': { title: 'Sanctum Floral Adornment Darshan', theme: 'Theme: Royal Velvet & Lotus Geometry', desc: '5000+ fresh flowers and a royal purple silk pitambar — a breathtaking sanctum adornment.', img: '/images/raja_real_5.png', badge: 'Year 2021' },
           '2020': { title: 'Health Pledge & Golden Medallion Form', theme: 'Theme: Arogya Seva & Blood Drive', desc: 'Continuous blood donation and health camp seva — honoured with a golden medallion idol form.', img: '/images/gallery_padya_pujan.png', badge: 'Year 2020' },
           '2018': { title: 'Royal Mandap & Golden Canopy', theme: 'Theme: Fort Raigad & Palace Architecture', desc: 'Grand Maratha palace-style set and a breathtaking golden canopy mandap decor.', img: '/images/gallery_aagman.png', badge: 'Year 2018' },

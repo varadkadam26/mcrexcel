@@ -91,7 +91,7 @@ const glimpsesData = [
     category: 'idols',
     title: 'काष्ठ सिंहासन व राजेशाही सुवर्ण शृंगार (Royal Wooden Throne)',
     theme: 'Peshwa Era Palace Mandap Architecture',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/raja_real_1.png',
     desc: 'The magnificent wooden throne form dressed in royal pink and maroon silk robes.'
@@ -101,7 +101,7 @@ const glimpsesData = [
     category: 'idols',
     title: 'सुवर्ण सिंहासन व तेज:पुंज पीत पितांबर (Golden Throne)',
     theme: 'Golden Temple Carvings & Lotus Arch',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Artisans & Sculptors',
     image: '/images/raja_real_2.png',
     desc: 'Radiant idol in yellow pitambar seated on handcrafted gold-leaf throne.'
@@ -111,7 +111,7 @@ const glimpsesData = [
     category: 'visarjan',
     title: 'मयूरपंख कमान आगमन सोहळा (Peacock Feather Arch)',
     theme: 'Royal Heritage Court Decor',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Karyakartas',
     image: '/images/raja_real_3.png',
     desc: 'Grand procession throne featuring peacock feather arches during Aagman Sohala.'
@@ -121,7 +121,7 @@ const glimpsesData = [
     category: 'aarti',
     title: 'श्री मुख दर्शन व सुवर्ण मुकुट (Divine Face & Gold Crown)',
     theme: 'Tradition of Pure Devotion',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Sculptor Shri Santosh Kambli',
     image: '/images/raja_real_4.png',
     desc: 'Mesmerizing facial smile with gold crown and Modak blessing hand posture.'
@@ -131,7 +131,7 @@ const glimpsesData = [
     category: 'decor',
     title: 'गर्भगृह पुष्प शृंगार दर्शन (Floral Sanctuary Decor)',
     theme: 'Royal Velvet & Lotus Geometry',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Design Team',
     image: '/images/raja_real_5.png',
     desc: 'Idol adorned in purple pitambar with backdrop of 5000+ fresh orchid & marigold flowers.'
@@ -151,7 +151,7 @@ const glimpsesData = [
     category: 'decor',
     title: 'राजवाडा महामंडप व सुवर्ण मेघडंबरी (Royal Palace Dome)',
     theme: 'Fort Raigad & Palace Architecture',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Artisans & Sculptors',
     image: '/images/gallery_aagman.png',
     desc: 'Grand traditional Maratha palace setup with ornate golden arches.'
@@ -161,7 +161,7 @@ const glimpsesData = [
     category: 'visarjan',
     title: 'भव्य विसर्जन मिरवणूक व तुतारी शंखनाद (Grand Visarjan)',
     theme: 'Traditional Dhol Tasha & Gulal Rain',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Karyakartas',
     image: '/images/gallery_mandap.png',
     desc: 'Royal chariot procession from Belasis Road to Girgaon Chowpatty beach.'
@@ -171,7 +171,7 @@ const glimpsesData = [
     category: 'idols',
     title: 'रत्नजडित मुकुट व पीतांबर शृंगार (Jeweled Crown & Silk)',
     theme: 'Classic Temple Carvings',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Sculptor Shri Santosh Kambli',
     image: '/images/gallery_pushpa_alankar.png',
     desc: 'Classic 18ft idol embellished with traditional Kolhapuri gold jewelry.'
@@ -181,7 +181,7 @@ const glimpsesData = [
     category: 'decor',
     title: 'रौप्य कमान व प्रथम दीप सोहळा (Silver Arch Deepotsav)',
     theme: 'Heritage Chawl Jubilee Decor',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Mandal Team',
     image: '/images/raja_real_1.png',
     desc: 'Illuminated 1008 lamps ceremony and silver backdrop arch.'
@@ -191,7 +191,7 @@ const glimpsesData = [
     category: 'idols',
     title: 'दशकपूर्ती आगमन व राजेशाही पदचिन्ह (Decade Milestone)',
     theme: 'Traditional Heritage Crafts',
-    height: '18 Feet',
+    height: '12 Feet',
     artist: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/raja_real_2.png',
     desc: 'Iconic historic idol sculpture marking 27th grand year of Mandal establishment.'
@@ -201,32 +201,39 @@ const glimpsesData = [
 // Social Work Data
 const socialWorkData = [
   {
-    id: 'annadan',
-    title: 'अन्नदान महाप्रसाद सेवा (Annadan Mahaprasad Drive)',
-    category: 'Food Security',
-    image: '/images/gallery_padya_pujan.png',
-    desc: 'Serving over 50,000+ hot nutritious meals, fresh breakfast, tea, and packaged water to visiting devotees and local community daily during Ganeshotsav.'
+    id: 'social-1',
+    title: 'समाजसेवा पुरस्कार व सन्मान (Social Service Awards)',
+    category: 'Awards & Recognition',
+    image: '/images/social_1.png',
+    desc: 'मंडळाच्या सामाजिक कार्याची दखल घेत देण्यात आलेले विविध पुरस्कार व सन्मान. (Various awards and honors received by the Mandal for its social service initiatives.)'
   },
   {
-    id: 'blood-donation',
-    title: 'भव्य रक्तदान व आरोग्य शिबीर (Blood Donation & Health Camp)',
+    id: 'social-2',
+    title: 'रुग्णवाहिका सेवा व वैद्यकीय मदत (Ambulance & Medical Aid)',
+    category: 'Medical',
+    image: '/images/social_2.png',
+    desc: 'गरजू रुग्णांसाठी मोफत रुग्णवाहिका सेवा आणि तातडीची वैद्यकीय मदत उपलब्ध करून दिली जाते. (Providing free ambulance services and urgent medical aid to the needy patients.)'
+  },
+  {
+    id: 'social-3',
+    title: 'भव्य रक्तदान शिबीर (Blood Donation Camp)',
     category: 'Healthcare',
-    image: '/images/gallery_aagman.png',
-    desc: 'Organizing annual blood donation drives in association with KEM & Nair Hospitals, collecting 500+ blood units every festival season.'
+    image: '/images/social_3.png',
+    desc: 'सामाजिक बांधिलकी जपत आयोजित केलेले भव्य रक्तदान शिबीर, ज्यामध्ये शेकडो रक्तदात्यांचा उत्स्फूर्त सहभाग. (Mega blood donation camp organized with spontaneous participation of hundreds of donors.)'
   },
   {
-    id: 'education',
-    title: 'विद्यार्थी शैक्षणिक सहाय्य (Student Educational Aid)',
-    category: 'Education',
-    image: '/images/gallery_mandap.png',
-    desc: 'Providing notebooks, school bags, e-learning tablets, and scholarships to underprivileged students residing in Mumbai Central area.'
+    id: 'social-4',
+    title: 'मोफत आरोग्य तपासणी शिबीर (Free Health Checkup Camp)',
+    category: 'Healthcare',
+    image: '/images/social_4.png',
+    desc: 'परिसरातील नागरिकांसाठी मोफत आरोग्य तपासणी शिबीर. (Free health checkup camp organized for the local citizens.)'
   },
   {
-    id: 'csr-environment',
-    title: 'पर्यावरणपूरक गणेशोत्सव व वृक्षारोपण (Green Ganeshotsav & Tree Plantation)',
-    category: 'Environment',
-    image: '/images/gallery_pushpa_alankar.png',
-    desc: 'Promoting eco-friendly clay idols, zero plastic mandap premises, and planting 1,000+ saplings annually across Mumbai.'
+    id: 'social-5',
+    title: 'गुणवंत सत्कार व सन्मान (Felicitation & Honors)',
+    category: 'Social Impact',
+    image: '/images/social_5.png',
+    desc: 'परिसरातील गुणवंत विद्यार्थी आणि समाजसेवकांचा विशेष सन्मान व सत्कार. (Special felicitation and honors for meritorious students and social workers from the area.)'
   }
 ];
 
@@ -234,73 +241,83 @@ const socialWorkData = [
 const committeeData = [
   {
     number: 1,
-    nameMr: 'श्री. संदीप बाबू सावळ',
-    nameEn: 'Shri Sandeep Bapu Sawal',
+    nameMr: 'श्री. मुरारी प्रदीप तावडे',
+    nameEn: 'Shri Murari Pradip Tawde',
     designationMr: 'अध्यक्ष',
-    designationEn: 'President'
+    designationEn: 'President',
+    image: '/images/committee_1.png'
   },
   {
     number: 2,
     nameMr: 'श्री. महेश रामचंद्र जगताप',
     nameEn: 'Shri Mahesh Ramchandra Jagtap',
     designationMr: 'सरचिटणीस',
-    designationEn: 'General Secretary'
+    designationEn: 'General Secretary',
+    image: '/images/committee_2.png'
   },
   {
     number: 3,
     nameMr: 'श्री. उर्वेश राजेंद्र शिंदे',
     nameEn: 'Shri Urvesh Rajendra Shinde',
     designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary'
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_3.png'
   },
   {
     number: 4,
     nameMr: 'श्री. अविनाश चंद्रकांत पाथरे',
     nameEn: 'Shri Avinash Chandrakant Pathare',
     designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary'
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_4.png'
   },
   {
     number: 5,
     nameMr: 'श्री. प्रसाद विष्णू चव्हाण',
     nameEn: 'Shri Prasad Vishnu Chavan',
     designationMr: 'अंतर्गत हिशोब तपासणीस',
-    designationEn: 'Internal Auditor'
+    designationEn: 'Internal Auditor',
+    image: '/images/committee_5.png'
   },
   {
     number: 6,
-    nameMr: 'श्री. मुरारी प्रदीप तावडे',
-    nameEn: 'Shri Murari Pradeep Tawde',
+    nameMr: 'श्री. सत्यजित बाळासाहेब शिंदे',
+    nameEn: 'Shri Satyajit Balasaheb Shinde',
     designationMr: 'उपाध्यक्ष',
-    designationEn: 'Vice President'
+    designationEn: 'Vice President',
+    image: '/images/committee_6.png'
   },
   {
     number: 7,
     nameMr: 'श्री. निलेश पांडुरंग कांबळे',
     nameEn: 'Shri Nilesh Pandurang Kamble',
     designationMr: 'खजिनदार',
-    designationEn: 'Treasurer'
+    designationEn: 'Treasurer',
+    image: '/images/committee_7.png'
   },
   {
     number: 8,
-    nameMr: 'श्री. गोवर्धन जगाभाऊ पाटील',
-    nameEn: 'Shri Govardhan Jagabhau Patil',
-    designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary'
-  },
-  {
-    number: 9,
     nameMr: 'श्री. यश दिनेश पयेर',
     nameEn: 'Shri Yash Dinesh Payer',
     designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary'
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_8.png'
   },
   {
-    number: 10,
+    number: 9,
     nameMr: 'श्री. दर्शन मंगेश येलवे',
     nameEn: 'Shri Darshan Mangesh Yelave',
     designationMr: 'सह अंतर्गत हिशोब तपासणीस',
-    designationEn: 'Joint Internal Auditor'
+    designationEn: 'Joint Internal Auditor',
+    image: '/images/committee_9.png'
+  },
+  {
+    number: 10,
+    nameMr: 'श्री. विराज विनोद कांबळे',
+    nameEn: 'Shri Viraj Vinod Kamble',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_10.png'
   }
 ];
 

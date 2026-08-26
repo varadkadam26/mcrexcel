@@ -350,13 +350,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const steps = duration / stepTime;
             const increment = targetNum / steps;
 
+            const formatNum = (num) => targetNum >= 10000 ? num.toLocaleString() : num.toString();
+
             const timer = setInterval(() => {
               startNum += increment;
               if (startNum >= targetNum) {
-                el.innerText = prefix + targetNum.toLocaleString() + suffix;
+                el.innerText = prefix + formatNum(targetNum) + suffix;
                 clearInterval(timer);
               } else {
-                el.innerText = prefix + Math.floor(startNum).toLocaleString() + suffix;
+                el.innerText = prefix + formatNum(Math.floor(startNum)) + suffix;
               }
             }, stepTime);
           }

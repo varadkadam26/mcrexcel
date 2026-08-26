@@ -29,7 +29,7 @@ const translations = {
     // Hero & Flip Clock
     hero_tag: "ESTD 1929",
     hero_title: "Mumbai Central Cha Raja",
-    hero_sub_tag: "Faith Beyond Boundaries",
+    hero_sub_tag: "Eco Friendly Murti",
     hero_subtitle: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1929.",
     btn_hero_live: "Watch Live Darshan",
     btn_hero_donate: "Donate Seva Online",
@@ -234,7 +234,7 @@ const translations = {
     // Hero & Flip Clock
     hero_tag: "स्थापना १९२९",
     hero_title: "मुंबई सेंट्रलचा राजा",
-    hero_sub_tag: "श्रद्धा आणि विश्वास",
+    hero_sub_tag: "पर्यावरणपूरक मूर्ती",
     hero_subtitle: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ. १९२९ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
     btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",

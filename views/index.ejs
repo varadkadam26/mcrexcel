@@ -32,7 +32,7 @@
         </h1>
 
         <p class="hero-sub-tag" data-i18n="hero_sub_tag">
-          Faith Beyond Boundaries
+          Eco Friendly Murti
         </p>
 
         <p class="hero-subtitle-text" data-i18n="hero_subtitle">
@@ -169,10 +169,114 @@
           <div class="stat-num-value" data-target="1929">1929</div>
           <div class="stat-label-text" data-i18n="stat_year_label">Founding Year</div>
         </div>
-        <div class="stat-counter-card">
-          <div class="stat-num-value" data-target="98" data-suffix="+">98</div>
+        <style>
+          .border-beam-panel {
+            position: relative;
+            background: var(--bg-ivory); /* Match card background */
+            border-radius: var(--radius-md);
+            /* Remove standard border so the beam is visible */
+            border: none;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+          }
+          
+          .border-beam-panel::before {
+            content: "";
+            position: absolute;
+            inset: -2px; /* Ring thickness */
+            border-radius: calc(var(--radius-md) + 2px);
+            padding: 2px; /* Ring thickness */
+            background: conic-gradient(
+              from var(--beam-angle, 0deg),
+              transparent 0deg,
+              color-mix(in srgb, #FFD700 4%, transparent) 55deg,
+              #FFD700 70deg,
+              #FFF 75deg,
+              transparent 78deg,
+              transparent 198deg,
+              color-mix(in srgb, #FFA500 4%, transparent) 253deg,
+              #FFA500 268deg,
+              #FFF 273deg,
+              transparent 276deg,
+              transparent 360deg
+            );
+            /* Standard mask for border only */
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask-composite: exclude;
+            pointer-events: none;
+            z-index: -1;
+            animation: border-beam-spin 8s linear infinite;
+          }
+          
+          .border-beam-panel:hover::before {
+            animation-duration: 2s; /* Speed up on hover */
+          }
+          
+          /* The glow effect behind the beam */
+          .border-beam-panel::after {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            border-radius: calc(var(--radius-md) + 2px);
+            background: inherit;
+            background: conic-gradient(
+              from var(--beam-angle, 0deg),
+              transparent 0deg,
+              color-mix(in srgb, #FFD700 4%, transparent) 55deg,
+              #FFD700 70deg,
+              #FFF 75deg,
+              transparent 78deg,
+              transparent 198deg,
+              color-mix(in srgb, #FFA500 4%, transparent) 253deg,
+              #FFA500 268deg,
+              #FFF 273deg,
+              transparent 276deg,
+              transparent 360deg
+            );
+            filter: blur(14px);
+            opacity: 0.35;
+            z-index: -2;
+            pointer-events: none;
+            animation: border-beam-spin 8s linear infinite;
+          }
+          
+          .border-beam-panel:hover::after {
+            animation-duration: 2s;
+          }
+
+          @property --beam-angle {
+            syntax: "<angle>";
+            initial-value: 0deg;
+            inherits: false;
+          }
+
+          @keyframes border-beam-spin {
+            0% { --beam-angle: 0deg; }
+            100% { --beam-angle: 360deg; }
+          }
+        </style>
+        <div class="stat-counter-card border-beam-panel" style="position: relative; z-index: 1;">
+          <div class="stat-num-value" style="display: flex; justify-content: center; align-items: center; min-height: 80px; perspective: 800px;">
+            <img id="marathi-98-img" src="/images/98_marathi.png" alt="98 Years" style="height: 90px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+          </div>
           <div class="stat-label-text" data-i18n="stat_service_label">Years of Continuous Service</div>
         </div>
+        
+        <!-- Anime.js 3D Animation Script -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script>
+          document.addEventListener('DOMContentLoaded', () => {
+            // Smooth growing and shrinking animation
+            anime({
+              targets: '#marathi-98-img',
+              scale: [1, 1.25, 1], // visible growing and shrinking
+              duration: 3000,
+              loop: true,
+              easing: 'easeInOutSine'
+            });
+          });
+        </script>
         <div class="stat-counter-card">
           <div class="stat-num-value" data-target="500000" data-suffix="+">500,000+</div>
           <div class="stat-label-text" data-i18n="stat_visitors_label">Annual Visiting Devotees</div>
@@ -307,14 +411,6 @@
         <div class="gold-divider"></div>
       </div>
 
-      <!-- Gallery Filter Bar -->
-      <div class="gallery-filter-bar">
-        <button class="filter-pill active" data-filter="all" data-i18n="filter_all">All Years</button>
-        <button class="filter-pill" data-filter="idols" data-i18n="filter_idols">Idols & Thrones</button>
-        <button class="filter-pill" data-filter="visarjan" data-i18n="filter_visarjan">Visarjan Procession</button>
-        <button class="filter-pill" data-filter="decor" data-i18n="filter_decor">Mandap Decor</button>
-        <button class="filter-pill" data-filter="aarti" data-i18n="filter_aarti">Devotion & Aarti</button>
-      </div>
 
       <!-- 3D Crazy Scroll Reel -->
       <div class="crazy-reel-wrapper">

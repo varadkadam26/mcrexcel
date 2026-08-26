@@ -61,20 +61,13 @@
   <div class="container">
     
     <!-- Gallery Category Filter Pills -->
-    <div class="gallery-filter-bar">
-      <button class="filter-pill active" data-filter="all" data-i18n="filter_all">सर्व वर्षे</button>
-      <button class="filter-pill" data-filter="idols" data-i18n="filter_idols">मूर्ती व सिंहासन</button>
-      <button class="filter-pill" data-filter="visarjan" data-i18n="filter_visarjan">विसर्जन मिरवणूक</button>
-      <button class="filter-pill" data-filter="decor" data-i18n="filter_decor">मंडप शृंगार</button>
-      <button class="filter-pill" data-filter="aarti" data-i18n="filter_aarti">महाआरती व भक्ती</button>
-    </div>
 
     <!-- 10-Year Retrospective Cards -->
     <div class="grid-3">
       <% glimpsesData.forEach(item => { %>
         <div class="card-temple gallery-card-item gold-motion-frame" data-category="<%= item.category %>" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
           <div style="position: relative; height: 360px; overflow: hidden; background: #0A0A0A; cursor: pointer;" data-lightbox data-lightbox-src="<%= item.image %>" data-lightbox-title="<%= item.title %> (वर्ष <%= item.year %>)" data-lightbox-caption="<%= item.desc %>">
-            <img src="<%= item.image %>" alt="<%= item.title %>" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+            <img src="<%= item.image %>" alt="<%= item.title %>" style="width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.5s ease;">
             <div style="position: absolute; top: 14px; right: 14px; background: var(--temple-maroon); color: var(--gold-soft); font-weight: 800; font-size: 0.9rem; padding: 6px 16px; border-radius: var(--radius-full); border: 1.5px solid var(--royal-gold); box-shadow: var(--shadow-sm);">
               वर्ष <%= item.year %>
             </div>

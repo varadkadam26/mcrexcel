@@ -2,11 +2,11 @@
 
   <section class="page-hero-banner">
     <div class="container">
-      <span class="section-badge">
+      <span class="section-badge" data-i18n="social_section_tag">
         समाजोपयोगी उपक्रम
       </span>
-      <h1 data-i18n="socialwork_title">सामाजिक कार्य व उपक्रम</h1>
-      <p data-i18n="socialwork_sub">
+      <h1 data-i18n="social_section_title">सामाजिक कार्य व उपक्रम</h1>
+      <p data-i18n="social_section_sub">
         अन्नदान महाप्रसाद, रक्तदान शिबीर, मोफत आरोग्य तपासणी आणि शैक्षणिक मदतीतून समाजसेवा.
       </p>
     </div>
@@ -22,19 +22,22 @@
             <div style="flex: 1; min-width: 300px;">
               <span
                 style="font-size: 0.82rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase; background: var(--saffron-light); padding: 4px 12px; border-radius: var(--radius-full);">
-                <%= work.category %>
+                <span class="lang-en"><%= work.categoryEn %></span>
+                <span class="lang-mr"><%= work.categoryMr %></span>
               </span>
               <h2 style="font-size: 1.9rem; color: var(--temple-maroon); margin: 0.8rem 0 1rem;">
-                <%= work.title %>
+                <span class="lang-en"><%= work.titleEn %></span>
+                <span class="lang-mr"><%= work.titleMr %></span>
               </h2>
               <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.5rem;">
-                <%= work.desc %>
+                <span class="lang-en"><%= work.descEn %></span>
+                <span class="lang-mr"><%= work.descMr %></span>
               </p>
             </div>
 
             <div
               style="flex: 1; min-width: 300px; border-radius: var(--radius-md); overflow: hidden; border: 3px solid var(--royal-gold); box-shadow: var(--shadow-sm);">
-              <img src="<%= work.image %>" alt="<%= work.title %>"
+              <img src="<%= work.image %>" alt="<%= work.titleEn %>"
                 style="width: 100%; height: auto; display: block;">
             </div>
           </div>

@@ -3050,3 +3050,9 @@ section {
     justify-content: center;
   }
 }
+
+/* ==========================================================================
+   BILINGUAL TOGGLE SYSTEM
+   ========================================================================== */
+html[data-lang="en"] .lang-mr, body[data-lang="en"] .lang-mr { display: none !important; }
+html[data-lang="mr"] .lang-en, body[data-lang="mr"] .lang-en { display: none !important; }

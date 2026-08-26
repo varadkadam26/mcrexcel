@@ -32,9 +32,9 @@
 
       <div class="crazy-reel-container">
         <% glimpsesData.forEach(item => { %>
-          <div class="crazy-reel-card gold-motion-frame" data-lightbox data-lightbox-src="<%= item.image %>" data-lightbox-title="<%= item.title %> (वर्ष <%= item.year %>)" data-lightbox-caption="<%= item.desc %>">
+          <div class="crazy-reel-card gold-motion-frame" data-lightbox data-lightbox-src="<%= item.image %>" data-lightbox-title="<%= item.titleMr %> / <%= item.titleEn %> (वर्ष <%= item.year %>)" data-lightbox-caption="<%= item.descMr %> / <%= item.descEn %>">
             <div class="card-img-box">
-              <img src="<%= item.image %>" alt="<%= item.title %>" loading="lazy">
+              <img src="<%= item.image %>" alt="<%= item.titleEn %>" loading="lazy">
               <div class="year-badge">वर्ष <%= item.year %></div>
               <div class="enlarge-hint">
                 <i class="fa-solid fa-magnifying-glass-plus" style="color: var(--royal-gold); margin-right: 4px;"></i>
@@ -42,8 +42,14 @@
               </div>
             </div>
             <div class="card-content">
-              <h4 class="card-title"><%= item.title %></h4>
-              <p class="card-subtitle"><%= item.theme %></p>
+              <h4 class="card-title">
+                <span class="lang-en"><%= item.titleEn %></span>
+                <span class="lang-mr"><%= item.titleMr %></span>
+              </h4>
+              <p class="card-subtitle">
+                <span class="lang-en"><%= item.themeEn %></span>
+                <span class="lang-mr"><%= item.themeMr %></span>
+              </p>
             </div>
           </div>
         <% }); %>
@@ -65,8 +71,8 @@
     <div class="grid-3">
       <% glimpsesData.forEach(item => { %>
         <div class="card-temple gallery-card-item gold-motion-frame reveal-on-scroll" data-category="<%= item.category %>" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
-          <div style="position: relative; height: 350px; overflow: hidden; background: #0A0A0A; cursor: pointer;" data-lightbox data-lightbox-src="<%= item.image %>" data-lightbox-title="<%= item.title %> (वर्ष <%= item.year %>)" data-lightbox-caption="<%= item.desc %>">
-            <img src="<%= item.image %>" alt="<%= item.title %>" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
+          <div style="position: relative; height: 350px; overflow: hidden; background: #0A0A0A; cursor: pointer;" data-lightbox data-lightbox-src="<%= item.image %>" data-lightbox-title="<%= item.titleMr %> / <%= item.titleEn %> (वर्ष <%= item.year %>)" data-lightbox-caption="<%= item.descMr %> / <%= item.descEn %>">
+            <img src="<%= item.image %>" alt="<%= item.titleEn %>" style="width: 100%; height: 100%; object-fit: cover; object-position: top center;">
             <div style="position: absolute; top: 14px; right: 14px; background: var(--temple-maroon); color: var(--gold-soft); font-weight: 800; font-size: 0.9rem; padding: 6px 16px; border-radius: var(--radius-full); border: 1.5px solid var(--royal-gold); box-shadow: var(--shadow-sm);">
               वर्ष <%= item.year %>
             </div>
@@ -76,16 +82,22 @@
           </div>
           <div style="padding: 1.8rem; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-              <h3 style="font-size: 1.35rem; color: var(--temple-maroon); margin-bottom: 0.6rem;"><%= item.title %></h3>
-              <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.2rem;"><%= item.desc %></p>
+              <h3 style="font-size: 1.35rem; color: var(--temple-maroon); margin-bottom: 0.6rem;">
+                <span class="lang-en"><%= item.titleEn %></span>
+                <span class="lang-mr"><%= item.titleMr %></span>
+              </h3>
+              <p style="font-size: 0.94rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.2rem;">
+                <span class="lang-en"><%= item.descEn %></span>
+                <span class="lang-mr"><%= item.descMr %></span>
+              </p>
             </div>
             
             <div style="border-top: 1px dashed var(--border-gold); padding-top: 1rem;">
               <div style="font-size: 0.85rem; color: var(--primary-saffron); font-weight: 700; margin-bottom: 0.3rem;">
-                <span data-i18n="label_height">मूर्तीची उंची</span>: <%= item.height %> | <span data-i18n="label_theme">संकल्पना</span>: <%= item.theme %>
+                <span data-i18n="label_height">मूर्तीची उंची</span>: <span class="lang-en"><%= item.heightEn %></span><span class="lang-mr"><%= item.heightMr %></span> | <span data-i18n="label_theme">संकल्पना</span>: <span class="lang-en"><%= item.themeEn %></span><span class="lang-mr"><%= item.themeMr %></span>
               </div>
               <div style="font-size: 0.85rem; color: var(--text-main); font-weight: 700;">
-                <span data-i18n="label_sculptor">मूर्तिकार</span>: <%= item.artist %>
+                <span data-i18n="label_sculptor">मूर्तिकार</span>: <span class="lang-en"><%= item.artistEn %></span><span class="lang-mr"><%= item.artistMr %></span>
               </div>
             </div>
           </div>

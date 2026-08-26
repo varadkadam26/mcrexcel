@@ -422,9 +422,9 @@
           <% (typeof glimpsesData !=='undefined' ? glimpsesData : []).forEach(item=> { %>
             <div class="crazy-reel-card gold-motion-frame gallery-card-item" data-category="<%= item.category %>"
               data-lightbox data-lightbox-src="<%= item.image %>"
-              data-lightbox-title="<%= item.title %> (Year <%= item.year %>)" data-lightbox-caption="<%= item.desc %>">
+              data-lightbox-title="<%= item.titleMr %> / <%= item.titleEn %> (Year <%= item.year %>)" data-lightbox-caption="<%= item.descMr %> / <%= item.descEn %>">
               <div class="card-img-box">
-                <img src="<%= item.image %>" alt="<%= item.title %>" loading="lazy">
+                <img src="<%= item.image %>" alt="<%= item.titleEn %>" loading="lazy">
                 <div class="year-badge">Year <%= item.year %>
                 </div>
                 <div class="enlarge-hint">
@@ -434,10 +434,12 @@
               </div>
               <div class="card-content">
                 <h4 class="card-title">
-                  <%= item.title %>
+                  <span class="lang-en"><%= item.titleEn %></span>
+                  <span class="lang-mr"><%= item.titleMr %></span>
                 </h4>
                 <p class="card-subtitle">
-                  <%= item.theme %>
+                  <span class="lang-en"><%= item.themeEn %></span>
+                  <span class="lang-mr"><%= item.themeMr %></span>
                 </p>
               </div>
             </div>
@@ -471,37 +473,27 @@
         <div class="gold-divider"></div>
       </div>
 
+      <% (typeof socialWorkData !== 'undefined' ? socialWorkData.slice(0, 2) : []).forEach((item, index) => { %>
       <div class="magazine-row">
         <div class="magazine-img-frame">
-          <img src="/images/gallery_padya_pujan.png" alt="Annadan Mahaprasad">
+          <img src="<%= item.image %>" alt="<%= item.titleEn %>">
         </div>
         <div>
-          <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase;"
-            data-i18n="social1_tag">FOOD DISTRIBUTION</span>
-          <h3 style="font-size: 2rem; color: var(--temple-maroon); margin: 0.4rem 0 1rem;" data-i18n="social1_title">
-            Annadan Mahaprasad Seva Drive</h3>
-          <p style="font-size: 1.02rem; color: var(--text-muted); line-height: 1.8;" data-i18n="social1_desc">
-            Serving hot nutritious meals, fresh breakfast, and purified drinking water to over 50,000+ devotees daily
-            during Ganeshotsav.
+          <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase;">
+            <span class="lang-en"><%= item.categoryEn %></span>
+            <span class="lang-mr"><%= item.categoryMr %></span>
+          </span>
+          <h3 style="font-size: 2rem; color: var(--temple-maroon); margin: 0.4rem 0 1rem;">
+            <span class="lang-en"><%= item.titleEn %></span>
+            <span class="lang-mr"><%= item.titleMr %></span>
+          </h3>
+          <p style="font-size: 1.02rem; color: var(--text-muted); line-height: 1.8;">
+            <span class="lang-en"><%= item.descEn %></span>
+            <span class="lang-mr"><%= item.descMr %></span>
           </p>
         </div>
       </div>
-
-      <div class="magazine-row">
-        <div class="magazine-img-frame">
-          <img src="/images/gallery_aagman.png" alt="Blood Donation Camp">
-        </div>
-        <div>
-          <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase;"
-            data-i18n="social2_tag">HEALTHCARE SEVA</span>
-          <h3 style="font-size: 2rem; color: var(--temple-maroon); margin: 0.4rem 0 1rem;" data-i18n="social2_title">
-            Grand Blood Donation & Medical Camp</h3>
-          <p style="font-size: 1.02rem; color: var(--text-muted); line-height: 1.8;" data-i18n="social2_desc">
-            Collecting 500+ blood units annually in partnership with KEM & Nair Hospitals alongside free healthcare
-            checkup camps.
-          </p>
-        </div>
-      </div>
+      <% }); %>
 
       <div style="text-align: center; margin-top: 2rem;">
         <a href="/social-work" class="btn btn-outline" data-i18n="btn_all_social">

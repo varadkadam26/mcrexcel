@@ -19,24 +19,31 @@
       <% scheduleData.forEach(evt => { %>
         <div class="card-temple reveal-on-scroll" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
           <div style="background: var(--temple-maroon); color: var(--gold-soft); padding: 1.5rem 2rem; border-radius: var(--radius-md); text-align: center; min-width: 140px; border: 2px solid var(--royal-gold);">
-            <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;">दिवस</span>
+            <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;" data-i18n="label_day">दिवस</span>
             <h2 style="font-size: 2.5rem; color: var(--gold-soft); margin: 0; line-height: 1;"><%= evt.day %></h2>
           </div>
 
           <div style="flex: 1;">
             <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase; background: var(--saffron-light); padding: 3px 10px; border-radius: 4px;">
-              <%= evt.date %>
+              <span class="lang-en"><%= evt.dateEn %></span>
+              <span class="lang-mr"><%= evt.dateMr %></span>
             </span>
-            <h3 style="font-size: 1.6rem; color: var(--temple-maroon); margin: 0.4rem 0 0.6rem;"><%= evt.title %></h3>
+            <h3 style="font-size: 1.6rem; color: var(--temple-maroon); margin: 0.4rem 0 0.6rem;">
+              <span class="lang-en"><%= evt.titleEn %></span>
+              <span class="lang-mr"><%= evt.titleMr %></span>
+            </h3>
             
             <p style="color: var(--text-muted); font-size: 0.98rem; margin-bottom: 1rem;">
-              <i class="fa-solid fa-location-dot" style="color: var(--primary-saffron); margin-right: 6px;"></i> <%= evt.halt_location %>
+              <i class="fa-solid fa-location-dot" style="color: var(--primary-saffron); margin-right: 6px;"></i> 
+              <span class="lang-en"><%= evt.halt_locationEn %></span>
+              <span class="lang-mr"><%= evt.halt_locationMr %></span>
             </p>
 
             <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
-              <% evt.facilities.forEach(fac => { %>
+              <% evt.facilitiesEn.forEach((fac, idx) => { %>
                 <span style="font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 4px 12px; border-radius: var(--radius-full); font-weight: 600;">
-                  <%= fac %>
+                  <span class="lang-en"><%= fac %></span>
+                  <span class="lang-mr"><%= evt.facilitiesMr[idx] %></span>
                 </span>
               <% }); %>
             </div>

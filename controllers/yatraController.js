@@ -212,7 +212,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
-    image: '/images/gallery_padya_pujan.png',
+    image: '/images/ganesha_2007.jpg',
     descMr: 'आरोग्य अभियान आणि रक्तदान शिबिरादरम्यान रौप्य सिंहासनावरील दर्शन.',
     descEn: 'Sacred silver throne during pandemic health drive and blood donation initiative.'
   },
@@ -227,7 +227,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मंडळ मूर्तिकार',
     artistEn: 'Mandal Artisans & Sculptors',
-    image: '/images/gallery_aagman.png',
+    image: '/images/ganesha_pic2.jpg',
     descMr: 'सुवर्ण कमानींसह भव्य पारंपारिक मराठा राजवाड्याची सजावट.',
     descEn: 'Grand traditional Maratha palace setup with ornate golden arches.'
   },
@@ -242,7 +242,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मंडळ कार्यकर्ते',
     artistEn: 'Mandal Karyakartas',
-    image: '/images/gallery_mandap.png',
+    image: '/images/ganesha_2013.jpg',
     descMr: 'बेलासिस रोड ते गिरगाव चौपाटीपर्यंत शाही रथातून भव्य मिरवणूक.',
     descEn: 'Royal chariot procession from Belasis Road to Girgaon Chowpatty beach.'
   },
@@ -257,7 +257,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Sculptor Shri Santosh Kambli',
-    image: '/images/gallery_pushpa_alankar.png',
+    image: '/images/ganesha_2008.jpg',
     descMr: 'पारंपारिक कोल्हापुरी सुवर्ण दागिन्यांनी सजवलेली भव्य मूर्ती.',
     descEn: 'Classic 18ft idol embellished with traditional Kolhapuri gold jewelry.'
   },

@@ -107,12 +107,7 @@
       <div class="carousel-dot" data-slide="1"></div>
       <div class="carousel-dot" data-slide="2"></div>
     </div>
-    <!-- MUSHak PARADE -->
-    <div class="mushak-parade" aria-hidden="true">
-      <img src="/images/mushak.svg" class="mushak-runner mushak-runner-one" alt="">
 
-      <img src="/images/mushak.svg" class="mushak-runner mushak-runner-two" alt="">
-    </div>
   </section>
 
   <!-- SECTION 4: NEWS & ANNOUNCEMENT TICKER STRIP -->
@@ -422,11 +417,9 @@
           <% (typeof glimpsesData !=='undefined' ? glimpsesData : []).forEach(item=> { %>
             <div class="crazy-reel-card gold-motion-frame gallery-card-item" data-category="<%= item.category %>"
               data-lightbox data-lightbox-src="<%= item.image %>"
-              data-lightbox-title="<%= item.titleMr %> / <%= item.titleEn %> (Year <%= item.year %>)" data-lightbox-caption="<%= item.descMr %> / <%= item.descEn %>">
+              data-lightbox-title="<%= item.titleMr %> / <%= item.titleEn %>" data-lightbox-caption="<%= item.descMr %> / <%= item.descEn %>">
               <div class="card-img-box">
                 <img src="<%= item.image %>" alt="<%= item.titleEn %>" loading="lazy">
-                <div class="year-badge">Year <%= item.year %>
-                </div>
                 <div class="enlarge-hint">
                   <i class="fa-solid fa-magnifying-glass-plus" style="color: var(--royal-gold); margin-right: 4px;"></i>
                   <span data-i18n="btn_enlarge">Zoom Image</span>

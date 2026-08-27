@@ -206,7 +206,7 @@ const translations = {
     ph_email: "Email for 80G PDF receipt",
     lbl_pan: "PAN Card Number (For 80G Tax Exemption Receipt)",
     ph_pan: "e.g. ABCDE1234F",
-    btn_donate_submit: "Donate Securely & Get PDF Receipt",
+    btn_donate_submit: "Donate & Get Receipt",
     msg_donation_processing: "Donation processing in progress...",
     msg_donation_success: "Donation successful! Your 80G receipt is downloading."
   },
@@ -230,6 +230,9 @@ const translations = {
     nav_committee: "कार्यकारिणी",
     nav_contact: "संपर्क",
     nav_donate: "देणगी",
+
+    // Donate Page Form & Modal
+    btn_donate_submit: "देणगी द्या व पावती मिळवा",
 
     // Hero & Flip Clock
     hero_tag: "स्थापना १९२९",

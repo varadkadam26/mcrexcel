@@ -2,13 +2,7 @@
 
 <section class="page-hero-banner">
   <div class="container">
-    <span class="section-badge" data-i18n="decade_tag">
-      १० वर्षांचा सुवर्ण प्रवास
-    </span>
     <h1 data-i18n="decade_title">दशकातील स्वर्णिम क्षणचित्रे (२०१५ - २०२५)</h1>
-    <p data-i18n="decade_sub">
-      गेल्या १० वर्षांतील राजाची राजेशाही रूपे, काष्ठ व सुवर्ण सिहांसन आणि अथांग भक्तीचा ऐतिहासिक लेखाजोखा.
-    </p>
   </div>
 </section>
 
@@ -18,7 +12,8 @@
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
       <h2 style="font-size: 1.6rem; color: var(--gold-soft); margin: 0; display: flex; align-items: center; gap: 10px;">
         <i class="fa-solid fa-crown" style="color: var(--royal-gold);"></i>
-        <span data-i18n="glimpses_tag">ऐतिहासिक सुवर्ण क्षण (3D Reel Scroll View)</span>
+        <span class="lang-en">3D Reel Scroll View</span>
+        <span class="lang-mr">ऐतिहासिक सुवर्ण क्षण</span>
       </h2>
       <span style="font-size: 0.85rem; color: var(--gold-soft); font-weight: 600; opacity: 0.85;">
         <i class="fa-solid fa-hand-pointer" style="margin-right: 4px;"></i> Drag or Scroll 3D Cards →
@@ -45,10 +40,6 @@
                 <span class="lang-en"><%= item.titleEn %></span>
                 <span class="lang-mr"><%= item.titleMr %></span>
               </h4>
-              <p class="card-subtitle">
-                <span class="lang-en"><%= item.themeEn %></span>
-                <span class="lang-mr"><%= item.themeMr %></span>
-              </p>
             </div>
           </div>
         <% }); %>
@@ -88,15 +79,6 @@
                 <span class="lang-en"><%= item.descEn %></span>
                 <span class="lang-mr"><%= item.descMr %></span>
               </p>
-            </div>
-            
-            <div style="border-top: 1px dashed var(--border-gold); padding-top: 1rem;">
-              <div style="font-size: 0.85rem; color: var(--primary-saffron); font-weight: 700; margin-bottom: 0.3rem;">
-                <span data-i18n="label_theme">संकल्पना</span>: <span class="lang-en"><%= item.themeEn %></span><span class="lang-mr"><%= item.themeMr %></span>
-              </div>
-              <div style="font-size: 0.85rem; color: var(--text-main); font-weight: 700;">
-                <span data-i18n="label_sculptor">मूर्तिकार</span>: <span class="lang-en"><%= item.artistEn %></span><span class="lang-mr"><%= item.artistMr %></span>
-              </div>
             </div>
           </div>
         </div>

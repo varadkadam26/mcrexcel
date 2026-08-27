@@ -31,12 +31,19 @@
               देणगी रक्कम निवडा (₹) *
             </label>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" id="presetBtns">
-              <button type="button" class="btn btn-outline preset-btn" data-val="501">₹ ५०१/-</button>
+              <button type="button" class="btn btn-outline preset-btn" data-val="501">
+                <span class="lang-en">₹ 501/-</span><span class="lang-mr">₹ ५०१/-</span>
+              </button>
               <button type="button" class="btn btn-outline preset-btn active" data-val="1008"
-                style="background: var(--temple-maroon); color: var(--gold-soft); border-color: var(--royal-gold);">₹
-                १००८/-</button>
-              <button type="button" class="btn btn-outline preset-btn" data-val="2100">₹ २१००/-</button>
-              <button type="button" class="btn btn-outline preset-btn" data-val="5001">₹ ५००१/-</button>
+                style="background: var(--temple-maroon); color: var(--gold-soft); border-color: var(--royal-gold);">
+                <span class="lang-en">₹ 1008/-</span><span class="lang-mr">₹ १००८/-</span>
+              </button>
+              <button type="button" class="btn btn-outline preset-btn" data-val="2100">
+                <span class="lang-en">₹ 2100/-</span><span class="lang-mr">₹ २१००/-</span>
+              </button>
+              <button type="button" class="btn btn-outline preset-btn" data-val="5001">
+                <span class="lang-en">₹ 5001/-</span><span class="lang-mr">₹ ५००१/-</span>
+              </button>
             </div>
           </div>
 
@@ -97,11 +104,58 @@
           </div>
 
           <button type="submit" class="btn btn-primary"
-            style="width: 100%; padding: 1rem; font-size: 1.1rem; font-weight: 800;" id="btnDonateSubmit">
+            style="width: 100%; padding: 1rem; font-size: clamp(0.9rem, 3.5vw, 1.1rem); font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="btnDonateSubmit">
             <span data-i18n="btn_donate_submit">सुरक्षित देणगी द्या व PDF पावती मिळवा</span> <i
               class="bi bi-shield-check"></i>
           </button>
         </form>
+      </div>
+
+      <!-- Direct Bank Transfer Option -->
+      <div class="card-temple" style="padding: 3rem; margin-top: 3rem;">
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1.5rem; text-align: center;">
+          <span class="lang-en">Direct Bank Transfer</span>
+          <span class="lang-mr">थेट बँक ट्रान्सफर</span>
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+          <span class="lang-en">You can also donate directly to our bank account using the details below:</span>
+          <span class="lang-mr">तुम्ही खालील बँक तपशील वापरून थेट आमच्या बँक खात्यात देणगी देऊ शकता:</span>
+        </p>
+
+        <div style="background: var(--bg-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Account Name:</span><span class="lang-mr">खातेदाराचे नाव:</span>
+            </strong>
+            <span class="lang-en">BIT CHAWL BELLASIS RD SARVAJANIK SHREE GANESHOTSAV MANDAL</span><span class="lang-mr">बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Bank Name:</span><span class="lang-mr">बँकेचे नाव:</span>
+            </strong>
+            <span class="lang-en">Bank of India (BOI)</span><span class="lang-mr">बँक ऑफ इंडिया (BOI)</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Branch:</span><span class="lang-mr">शाखा:</span>
+            </strong>
+            <span class="lang-en">Mumbai Central Branch, Mumbai, Maharashtra - 400007</span><span class="lang-mr">मुंबई सेंट्रल शाखा, मुंबई, महाराष्ट्र - ४००००७</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Account Number:</span><span class="lang-mr">खाते क्रमांक:</span>
+            </strong>
+            <span style="font-weight: 700;">
+              <span class="lang-en">000510100013602</span><span class="lang-mr">०००५१०१०००१३६०२</span>
+            </span>
+          </div>
+          <div>
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">IFSC Code:</span><span class="lang-mr">IFSC कोड:</span>
+            </strong>
+            <span style="font-weight: 700;">BKID0000005</span>
+          </div>
+        </div>
       </div>
 
     </div>

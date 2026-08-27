@@ -12,6 +12,24 @@
     </div>
   </section>
 
+  <style>
+    .social-work-img-container {
+      flex: 1; 
+      min-width: 300px; 
+      border-radius: var(--radius-md); 
+      overflow: hidden; 
+      border: 3px solid var(--royal-gold); 
+      box-shadow: var(--shadow-sm);
+    }
+    @media (max-width: 768px) {
+      .social-work-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
+    }
+  </style>
   <section style="background: var(--bg-cream); padding: 5rem 0;">
     <div class="container">
       <div style="display: flex; flex-direction: column; gap: 3.5rem;">
@@ -25,7 +43,7 @@
                 <span class="lang-en"><%= work.categoryEn %></span>
                 <span class="lang-mr"><%= work.categoryMr %></span>
               </span>
-              <h2 style="font-size: 1.9rem; color: var(--temple-maroon); margin: 0.8rem 0 1rem;">
+              <h2 style="font-size: clamp(1.2rem, 3vw, 1.5rem); color: var(--temple-maroon); margin: 0.8rem 0 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1.2;">
                 <span class="lang-en"><%= work.titleEn %></span>
                 <span class="lang-mr"><%= work.titleMr %></span>
               </h2>
@@ -35,10 +53,9 @@
               </p>
             </div>
 
-            <div
-              style="flex: 1; min-width: 300px; border-radius: var(--radius-md); overflow: hidden; border: 3px solid var(--royal-gold); box-shadow: var(--shadow-sm);">
+            <div class="social-work-img-container">
               <img src="<%= work.image %>" alt="<%= work.titleEn %>"
-                style="width: 100%; height: auto; display: block;">
+                style="max-width: 100%; height: auto; object-fit: cover; object-position: center; display: block;">
             </div>
           </div>
           <% }); %>

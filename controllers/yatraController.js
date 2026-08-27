@@ -262,34 +262,34 @@ const glimpsesData = [
     descEn: 'Classic 18ft idol embellished with traditional Kolhapuri gold jewelry.'
   },
   {
-    year: '2016',
-    category: 'decor',
-    titleMr: 'रौप्य कमान व प्रथम दीप सोहळा',
-    titleEn: 'Silver Arch Deepotsav',
-    themeMr: 'ऐतिहासिक चाळ सजावट',
-    themeEn: 'Heritage Chawl Jubilee Decor',
-    heightMr: '१२ फूट',
-    heightEn: '12 Feet',
-    artistMr: 'मंडळ समिती',
-    artistEn: 'Mandal Team',
-    image: '/images/raja_real_1.png',
-    descMr: 'रौप्य कमान पार्श्वभूमीवर १०१४ दिव्यांचा दीपोत्सव.',
-    descEn: 'Illuminated 1008 lamps ceremony and silver backdrop arch.'
-  },
-  {
-    year: '2015',
+    year: '2009',
     category: 'idols',
-    titleMr: 'दशकपूर्ती आगमन व राजेशाही पदचिन्ह',
-    titleEn: 'Decade Milestone',
-    themeMr: 'पारंपारिक हस्तकला',
-    themeEn: 'Traditional Heritage Crafts',
+    titleMr: 'सुवर्ण प्रभावळ व विलोभनीय रूप',
+    titleEn: 'Golden Throne & Prabhavali',
+    themeMr: 'पारंपारिक सुवर्ण कला',
+    themeEn: 'Traditional Gold Art',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
-    image: '/images/raja_real_2.png',
-    descMr: 'मंडळ स्थापनेचे २७ वे भव्य वर्ष साजरे करताना ऐतिहासिक मूर्ती शिल्प.',
-    descEn: 'Iconic historic idol sculpture marking 27th grand year of Mandal establishment.'
+    image: '/images/ganesha_2003.jpg',
+    descMr: 'गुलाबी पितांबरातील भव्य मूर्ती आणि पाठीमागे आकर्षक सुवर्ण प्रभावळ (२००९).',
+    descEn: 'Grand idol in pink pitambar with an attractive golden prabhavali behind (2009).'
+  },
+  {
+    year: '2003',
+    category: 'idols',
+    titleMr: 'शुभ्र मूर्ती व रौप्य मुकुट',
+    titleEn: 'White Idol & Silver Crown',
+    themeMr: 'भक्तीची शुद्ध परंपरा',
+    themeEn: 'Tradition of Pure Devotion',
+    heightMr: '१२ फूट',
+    heightEn: '12 Feet',
+    artistMr: 'मूर्तिकार श्री संतोष कांबळी',
+    artistEn: 'Master Sculptor Shri Santosh Kambli',
+    image: '/images/ganesha_2009.jpg',
+    descMr: 'गडद जांभळ्या पितांबरातील शुभ्र मूर्ती आणि डोक्यावर भव्य रौप्य मुकुट (२००३).',
+    descEn: 'White idol in dark purple pitambar with a grand silver crown on the head (2003).'
   }
 ];
 

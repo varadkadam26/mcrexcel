@@ -180,7 +180,8 @@ body[data-lang="mr"] .nav-link {
 
 html[lang="mr"] .mandal-banner-3d-text,
 body[data-lang="mr"] .mandal-banner-3d-text {
-  font-size: 1.85rem;
+  font-size: clamp(0.75rem, 3.5vw, 1.85rem);
+  line-height: 1.2;
 }
 
 html[lang="mr"] h1,
@@ -1212,7 +1213,7 @@ section {
   }
 
   .mandal-banner-3d-text {
-    font-size: 1.35rem;
+    font-size: 0.85rem;
   }
 
   .footer-grid {
@@ -1261,7 +1262,8 @@ section {
   }
 
   .mandal-banner-3d-text {
-    font-size: 1.15rem;
+    font-size: 0.75rem;
+    line-height: 1.2;
   }
 
   .topbar-chintamani {
@@ -2565,7 +2567,7 @@ section {
   }
 
   .mandal-banner-3d-text {
-    font-size: 1.35rem;
+    font-size: 0.85rem;
     text-align: center;
   }
 
@@ -2768,8 +2770,19 @@ section {
 }
 
 @media (max-width: 480px) {
+  .est-text, .reg-text {
+    display: none !important;
+  }
+
+  .topbar-chintamani {
+    padding: 3px 0 4px !important;
+  }
+
   .mandal-banner-3d-text {
-    font-size: 1.15rem;
+    font-size: clamp(0.65rem, 3.2vw, 0.95rem) !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
   }
 
   .hero-content h1 {

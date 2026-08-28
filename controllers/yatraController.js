@@ -272,7 +272,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
-    image: '/images/ganesha_2003.jpg',
+    image: '/images/ganesha_2009.jpg',
     descMr: 'गुलाबी पितांबरातील भव्य मूर्ती आणि पाठीमागे आकर्षक सुवर्ण प्रभावळ (२००९).',
     descEn: 'Ganesha idol in pink clothing with a gold backdrop.'
   },
@@ -287,7 +287,7 @@ const glimpsesData = [
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
-    image: '/images/ganesha_2009.jpg',
+    image: '/images/ganesha_2003.jpg',
     descMr: 'गडद जांभळ्या पितांबरातील शुभ्र मूर्ती आणि डोक्यावर भव्य रौप्य मुकुट (२००३).',
     descEn: 'White-colored Ganesha idol.'
   },

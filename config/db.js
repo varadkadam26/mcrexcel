@@ -104,9 +104,19 @@ const mockStore = {
 
 let dbPool = null;
 let useMock = false;
+let isInitialized = false;
 
 async function initDB() {
+  if (isInitialized) return;
+  
   try {
+    if (!process.env.DB_HOST && !process.env.DB_USER) {
+      console.log('⚠️ No DB credentials found. Using In-Memory Data Store.');
+      useMock = true;
+      isInitialized = true;
+      return;
+    }
+
     const pool = mysql.createPool({
       host: process.env.DB_HOST || 'localhost',
       user: process.env.DB_USER || 'root',
@@ -126,9 +136,11 @@ async function initDB() {
 
     // Create tables if they do not exist
     await createTables(dbPool);
+    isInitialized = true;
   } catch (err) {
     console.log('⚠️ MySQL connection omitted or unavailable. Running with high-performance In-Memory Data Store.');
     useMock = true;
+    isInitialized = true;
   }
 }
 

@@ -47,6 +47,12 @@ app.use((req, res, next) => {
   next();
 });
 
+// Ensure DB is initialized (crucial for Serverless environments like Vercel)
+app.use(async (req, res, next) => {
+  await db.initDB();
+  next();
+});
+
 // Mount Routes
 app.use('/', indexRoutes);
 app.use('/', donationRoutes);

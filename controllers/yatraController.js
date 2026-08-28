@@ -130,16 +130,16 @@ const glimpsesData = [
     year: '2025',
     category: 'idols',
     titleMr: 'काष्ठ सिंहासन व राजेशाही सुवर्ण शृंगार',
-    titleEn: 'Royal Wooden Throne',
+    titleEn: 'Wooden Throne',
     themeMr: 'पेशवेकालीन राजवाडा मंडप',
-    themeEn: 'Peshwa Era Palace Mandap Architecture',
+    themeEn: 'Palace Theme',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/raja_real_1.png',
     descMr: 'गुलाबी व मरून रेशमी वस्त्रांतील राजेशाही लाकडी सिंहासनावरील भव्य रूप.',
-    descEn: 'The magnificent wooden throne form dressed in royal pink and maroon silk robes.'
+    descEn: 'Ganesha idol seated on a wooden throne.'
   },
   {
     year: '2024',
@@ -147,14 +147,14 @@ const glimpsesData = [
     titleMr: 'सुवर्ण सिंहासन व तेज:पुंज पीत पितांबर',
     titleEn: 'Golden Throne',
     themeMr: 'सुवर्ण मंदिर कलाकृती',
-    themeEn: 'Golden Temple Carvings & Lotus Arch',
+    themeEn: 'Temple Theme Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मंडळ मूर्तिकार',
     artistEn: 'Mandal Artisans & Sculptors',
     image: '/images/raja_real_2.png',
     descMr: 'हस्तनिर्मित सुवर्ण सिंहासनावर आरूढ पीत पितांबरातील तेज:पुंज मूर्ती.',
-    descEn: 'Radiant idol in yellow pitambar seated on handcrafted gold-leaf throne.'
+    descEn: 'Ganesha idol seated on a golden throne.'
   },
   {
     year: '2023',
@@ -162,44 +162,44 @@ const glimpsesData = [
     titleMr: 'मयूरपंख कमान आगमन सोहळा',
     titleEn: 'Peacock Feather Arch',
     themeMr: 'राजेशाही दरबार',
-    themeEn: 'Royal Heritage Court Decor',
+    themeEn: 'Court Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मंडळ कार्यकर्ते',
     artistEn: 'Mandal Karyakartas',
     image: '/images/raja_real_3.png',
     descMr: 'आगमन सोहळ्यादरम्यान मयूरपंख कमानीतून भव्य मिरवणूक.',
-    descEn: 'Grand procession throne featuring peacock feather arches during Aagman Sohala.'
+    descEn: 'Ganesha idol during the Aagman Sohala.'
   },
   {
     year: '2022',
     category: 'aarti',
     titleMr: 'श्री मुख दर्शन व सुवर्ण मुकुट',
-    titleEn: 'Divine Face & Gold Crown',
+    titleEn: 'Gold Crown',
     themeMr: 'भक्तीची शुद्ध परंपरा',
-    themeEn: 'Tradition of Pure Devotion',
+    themeEn: 'Traditional Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Sculptor Shri Santosh Kambli',
     image: '/images/raja_real_4.png',
     descMr: 'सुवर्ण मुकुट आणि हास्याने मोहरलेले श्रींचे विलोभनीय मुखदर्शन.',
-    descEn: 'Mesmerizing facial smile with gold crown and Modak blessing hand posture.'
+    descEn: 'Ganesha idol with a gold crown.'
   },
   {
     year: '2021',
     category: 'decor',
     titleMr: 'गर्भगृह पुष्प शृंगार दर्शन',
-    titleEn: 'Floral Sanctuary Decor',
+    titleEn: 'Floral Decor',
     themeMr: 'राजेशाही मखमल व कमळ रचना',
-    themeEn: 'Royal Velvet & Lotus Geometry',
+    themeEn: 'Flower Backdrop',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मंडळ सजावट समिती',
     artistEn: 'Mandal Design Team',
     image: '/images/raja_real_5.png',
     descMr: '५००० हून अधिक ऑर्किड आणि झेंडूच्या फुलांच्या पार्श्वभूमीवर जांभळ्या पितांबरातील मूर्ती.',
-    descEn: 'Idol adorned in purple pitambar with backdrop of 5000+ fresh orchid & marigold flowers.'
+    descEn: 'Ganesha idol with orchid and marigold flower decoration.'
   },
   {
     year: '2020',
@@ -207,90 +207,90 @@ const glimpsesData = [
     titleMr: 'आरोग्य संकल्प व सुवर्ण पदकमयी रूप',
     titleEn: 'Arogya Sankalp',
     themeMr: 'पर्यावरणपूरक माती व रौप्य सिंहासन',
-    themeEn: 'Eco-Friendly Clay & Silver Throne',
+    themeEn: 'Health Initiative',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/ganesha_2007.jpg',
     descMr: 'आरोग्य अभियान आणि रक्तदान शिबिरादरम्यान रौप्य सिंहासनावरील दर्शन.',
-    descEn: 'Sacred silver throne during pandemic health drive and blood donation initiative.'
+    descEn: 'Ganesha idol during the health drive and blood donation camp.'
   },
   {
     year: '2019',
     category: 'decor',
     titleMr: 'राजवाडा महामंडप व सुवर्ण मेघडंबरी',
-    titleEn: 'Royal Palace Dome',
+    titleEn: 'Palace Dome',
     themeMr: 'किल्ले रायगड व राजवाडा कला',
-    themeEn: 'Fort Raigad & Palace Architecture',
+    themeEn: 'Palace Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मंडळ मूर्तिकार',
     artistEn: 'Mandal Artisans & Sculptors',
     image: '/images/ganesha_pic2.jpg',
     descMr: 'सुवर्ण कमानींसह भव्य पारंपारिक मराठा राजवाड्याची सजावट.',
-    descEn: 'Grand traditional Maratha palace setup with ornate golden arches.'
+    descEn: 'Ganesha idol with palace theme decoration.'
   },
   {
     year: '2018',
     category: 'visarjan',
     titleMr: 'भव्य विसर्जन मिरवणूक व तुतारी शंखनाद',
-    titleEn: 'Grand Visarjan',
+    titleEn: 'Visarjan',
     themeMr: 'पारंपारिक ढोल ताशा व गुलाल',
-    themeEn: 'Traditional Dhol Tasha & Gulal Rain',
+    themeEn: 'Immersion Procession',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मंडळ कार्यकर्ते',
     artistEn: 'Mandal Karyakartas',
     image: '/images/ganesha_2013.jpg',
     descMr: 'बेलासिस रोड ते गिरगाव चौपाटीपर्यंत शाही रथातून भव्य मिरवणूक.',
-    descEn: 'Royal chariot procession from Belasis Road to Girgaon Chowpatty beach.'
+    descEn: 'Ganesha idol during the Visarjan procession.'
   },
   {
     year: '2017',
     category: 'idols',
     titleMr: 'रत्नजडित मुकुट व पीतांबर शृंगार',
-    titleEn: 'Jeweled Crown & Silk',
+    titleEn: 'Jeweled Crown',
     themeMr: 'पारंपारिक मंदिर कोरीव काम',
-    themeEn: 'Classic Temple Carvings',
+    themeEn: 'Temple Carvings',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Sculptor Shri Santosh Kambli',
     image: '/images/ganesha_2008.jpg',
     descMr: 'पारंपारिक कोल्हापुरी सुवर्ण दागिन्यांनी सजवलेली भव्य मूर्ती.',
-    descEn: 'Classic 18ft idol embellished with traditional Kolhapuri gold jewelry.'
+    descEn: 'Ganesha idol with traditional jewelry.'
   },
   {
     year: '2009',
     category: 'idols',
     titleMr: 'सुवर्ण प्रभावळ व विलोभनीय रूप',
-    titleEn: 'Golden Throne & Prabhavali',
+    titleEn: 'Golden Prabhavali',
     themeMr: 'पारंपारिक सुवर्ण कला',
-    themeEn: 'Traditional Gold Art',
+    themeEn: 'Gold Art Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/ganesha_2003.jpg',
     descMr: 'गुलाबी पितांबरातील भव्य मूर्ती आणि पाठीमागे आकर्षक सुवर्ण प्रभावळ (२००९).',
-    descEn: 'Grand idol in pink pitambar with an attractive golden prabhavali behind (2009).'
+    descEn: 'Ganesha idol with a golden prabhavali decoration.'
   },
   {
     year: '2003',
     category: 'idols',
     titleMr: 'शुभ्र मूर्ती व रौप्य मुकुट',
-    titleEn: 'White Idol & Silver Crown',
+    titleEn: 'Silver Crown',
     themeMr: 'भक्तीची शुद्ध परंपरा',
-    themeEn: 'Tradition of Pure Devotion',
+    themeEn: 'Traditional Decor',
     heightMr: '१२ फूट',
     heightEn: '12 Feet',
     artistMr: 'मूर्तिकार श्री संतोष कांबळी',
     artistEn: 'Master Sculptor Shri Santosh Kambli',
     image: '/images/ganesha_2009.jpg',
     descMr: 'गडद जांभळ्या पितांबरातील शुभ्र मूर्ती आणि डोक्यावर भव्य रौप्य मुकुट (२००३).',
-    descEn: 'White idol in dark purple pitambar with a grand silver crown on the head (2003).'
-  }
+    descEn: 'White Ganesha idol with a silver crown.'
+  },
 ];
 
 // Social Work Data

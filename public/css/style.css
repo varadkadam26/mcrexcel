@@ -1264,6 +1264,9 @@ section {
   .mandal-banner-3d-text {
     font-size: 0.75rem;
     line-height: 1.2;
+    white-space: normal !important;
+    text-align: center;
+    padding: 0 5px;
   }
 
   .topbar-chintamani {
@@ -2785,11 +2788,11 @@ section {
   .mandal-banner-3d-text {
     font-size: clamp(0.55rem, 2.7vw, 0.85rem) !important;
     letter-spacing: -0.3px !important;
-    line-height: 1.1 !important;
+    line-height: 1.2 !important;
     margin: 0 !important;
-    white-space: nowrap !important;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal !important;
+    text-align: center;
+    padding: 0 5px;
   }
 
   .hero-content h1 {

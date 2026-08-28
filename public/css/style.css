@@ -2779,10 +2779,13 @@ section {
   }
 
   .mandal-banner-3d-text {
-    font-size: clamp(0.65rem, 3.2vw, 0.95rem) !important;
+    font-size: clamp(0.55rem, 2.7vw, 0.85rem) !important;
+    letter-spacing: -0.3px !important;
     line-height: 1.1 !important;
     margin: 0 !important;
     white-space: nowrap !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .hero-content h1 {

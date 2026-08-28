@@ -344,6 +344,36 @@ const socialWorkData = [
     image: '/images/social_5.png',
     descMr: 'गरजू शैक्षणिक, वैद्यकीय आणि सामाजिक संस्थांना आर्थिक मदत व आवश्यक साहित्याचे वाटप.',
     descEn: 'Providing financial assistance and necessary materials to educational, medical, and social institutes in need.'
+  },
+  {
+    id: 'social-6',
+    titleMr: 'मास्क आणि सॅनिटायझर वाटप',
+    titleEn: 'Mask & Sanitizer Distribution',
+    categoryMr: 'आरोग्य',
+    categoryEn: 'Healthcare',
+    image: '/images/media_1787903804926.jpg',
+    descMr: 'कोविड-१९ काळात गरजू नागरिकांना मास्क आणि सॅनिटायझर वाटप.',
+    descEn: 'Distribution of masks and sanitizers to needy citizens during COVID-19.'
+  },
+  {
+    id: 'social-7',
+    titleMr: 'दिवाळी खाऊचे वाटप',
+    titleEn: 'Diwali Sweets Distribution',
+    categoryMr: 'सामाजिक कार्य',
+    categoryEn: 'Social Impact',
+    image: '/images/media_1787903910841.jpg',
+    descMr: 'लोहारे शाळेतील विद्यार्थ्यांना मंडळाच्या वतीने दिवाळी खाऊचे वाटप.',
+    descEn: 'Distribution of Diwali sweets to the students of Lohare School by the Mandal.'
+  },
+  {
+    id: 'social-8',
+    titleMr: 'पोलादपूर तालुक्यातील शाळांना मदत',
+    titleEn: 'Aid to Poladpur Schools',
+    categoryMr: 'शैक्षणिक मदत',
+    categoryEn: 'Educational Aid',
+    image: '/images/media_1787903953429.jpg',
+    descMr: 'पोलादपूर तालुक्यातील १३ शाळांतील २८० आदिवासी व गरीब विद्यार्थ्यांसोबत शैक्षणिक साहित्य व दिवाळीचा फराळ वाटून दिवाळी साजरी.',
+    descEn: 'Distribution of educational materials and Diwali snacks to 280 tribal and poor students across 13 schools in Poladpur taluka.'
   }
 ];
 

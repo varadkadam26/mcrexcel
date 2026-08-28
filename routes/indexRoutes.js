@@ -15,6 +15,14 @@ router.get('/api/live-status', yatraController.getLiveStatusApi);
 router.get('/glimpses', yatraController.renderGlimpsesPage);
 router.get('/photo-booth', (req, res) => res.redirect(301, '/glimpses'));
 
+// Memories & Notable Personalities
+router.get('/memories', (req, res) => {
+  res.render('memories', {
+    title: 'Memories & Notable Personalities | Mumbai Central Cha Raja',
+    activeTab: 'memories'
+  });
+});
+
 // Social Work Page (Separate Page & Photos)
 router.get('/social-work', yatraController.renderSocialWorkPage);
 

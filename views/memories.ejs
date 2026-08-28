@@ -1,0 +1,100 @@
+<%- include('partials/header') %>
+
+<style>
+  .memories-container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+    padding: 0 1rem;
+    padding-top: 90px; /* Adjusted to prevent header overlap without excessive whitespace */
+  }
+  
+  .memories-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .memories-header h1 {
+    font-size: 2.5rem;
+    color: var(--royal-gold);
+    margin-bottom: 0.5rem;
+  }
+
+  .memories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .memory-item {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background: #fff;
+  }
+
+  .memory-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .memory-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 768px) {
+    .memories-header h1 {
+      font-size: 2rem;
+    }
+    .memories-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+</style>
+
+
+  <main>
+    <section class="memories-container">
+      <div class="memories-header">
+        <h1 class="lang-en">Memories & Notable Personalities</h1>
+        <h1 class="lang-mr">स्मृती आणि उल्लेखनीय व्यक्ती</h1>
+      </div>
+
+      <div class="memories-grid">
+        <div class="memory-item">
+          <img src="/images/media_1787903516642.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787903548445.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787903567894.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787903604523.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787903636962.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787906595052.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787906588315.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787906539539.jpg" alt="Notable Personality">
+        </div>
+        <div class="memory-item">
+          <img src="/images/media_1787906519879.jpg" alt="Notable Personality">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('partials/footer') %>

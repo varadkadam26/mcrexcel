@@ -17,13 +17,13 @@
     
     <div style="display: flex; flex-direction: column; gap: 2rem;">
       <% scheduleData.forEach(evt => { %>
-        <div class="card-temple reveal-on-scroll" style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
-          <div style="background: var(--temple-maroon); color: var(--gold-soft); padding: 1.5rem 2rem; border-radius: var(--radius-md); text-align: center; min-width: 140px; border: 2px solid var(--royal-gold);">
+        <div class="card-temple reveal-on-scroll schedule-card">
+          <div class="schedule-date-box">
             <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase;" data-i18n="label_day">दिवस</span>
             <h2 style="font-size: 2.5rem; color: var(--gold-soft); margin: 0; line-height: 1;"><%= evt.day %></h2>
           </div>
 
-          <div style="flex: 1;">
+          <div class="schedule-details">
             <span style="font-size: 0.8rem; font-weight: 800; color: var(--primary-saffron); text-transform: uppercase; background: var(--saffron-light); padding: 3px 10px; border-radius: 4px;">
               <span class="lang-en"><%= evt.dateEn %></span>
               <span class="lang-mr"><%= evt.dateMr %></span>
@@ -39,7 +39,7 @@
               <span class="lang-mr"><%= evt.halt_locationMr %></span>
             </p>
 
-            <div style="display: flex; gap: 0.6rem; flex-wrap: wrap;">
+            <div class="schedule-tags">
               <% evt.facilitiesEn.forEach((fac, idx) => { %>
                 <span style="font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 4px 12px; border-radius: var(--radius-full); font-weight: 600;">
                   <span class="lang-en"><%= fac %></span>

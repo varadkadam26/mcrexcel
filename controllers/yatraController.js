@@ -4,38 +4,38 @@ const db = require('../config/db');
 const scheduleData = [
   {
     day: 1,
-    titleMr: 'पाद्यपूजन व मंडळ संकल्प सोहळा',
-    titleEn: 'Padya Pujan & Mandal Sankalp Sohala',
-    dateMr: 'दिवस १ (गणेशोत्सव काऊंटडाऊन)',
-    dateEn: 'Day 1 (Ganeshotsav Countdown)',
-    halt_locationMr: 'बीआयटी चाळ मध्यवर्ती मैदान, मुंबई सेंट्रल',
-    halt_locationEn: 'BIT Chawl Central Ground, Mumbai Central',
-    facilitiesMr: ['वेदिक मंत्र पठण', 'पुष्प कमान सजावट', 'मोदक प्रसाद वाटप'],
-    facilitiesEn: ['Vedic Mantra Chanting', 'Floral Arch Decoration', 'Modak Prasad Distribution'],
-    emergency_contact: '+91 98765 11111'
-  },
-  {
-    day: 2,
-    titleMr: 'भव्य आगमन सोहळा',
-    titleEn: 'Grand Aagman Sohala (Arrival Procession)',
-    dateMr: 'दिवस २ (आगमन दिवस)',
-    dateEn: 'Day 2 (Aagman Day)',
-    halt_locationMr: 'बेलासिस रोड ते बीआयटी चाळ मंडप',
-    halt_locationEn: 'Belasis Road to BIT Chawl Mandap',
-    facilitiesMr: ['नाशिक ढोल व ताशा पथक', 'गुलाल व पुष्पवृष्टी', 'सुरक्षा व गर्दी नियंत्रण'],
-    facilitiesEn: ['Nashik Dhol & Tasha Pathak', 'Gulal & Flower Rain', 'Security & Crowd Assistance'],
-    emergency_contact: '+91 98765 22222'
-  },
-  {
-    day: 3,
     titleMr: 'प्रतिष्ठापना व प्रथम महाआरती',
     titleEn: 'Pratishthapana & First Maha Aarti',
-    dateMr: 'दिवस ३ (गणेश चतुर्थी)',
-    dateEn: 'Day 3 (Ganesh Chaturthi)',
+    dateMr: 'दिवस १ (गणेश चतुर्थी)',
+    dateEn: 'Day 1 (Ganesh Chaturthi)',
     halt_locationMr: 'मुंबई सेंट्रलचा राजा राजेशाही मंडप',
     halt_locationEn: 'Mumbai Central Cha Raja Royal Mandap',
     facilitiesMr: ['सकाळी ८:०० वाजता आरती', 'सामान्य दर्शन रांग', 'संध्याकाळी ८:०० वाजता महाआरती'],
     facilitiesEn: ['Morning 8:00 AM Aarti', 'General Darshan Queue', 'Evening 8:00 PM Maha Aarti'],
+    emergency_contact: '+91 98765 11111'
+  },
+  {
+    day: 2,
+    titleMr: 'लहान मुलांची चित्रकला स्पर्धा',
+    titleEn: 'Kids Drawing Competition',
+    dateMr: 'दिवस २',
+    dateEn: 'Day 2',
+    halt_locationMr: 'बीआयटी चाळ समाज मंदिर',
+    halt_locationEn: 'BIT Chawl Samaj Mandir',
+    facilitiesMr: ['रंग आणि कागद उपलब्ध', 'बक्षीस वितरण', 'अल्पोपहार'],
+    facilitiesEn: ['Colors & Paper Provided', 'Prize Distribution', 'Refreshments'],
+    emergency_contact: '+91 98765 22222'
+  },
+  {
+    day: 3,
+    titleMr: 'व्हिडिओ निर्मिती स्पर्धा',
+    titleEn: 'Reel / Video Competition',
+    dateMr: 'दिवस ३',
+    dateEn: 'Day 3',
+    halt_locationMr: 'ऑनलाईन आणि मंडप परिसर',
+    halt_locationEn: 'Online & Mandap Premises',
+    facilitiesMr: ['उत्कृष्ट व्हिडिओसाठी बक्षीस', 'सोशल मीडिया कव्हरेज', 'विशेष प्रमाणपत्र'],
+    facilitiesEn: ['Prizes for Best Video', 'Social Media Coverage', 'Special Certificate'],
     emergency_contact: '+91 98765 33333'
   },
   {
@@ -113,7 +113,7 @@ const scheduleData = [
   {
     day: 10,
     titleMr: 'अनंत चतुर्दशी उत्तरपूजा व विसर्जन मिरवणूक',
-    titleEn: 'Anant Chaturdashi Uttarpuja & Visarjan Miravand',
+    titleEn: 'Anant Chaturdashi Uttarpuja & Visarjan Miravnuk',
     dateMr: 'दिवस १० (भव्य निरोप)',
     dateEn: 'Day 10 (Grand Farewell)',
     halt_locationMr: 'मुंबई सेंट्रल ते गिरगाव चौपाटी',
@@ -297,8 +297,8 @@ const glimpsesData = [
 const socialWorkData = [
   {
     id: 'social-1',
-    titleMr: 'शैक्षणिक मदत व शालेय साहित्य वाटप',
-    titleEn: 'Educational Aid & School Supplies',
+    titleMr: 'शैक्षणिक मदत',
+    titleEn: 'Educational Aid',
     categoryMr: 'शैक्षणिक मदत',
     categoryEn: 'Educational Aid',
     image: '/images/social_1.png',
@@ -307,8 +307,8 @@ const socialWorkData = [
   },
   {
     id: 'social-2',
-    titleMr: 'रुग्णवाहिका सेवा व वैद्यकीय मदत',
-    titleEn: 'Ambulance & Medical Aid',
+    titleMr: 'वैद्यकीय मदत',
+    titleEn: 'Medical Aid',
     categoryMr: 'वैद्यकीय',
     categoryEn: 'Medical',
     image: '/images/social_2.png',
@@ -317,8 +317,8 @@ const socialWorkData = [
   },
   {
     id: 'social-3',
-    titleMr: 'कोविड-१९ मदत व अन्नदान',
-    titleEn: 'COVID-19 Relief & Aid',
+    titleMr: 'कोविड-१९ मदत',
+    titleEn: 'COVID-19 Relief',
     categoryMr: 'आरोग्य',
     categoryEn: 'Healthcare',
     image: '/images/social_3.png',
@@ -327,8 +327,8 @@ const socialWorkData = [
   },
   {
     id: 'social-4',
-    titleMr: 'मोफत आरोग्य तपासणी शिबीर',
-    titleEn: 'Free Health Checkup Camp',
+    titleMr: 'आरोग्य तपासणी',
+    titleEn: 'Health Checkup Camp',
     categoryMr: 'आरोग्य',
     categoryEn: 'Healthcare',
     image: '/images/social_4.png',
@@ -337,7 +337,7 @@ const socialWorkData = [
   },
   {
     id: 'social-5',
-    titleMr: 'संस्थांना आर्थिक व साहित्याची मदत',
+    titleMr: 'संस्थांना मदत',
     titleEn: 'Support to Institutes',
     categoryMr: 'सामाजिक कार्य',
     categoryEn: 'Social Impact',

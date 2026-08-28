@@ -617,7 +617,7 @@ section {
   }
   .page-hero-banner h1 {
     font-size: clamp(1.05rem, 4.5vw, 1.4rem) !important;
-    white-space: nowrap !important;
+    white-space: normal !important;
   }
   .page-hero-banner p {
     font-size: clamp(0.75rem, 3.2vw, 0.88rem) !important;
@@ -1726,10 +1726,14 @@ section {
 }
 
 @media (max-width: 992px) {
-
   .magazine-row,
   .magazine-row:nth-child(even) {
     grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .magazine-row .magazine-img-frame {
+    margin: 0 auto;
   }
 
   .magazine-row:nth-child(even) .magazine-img-frame {
@@ -3072,3 +3076,104 @@ section {
    ========================================================================== */
 html[data-lang="en"] .lang-mr, body[data-lang="en"] .lang-mr { display: none !important; }
 html[data-lang="mr"] .lang-en, body[data-lang="mr"] .lang-en { display: none !important; }
+/* Contact Info Box Responsiveness */
+.contact-info-box {
+  background: #FFFFFF;
+  border: 2px solid var(--border-gold);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-box-title {
+  color: var(--temple-maroon);
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.contact-social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.contact-social-links .btn {
+  font-size: 0.85rem;
+  flex: 1 1 140px;
+  text-align: center;
+  justify-content: center;
+}
+
+@media (max-width: 576px) {
+  .contact-info-box {
+    padding: 1.2rem;
+  }
+  .contact-box-title {
+    font-size: 1.3rem;
+  }
+}
+
+
+/* About Page Responsiveness */
+@media (max-width: 768px) {
+  .page-hero-banner h1, .page-hero-banner p {
+    text-align: center !important;
+  }
+  .about-content-box {
+    text-align: center !important;
+  }
+  .about-content-box h2 {
+    border-left: none !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+}
+
+
+/* Schedule Page Responsiveness */
+.schedule-card {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.schedule-date-box {
+  background: var(--temple-maroon);
+  color: var(--gold-soft);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  min-width: 140px;
+  border: 2px solid var(--royal-gold);
+}
+.schedule-details {
+  flex: 1;
+}
+.schedule-tags {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .schedule-card {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 1.5rem !important;
+  }
+  .schedule-details {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .schedule-tags {
+    justify-content: center !important;
+  }
+  .schedule-date-box {
+    width: 100% !important;
+    padding: 1rem !important;
+  }
+}
+

@@ -110,9 +110,9 @@ const translations = {
     // Location & Contact
     location_tag: "MANDAP LOCATION & CONTACT",
     location_title: "Mandap Darshan Location & Map",
-    location_sub: "Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl, Mumbai Central (East), Mumbai - 400008",
+    location_sub: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     contact_box_title: "Contact Information",
-    contact_address: "Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl, Mumbai Central (East), Mumbai - 400008",
+    contact_address: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     contact_reg: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
     visitor_count_label: "Total Devotee Visits:",
 
@@ -139,7 +139,7 @@ const translations = {
     footer_col_links: "Quick Links",
     footer_col_initiatives: "Initiatives & Donation",
     footer_col_location: "Mandap Location & Map",
-    footer_address: "Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl, Mumbai Central (East), Mumbai - 400008",
+    footer_address: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     footer_reg_tax: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
     footer_desc: "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Dedicated to preserving Maharashtrian heritage and serving humanity.",
     footer_copyright: "© Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
@@ -159,9 +159,9 @@ const translations = {
     // Location & Contact
     location_tag: "MANDAP LOCATION & CONTACT",
     location_title: "Mandap Darshan Location & Map",
-    location_sub: "Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl, Mumbai Central (East), Mumbai - 400008",
+    location_sub: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     contact_box_title: "Contact Information",
-    contact_address: "Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl, Mumbai Central (East), Mumbai - 400008",
+    contact_address: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     contact_reg: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
 
     // Social Work section
@@ -317,9 +317,9 @@ const translations = {
     // Location & Contact
     location_tag: "मंडप स्थान व संपर्क",
     location_title: "मंडप दर्शन स्थान व नकाशा",
-    location_sub: "गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.",
+    location_sub: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
-    contact_address: "गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.",
+    contact_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
     visitor_count_label: "एकूण दर्शनार्थी भेट :",
 
@@ -346,7 +346,7 @@ const translations = {
     footer_col_links: "मुख्य दुवे",
     footer_col_initiatives: "उपक्रम व देणगी",
     footer_col_location: "मंडप स्थान व नकाशा",
-    footer_address: "गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.",
+    footer_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     footer_reg_tax: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
     footer_desc: "बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९२९). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
     footer_copyright: "© बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
@@ -366,9 +366,9 @@ const translations = {
     // Location & Contact
     location_tag: "मंडप स्थान व संपर्क",
     location_title: "मंडप दर्शन स्थान व नकाशा",
-    location_sub: "गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.",
+    location_sub: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
-    contact_address: "गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.",
+    contact_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
 
     // Social Work section

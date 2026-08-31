@@ -97,8 +97,8 @@ function getJsonLdSchemas(siteUrl, pageKey = 'home') {
     'identifier': 'A/3141/Mumbai/77',
     'address': {
       '@type': 'PostalAddress',
-      'streetAddress': 'Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road, B.I.T. Chawl',
-      'addressLocality': 'Mumbai Central (East), Mumbai',
+      'streetAddress': 'BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh',
+      'addressLocality': 'Mumbai',
       'addressRegion': 'Maharashtra',
       'postalCode': '400008',
       'addressCountry': 'IN'
@@ -126,8 +126,8 @@ function getJsonLdSchemas(siteUrl, pageKey = 'home') {
       'name': 'Mumbai Central Cha Raja Mandap',
       'address': {
         '@type': 'PostalAddress',
-        'streetAddress': 'Ganesh Shed, In front of B.I.T. Chawl No. 10, Keshavrao Khadye Marg, Belasis Road',
-        'addressLocality': 'Mumbai Central (East), Mumbai',
+        'streetAddress': 'BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh',
+        'addressLocality': 'Mumbai',
         'postalCode': '400008',
         'addressCountry': 'IN'
       },

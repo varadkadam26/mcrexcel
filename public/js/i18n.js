@@ -141,8 +141,8 @@ const translations = {
     footer_col_location: "Mandap Location & Map",
     footer_address: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal, Mumbai Central Cha Raja Sabhagruh, Mumbai - 400008",
     footer_reg_tax: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
-    footer_desc: "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Dedicated to preserving Maharashtrian heritage and serving humanity.",
-    footer_copyright: "© Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
+    footer_desc: "BIT Chawl, Belasis Road Sarvajanik Shree Ganeshotsav Mandal (Est. 1929). Dedicated to preserving Maharashtrian heritage and serving humanity.",
+    footer_copyright: "© BIT Chawl, Belasis Road Sarvajanik Shree Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
 
     // Scroll Info Popup
     scroll_popup_badge: "Live Updates",
@@ -348,8 +348,8 @@ const translations = {
     footer_col_location: "मंडप स्थान व नकाशा",
     footer_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     footer_reg_tax: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
-    footer_desc: "बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९२९). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
-    footer_copyright: "© बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
+    footer_desc: "बी.आय.टी. चाळ, बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९२९). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
+    footer_copyright: "© बी.आय.टी. चाळ, बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
 
     // Scroll Info Popup
     scroll_popup_badge: "ताजी माहिती",

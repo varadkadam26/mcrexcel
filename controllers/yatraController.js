@@ -319,16 +319,6 @@ const socialWorkData = [
     descEn: 'Providing free ambulance services and urgent medical aid to the needy patients.'
   },
   {
-    id: 'social-3',
-    titleMr: 'कोविड-१९ मदत',
-    titleEn: 'COVID-19 Relief',
-    categoryMr: 'आरोग्य',
-    categoryEn: 'Healthcare',
-    image: '/images/social_3.png',
-    descMr: 'कोविड-१९ महामारीच्या कठीण काळात गरजूंना वैद्यकीय मदत, औषधे आणि जीवनावश्यक वस्तूंचे वाटप.',
-    descEn: 'Providing medical assistance, medicines, and essential supplies to the needy during the challenging times of the COVID-19 pandemic.'
-  },
-  {
     id: 'social-4',
     titleMr: 'आरोग्य तपासणी',
     titleEn: 'Health Checkup Camp',

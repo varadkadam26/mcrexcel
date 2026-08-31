@@ -252,26 +252,22 @@
           }
         </style>
         <div class="stat-counter-card border-beam-panel" style="position: relative; z-index: 1;">
-          <div class="stat-num-value" style="display: flex; justify-content: center; align-items: center; min-height: 80px; perspective: 800px;">
-            <img id="marathi-98-img" src="/images/98_marathi.png" alt="98 Years" style="height: 90px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));">
+          <div class="globe-3d-wrapper">
+            <div class="globe-3d-sphere">
+              <div class="globe-ring ring-lat-1"></div>
+              <div class="globe-ring ring-lat-2"></div>
+              <div class="globe-ring ring-long-1"></div>
+              <div class="globe-ring ring-long-2"></div>
+              <div class="globe-ring ring-long-3"></div>
+              <div class="globe-ring ring-equator"></div>
+            </div>
+            <div class="globe-center-content">
+              <span class="golden-98-text lang-en">98</span>
+              <img id="marathi-98-img" class="lang-mr" src="/images/98_marathi.png" alt="९८ वर्षे" style="height: 80px; width: auto; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(255,215,0,0.6));">
+            </div>
           </div>
           <div class="stat-label-text" data-i18n="stat_service_label">Years of Continuous Service</div>
         </div>
-        
-        <!-- Anime.js 3D Animation Script -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-        <script>
-          document.addEventListener('DOMContentLoaded', () => {
-            // Smooth growing and shrinking animation
-            anime({
-              targets: '#marathi-98-img',
-              scale: [1, 1.25, 1], // visible growing and shrinking
-              duration: 3000,
-              loop: true,
-              easing: 'easeInOutSine'
-            });
-          });
-        </script>
         <div class="stat-counter-card">
           <div class="stat-num-value" data-target="100000" data-suffix="+">100,000+</div>
           <div class="stat-label-text" data-i18n="stat_visitors_label">Annual Visiting Devotees</div>

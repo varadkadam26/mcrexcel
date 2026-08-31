@@ -1358,6 +1358,124 @@ section {
   }
 }
 
+/* ==========================================================================
+   3D ROTATING GOLDEN GLOBE STAT (98 YEARS SEVA)
+   ========================================================================== */
+.globe-3d-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.globe-3d-sphere {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  animation: rotate3dGlobe 14s linear infinite;
+}
+
+.globe-3d-wrapper:hover .globe-3d-sphere {
+  animation-duration: 5s;
+}
+
+@keyframes rotate3dGlobe {
+  0% {
+    transform: rotateX(15deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(15deg) rotateY(360deg);
+  }
+}
+
+.globe-ring {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212, 175, 55, 0.75);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.35), inset 0 0 10px rgba(255, 215, 0, 0.25);
+  pointer-events: none;
+}
+
+.ring-lat-1 {
+  width: 130px;
+  height: 130px;
+  transform: rotateX(0deg);
+}
+
+.ring-lat-2 {
+  width: 130px;
+  height: 130px;
+  transform: rotateX(60deg);
+}
+
+.ring-long-1 {
+  width: 130px;
+  height: 130px;
+  transform: rotateY(45deg);
+}
+
+.ring-long-2 {
+  width: 130px;
+  height: 130px;
+  transform: rotateY(90deg);
+}
+
+.ring-long-3 {
+  width: 130px;
+  height: 130px;
+  transform: rotateY(135deg);
+}
+
+.ring-equator {
+  width: 130px;
+  height: 130px;
+  transform: rotateX(90deg);
+  border-style: dashed;
+  border-color: #FFD700;
+}
+
+.globe-center-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulseGlobe98 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulseGlobe98 {
+  0% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.golden-98-text {
+  font-family: 'Cinzel', 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #FFF6D6 0%, #FFD700 35%, #D4AF37 70%, #996515 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+  letter-spacing: -2px;
+}
+
 .gold-motion-frame {
   position: relative;
   border: 2px solid var(--royal-gold);

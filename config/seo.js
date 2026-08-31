@@ -104,7 +104,7 @@ function getJsonLdSchemas(siteUrl, pageKey = 'home') {
       'addressCountry': 'IN'
     },
     'telephone': ['+917666695958', '+919967638687'],
-    'email': 'mumbaicentralcharajaofficial@gmail.com',
+    'email': 'mumbaicentralcharaja@gmail.com',
     'sameAs': [
       'https://www.instagram.com/mumbaicentralcharajaofficial',
       'https://www.youtube.com/channel/UCrijB5WpQhGLfWQT1WSySNg',

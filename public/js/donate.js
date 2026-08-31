@@ -94,16 +94,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const phone = document.getElementById('phone').value.trim();
     const email = document.getElementById('email').value.trim();
     const amount = amountInput.value.trim();
-    const category = document.getElementById('category').value;
-    const panNumber = document.getElementById('pan_number').value.trim();
+    const panEl = document.getElementById('pan_number');
+    const panNumber = panEl ? panEl.value.trim() : '';
 
     if (!donorName || !phone || !amount || parseFloat(amount) <= 0) {
       alert('कृपया तुमचे नाव, मोबाईल नंबर आणि वैध रक्कम प्रविष्ट करा.');
       return;
-    }
-
-    if (parseFloat(amount) >= 2000 && !panNumber) {
-      alert('२००० रुपयांपेक्षा जास्त देणगीसाठी ८०जी कर सवलतीकरिता पॅन कार्ड आवश्यक आहे.');
     }
 
     // Prepare Donation Payload

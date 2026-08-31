@@ -92,16 +92,8 @@
             </div>
           </div>
 
-          <!-- PAN Card (Optional for 80G) -->
-          <div style="margin-bottom: 2rem;">
-            <label
-              style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);"
-              data-i18n="lbl_pan">
-              पॅन कार्ड नंबर (८०जी कर सवलत पावतीसाठी)
-            </label>
-            <input type="text" id="donorPan" placeholder="उदा. ABCDE1234F" data-i18n="ph_pan"
-              style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem; text-transform: uppercase;">
-          </div>
+          <!-- PAN Card (Hidden) -->
+          <input type="hidden" id="donorPan" value="">
 
           <button type="submit" class="btn btn-primary"
             style="width: 100%; padding: 1rem; font-size: clamp(0.9rem, 3.5vw, 1.1rem); font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="btnDonateSubmit">

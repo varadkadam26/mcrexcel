@@ -319,6 +319,16 @@ const socialWorkData = [
     descEn: 'Providing free ambulance services and urgent medical aid to the needy patients.'
   },
   {
+    id: 'social-3',
+    titleMr: 'रक्तदान शिबीर',
+    titleEn: 'Blood Donation Camp',
+    categoryMr: 'आरोग्य',
+    categoryEn: 'Healthcare',
+    image: '/images/social_blood_donation.jpg',
+    descMr: 'भारतीय नौदलाच्या INHS अश्विनी हॉस्पिटल, कुलाबा मुंबई यांच्या सहकार्याने मंडळातर्फे दरवर्षी भव्य रक्तदान शिबीर आयोजित केले जाते.',
+    descEn: 'Grand Blood Donation Camp organized annually in collaboration with INHS Asvini Hospital, Indian Navy, Colaba Mumbai.'
+  },
+  {
     id: 'social-4',
     titleMr: 'आरोग्य तपासणी',
     titleEn: 'Health Checkup Camp',

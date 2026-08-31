@@ -10,8 +10,8 @@ const translations = {
     // Header & Meta
     est_label: "Est. Year: 1929",
     reg_label: "Reg No: A/3141/Mumbai/77",
-    mandal_full_title: "BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav",
-    mandal_name_header: "Mumbai Central Cha Raja",
+    mandal_full_title: "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal, Mumbai",
+    mandal_name_header: "BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav",
     mandal_sub_header: "Sarvajanik Shri Ganeshotsav Mandal",
 
     // Navigation
@@ -216,8 +216,8 @@ const translations = {
     // Header & Meta
     est_label: "स्थापना : १९२९",
     reg_label: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७)",
-    mandal_full_title: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेश उत्सव",
-    mandal_name_header: "मुंबई सेंट्रलचा राजा",
+    mandal_full_title: "बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई",
+    mandal_name_header: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेश उत्सव",
     mandal_sub_header: "सार्वजनिक श्री गणेशोत्सव मंडळ",
 
     // Navigation

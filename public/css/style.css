@@ -1469,10 +1469,10 @@ section {
   font-size: 3.8rem;
   font-weight: 900;
   line-height: 1;
-  background: linear-gradient(135deg, #FFF6D6 0%, #FFD700 35%, #D4AF37 70%, #996515 100%);
+  background: linear-gradient(135deg, #ff4d4d 0%, #cc0000 35%, #8b0000 70%, #5c0000 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(255, 215, 0, 0.6));
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4)) drop-shadow(0 0 15px rgba(139, 0, 0, 0.5));
   letter-spacing: -2px;
 }
 

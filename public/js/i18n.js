@@ -47,7 +47,7 @@ const translations = {
     // President Message & Counters
     pres_badge: "President & Executive Message",
     pres_title: "Warm Welcome & Divine Blessings",
-    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal. Serving society with faith, culture, and unity since 1929.",
+    pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav. Serving society with faith, culture, and unity since 1929.",
     pres_quote: '"Faith, service, and social commitment are the core pillars of Mumbai Central Cha Raja Mandal."',
     pres_name: "Mr. Murari Pradip Tawde",
     pres_role: "President, BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav",
@@ -256,7 +256,7 @@ const translations = {
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",
     pres_title: "हार्दिक स्वागत व श्रींचे आशीर्वाद",
-    pres_desc: "मुंबई सेंट्रलचा राजा, बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळाच्या अधिकृत डिजिटल मंदिर पोर्टलवर आपले हार्दिक स्वागत.",
+    pres_desc: "मुंबई सेंट्रलचा राजा, बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेश उत्सव मंडळाच्या अधिकृत डिजिटल मंदिर पोर्टलवर आपले हार्दिक स्वागत.",
     pres_quote: '"भक्ती, सेवा आणि सामाजिक बांधिलकी हेच मंडळाचे मुख्य आधारस्तंभ आहेत."',
     pres_name: "श्री. मुरारी प्रदीप तावडे",
     pres_role: "अध्यक्ष, बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेश उत्सव",

@@ -1,22 +1,20 @@
-# 🚩 Shri Saileela Palkhi Pilgrimage & Management Portal
+# 🚩 Mumbai Central Cha Raja - Official Portal
 
-A full-featured, executive web application for **Shri Saileela Palkhi Sohala & Devotee Seva Trust** (Reg No: A/3141/Mumbai/77). 
+A full-featured, executive web application for **Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal** (Reg No: A/3141/Mumbai/77). 
 
-Built to handle digital pilgrim registration, live GPS/yatra tracking, Razorpay donation handling with instant 80G tax benefit PDF receipts, Twilio SMS alerts, and an executive Admin Management Control Panel.
+Built to handle digital temple portal, 24/7 live darshan, Razorpay donation handling with instant 80G tax benefit PDF receipts, Nodemailer SMTP email alerts, Google Sheets & Drive automated log management, and an executive Admin Management Control Panel.
 
 ---
 
 ## 🌟 Key Features
 
-- **Devotee Gate Pass Registration**: Multi-step registration wizard generating unique pilgrim pass codes (`SLP-2026-XXXX`).
-- **Instant Downloadable PDF Passes (`PDFKit`)**: QR-coded official gate passes with verified ID details and emergency contact info.
-- **Pass Verification Portal**: Instant online lookup for devotees and trust security officers.
-- **Online Seva & Annadan Hub (`Razorpay`)**: Preset and custom donation options supporting Mahaprasad, Medical Camps, and Chariot Seva.
+- **24/7 Live Aarti & Darshan**: Immersive digital temple experience for global devotees.
+- **Online Seva & Donation Hub (`Razorpay`)**: Preset and custom donation options supporting Medical Camps, Blood Donation, and Mandap Seva.
 - **80G Tax Exemption Receipts (`PDFKit`)**: Automated PDF receipt generation containing 80G tax deduction details.
-- **Live Yatra Route Tracker & Timeline**: 11-day detailed itinerary (Mumbai to Shirdi, 265 KM) featuring live halt location, distance covered, and meals served.
-- **Twilio SMS Notifications**: Automated SMS dispatch for pass confirmations and broadcast announcements.
-- **Executive Admin Control Panel (`/admin`)**: Real-time metrics dashboard, gate scanner simulator, SMS broadcaster, and data tables.
-- **Flexible Database Architecture**: MySQL connection with automatic schema creation and a seamless fallback data store.
+- **Official T-Shirt Store & Pickup Tokens**: Seamless merchandise booking with downloadable PDF pickup tokens.
+- **Google Sheets Automated Log Management**: Real-time logging of Donations, Contact Inquiries, and T-Shirt Bookings via Google Sheets API.
+- **Nodemailer SMTP Email Alerts**: Instant email notifications for contact inquiries sent to Mandal executive mailbox.
+- **Executive Admin Control Panel (`/admin`)**: Real-time metrics dashboard, log viewer, and data tables.
 
 ---
 
@@ -24,12 +22,12 @@ Built to handle digital pilgrim registration, live GPS/yatra tracking, Razorpay 
 
 - **Backend Framework**: Node.js & Express.js
 - **Template Engine**: EJS (Embedded JavaScript)
-- **Database**: MySQL2 (with fallback data store for offline demo)
+- **Database**: MySQL2 (with fallback data store)
 - **Payment Gateway**: Razorpay SDK
-- **SMS & Alerts**: Twilio API
+- **Google Integration**: Google Sheets & Drive API (`googleapis`)
+- **Email Service**: Nodemailer SMTP
 - **PDF Generation**: PDFKit
-- **Background Tasks**: Node-cron
-- **Styling**: Vanilla CSS3 (Custom formal design system, Google Fonts Outfit & Inter)
+- **Styling**: Vanilla CSS3 (Custom formal design system, Google Fonts)
 
 ---
 

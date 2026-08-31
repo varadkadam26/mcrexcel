@@ -1,6 +1,6 @@
 const db = require('../config/db');
 const razorpay = require('../config/razorpay');
-const twilio = require('../config/twilio');
+const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
 
 module.exports = {
@@ -69,6 +69,9 @@ module.exports = {
 
       const createdOrder = await db.createTshirtOrder(orderData);
       db.addLog('MERCHANDISE', `New T-Shirt Order: ₹${createdOrder.total_amount} (${createdOrder.size} - ${createdOrder.color}) from ${createdOrder.buyer_name}`);
+
+      // Log to Google Sheets
+      googleSheets.appendTshirtBooking(createdOrder).catch(err => console.error('GSheets Tshirt Log Error:', err.message));
 
       res.json({
         success: true,

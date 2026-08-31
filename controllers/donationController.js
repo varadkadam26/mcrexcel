@@ -1,6 +1,6 @@
 const db = require('../config/db');
 const razorpay = require('../config/razorpay');
-const twilio = require('../config/twilio');
+const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
 
 module.exports = {
@@ -68,8 +68,8 @@ module.exports = {
       const createdDonation = await db.createDonation(donationData);
       db.addLog('DONATION', `New Donation received: ₹${createdDonation.amount} from ${createdDonation.donor_name}`);
 
-      // Dispatch SMS notification via Twilio
-      twilio.sendDonationReceiptSMS(createdDonation).catch(err => console.error('Donation SMS error:', err));
+      // Log to Google Sheets
+      googleSheets.appendDonation(createdDonation).catch(err => console.error('GSheets Donation Log Error:', err.message));
 
       res.json({
         success: true,

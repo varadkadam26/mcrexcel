@@ -1,23 +1,23 @@
 {
-  "name": "saileela-palkhi",
+  "name": "mcrexcel",
   "version": "1.0.0",
-  "description": "Shri Saileela Palkhi Pilgrimage & Management Web Application",
+  "description": "Mumbai Central Cha Raja - Belasis Road B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal Web Portal",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
   },
   "keywords": [
-    "saileela",
-    "palkhi",
+    "mumbaicentralcharaja",
+    "ganeshotsav",
     "express",
     "ejs",
-    "pilgrimage",
     "razorpay",
     "pdfkit",
-    "twilio"
+    "nodemailer",
+    "googleapis"
   ],
-  "author": "Sai Leela Seva Trust",
+  "author": "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal",
   "license": "ISC",
   "dependencies": {
     "animejs": "^4.5.0",
@@ -25,11 +25,12 @@
     "ejs": "^3.1.10",
     "exceljs": "^4.4.0",
     "express": "^4.19.2",
+    "googleapis": "^176.0.0",
     "multer": "^2.2.0",
     "mysql2": "^3.10.0",
     "node-cron": "^3.0.3",
+    "nodemailer": "^9.0.6",
     "pdfkit": "^0.15.0",
-    "razorpay": "^2.9.4",
-    "twilio": "^5.1.0"
+    "razorpay": "^2.9.4"
   }
 }

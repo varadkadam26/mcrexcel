@@ -36,6 +36,7 @@ router.get('/contact', (req, res) => {
     activeTab: 'contact'
   });
 });
+router.post('/api/contact', yatraController.submitContactForm);
 
 // Official T-Shirt Booking Routes (Renamed from Tshirt Store)
 router.get('/tshirt', tshirtController.renderTshirtPage);

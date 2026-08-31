@@ -1,4 +1,6 @@
 const db = require('../config/db');
+const googleSheets = require('../config/googleSheets');
+const mailer = require('../config/mailer');
 
 // Ganeshotsav Event Schedule Data for Mumbai Central Cha Raja
 const scheduleData = [
@@ -533,5 +535,33 @@ module.exports = {
   getLiveStatusApi(req, res) {
     const status = db.getYatraStatus();
     res.json({ success: true, status });
+  },
+
+  // Submit Contact Form Inquiry & Log to Google Sheets
+  async submitContactForm(req, res) {
+    try {
+      const { name, contact, message, mandal } = req.body;
+      if (!name || !contact || !message) {
+        return res.status(400).json({ success: false, message: 'Missing required contact fields.' });
+      }
+
+      const isEmail = String(contact).includes('@');
+      const contactData = {
+        name: String(name).trim(),
+        email: isEmail ? String(contact).trim() : '',
+        phone: isEmail ? '' : String(contact).trim(),
+        mandal: mandal || 'Mumbai Central',
+        message: String(message).trim()
+      };
+
+      db.addLog('INQUIRY', `New Contact Inquiry: ${contactData.name} (${contactData.phone || contactData.email})`);
+      googleSheets.appendContact(contactData).catch(err => console.error('GSheets Contact Log Error:', err.message));
+      mailer.sendContactEmail(contactData).catch(err => console.error('SMTP Contact Email Error:', err.message));
+
+      res.json({ success: true, message: 'Message successfully sent to Mandal!' });
+    } catch (err) {
+      console.error('Submit contact form error:', err);
+      res.status(500).json({ success: false, message: 'Failed to submit contact message.' });
+    }
   }
 };

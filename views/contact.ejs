@@ -35,20 +35,32 @@
             <span class="lang-mr">मण्डप व मुख्य कार्यालय पत्ता</span>
           </h4>
           <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;" data-i18n="footer_address">
-            मुंबई सेंट्रलचा राजा सभागृह, बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई - ४००००८.
+            गणेश शेड, बी. आय. टी. चाळ नं. १० समोर, केशवराव खाडये मार्ग, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पूर्व), मुंबई - ४००००८.
           </p>
         </div>
 
         <div style="margin-bottom: 1.8rem;">
-          <h4 style="color: var(--primary-saffron); font-size: 1.05rem; margin-bottom: 0.4rem;">
+          <h4 style="color: var(--primary-saffron); font-size: 1.05rem; margin-bottom: 0.6rem;">
             <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>
-            <span class="lang-en">Emergency & Help Desk</span>
-            <span class="lang-mr">आपत्कालीन व मदत केंद्र</span>
+            <span class="lang-en">Mandal Contact Numbers</span>
+            <span class="lang-mr">मंडळ संपर्क क्रमांक</span>
           </h4>
-          <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;">
-            फोन: +९१ ९८२०० १११११ / +९१ ९८२०० २२२२२<br>
-            व्हॉट्सॲप हेल्पलाईन: +९१ ९८२०० ३३३३३
-          </p>
+          <div style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">
+            <div style="margin-bottom: 0.6rem;">
+              <strong style="color: var(--temple-maroon);">
+                <span class="lang-en">1) Shri Murari Pradip Tawde (President):</span>
+                <span class="lang-mr">१) श्री. मुरारी प्रदीप तावडे (अध्यक्ष):</span>
+              </strong><br>
+              <a href="tel:+917666695958" style="color: var(--primary-saffron); font-weight: 700; text-decoration: none;">+91 76666 95958</a>
+            </div>
+            <div>
+              <strong style="color: var(--temple-maroon);">
+                <span class="lang-en">2) Shri Sameer Sadanand Patil (Publicity Advisor):</span>
+                <span class="lang-mr">२) श्री. समीर सदानंद पाटील (प्रचार-प्रसार सल्लागार):</span>
+              </strong><br>
+              <a href="tel:+919967638687" style="color: var(--primary-saffron); font-weight: 700; text-decoration: none;">+91 99676 38687</a>
+            </div>
+          </div>
         </div>
 
         <div>
@@ -128,10 +140,42 @@
 </section>
 
 <script>
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    alert('तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे! मंडळ प्रतिनिधी लवकरच संपर्क करतील.');
-    document.getElementById('contactForm').reset();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const origText = btn.innerHTML;
+    
+    try {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> संदेश पाठवत आहे...';
+      
+      const payload = {
+        name: document.getElementById('cName').value,
+        contact: document.getElementById('cContact').value,
+        message: document.getElementById('cMessage').value,
+        mandal: 'Mumbai Central'
+      };
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        alert('तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे! मंडळ प्रतिनिधी लवकरच संपर्क करतील.');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('त्रुटी: ' + (data.message || 'संदेश पाठवता आला नाही.'));
+      }
+    } catch(err) {
+      console.error(err);
+      alert('नेटवर्क त्रुटी! कृपया थोड्या वेळाने प्रयत्न करा.');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = origText;
+    }
   });
 </script>
 

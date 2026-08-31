@@ -9,7 +9,7 @@ const translations = {
   en: {
     // Header & Meta
     est_label: "Est. Year: 1929",
-    reg_label: "Reg No: E-3892 Mumbai",
+    reg_label: "Reg No: A/3141/Mumbai/77",
     mandal_full_title: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai",
     mandal_name_header: "Mumbai Central Cha Raja",
     mandal_sub_header: "Sarvajanik Shri Ganeshotsav Mandal",
@@ -113,7 +113,7 @@ const translations = {
     location_sub: "B.I.T Chawl,Belasis Road,Mumbai Central,Mumbai - 400008",
     contact_box_title: "Contact Information",
     contact_address: "B.I.T Chawl,Belasis Road,Mumbai Central,Mumbai - 400008",
-    contact_reg: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
+    contact_reg: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
     visitor_count_label: "Total Devotee Visits:",
 
     // Schedule Page Titles
@@ -140,7 +140,7 @@ const translations = {
     footer_col_initiatives: "Initiatives & Donation",
     footer_col_location: "Mandap Location & Map",
     footer_address: "B.I.T Chawl,Belasis Road,Mumbai Central,Mumbai - 400008",
-    footer_reg_tax: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
+    footer_reg_tax: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
     footer_desc: "B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Dedicated to preserving Maharashtrian heritage and serving humanity.",
     footer_copyright: "© B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal, Mumbai. All Rights Reserved.",
 
@@ -162,7 +162,7 @@ const translations = {
     location_sub: "B.I.T Chawl,Belasis Road,Mumbai Central,Mumbai - 400008",
     contact_box_title: "Contact Information",
     contact_address: "B.I.T Chawl,Belasis Road,Mumbai Central,Mumbai - 400008",
-    contact_reg: "Reg No: E-3892 Mumbai (80G Tax Exempt Certified)",
+    contact_reg: "Reg No: A/3141/Mumbai/77 (80G Tax Exempt Certified)",
 
     // Social Work section
     social_section_tag: "COMMUNITY SERVICES",
@@ -215,7 +215,7 @@ const translations = {
   mr: {
     // Header & Meta
     est_label: "स्थापना : १९२९",
-    reg_label: "नोंदणी क्र. : ई-३८९२ मुंबई",
+    reg_label: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७)",
     mandal_full_title: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई",
     mandal_name_header: "मुंबई सेंट्रलचा राजा",
     mandal_sub_header: "सार्वजनिक श्री गणेशोत्सव मंडळ",
@@ -320,7 +320,7 @@ const translations = {
     location_sub: "प्रोग्रेसिव्ह बिल्डींग अ /३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
     contact_address: "बी.आय.टी चाळ बेलासिस रोड, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
-    contact_reg: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
+    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
     visitor_count_label: "एकूण दर्शनार्थी भेट :",
 
     // Schedule Page Titles
@@ -347,7 +347,7 @@ const translations = {
     footer_col_initiatives: "उपक्रम व देणगी",
     footer_col_location: "मंडप स्थान व नकाशा",
     footer_address: "प्रोग्रेसिव्ह बिल्डींग अ /३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
-    footer_reg_tax: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
+    footer_reg_tax: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
     footer_desc: "बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९२९). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
     footer_copyright: "© बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
 
@@ -369,7 +369,7 @@ const translations = {
     location_sub: "प्रोग्रेसिव्ह बिल्डींग अ/३, बेलासिस रोड, बी.आय.टी. चाळ, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
     contact_address: "बी.आय.टी चाळ बेलासिस रोड, मुंबई सेंट्रल (पु.), मुंबई - ४००००८.",
-    contact_reg: "नोंदणी क्र. : ई-३८९२ मुंबई (८०जी कर सवलत प्राप्त)",
+    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
 
     // Social Work section
     social_section_tag: "समाजोपयोगी उपक्रम",

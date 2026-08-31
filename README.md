@@ -1,6 +1,6 @@
 # 🚩 Shri Saileela Palkhi Pilgrimage & Management Portal
 
-A full-featured, executive web application for **Shri Saileela Palkhi Sohala & Devotee Seva Trust** (Reg No: E-3892/MUM). 
+A full-featured, executive web application for **Shri Saileela Palkhi Sohala & Devotee Seva Trust** (Reg No: A/3141/Mumbai/77). 
 
 Built to handle digital pilgrim registration, live GPS/yatra tracking, Razorpay donation handling with instant 80G tax benefit PDF receipts, Twilio SMS alerts, and an executive Admin Management Control Panel.
 

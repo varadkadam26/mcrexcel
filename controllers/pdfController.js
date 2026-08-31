@@ -15,7 +15,7 @@ module.exports = {
     doc.rect(40, 40, 515, 100).fill('#4A0404');
     doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('B.I.T CHAWL BELASIS ROAD SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
     doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('MUMBAI CENTRAL CHA RAJA (SEC 80G TAX EXEMPT)', 55, 85);
-    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: E-3892/MUM | 80G Approval: CIT(E)/80G/2024-25/A-1029 | @mumbaicentralcharajaofficial', 55, 106);
+    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | 80G Approval: CIT(E)/80G/2024-25/A-1029 | @mumbaicentralcharajaofficial', 55, 106);
 
     // Main Receipt Body
     doc.rect(40, 155, 515, 335).lineWidth(1.5).strokeColor('#800020').stroke();
@@ -71,7 +71,7 @@ module.exports = {
     doc.rect(40, 40, 515, 100).fill('#800020');
     doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('B.I.T CHAWL BELASIS ROAD SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
     doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('OFFICIAL T-SHIRT & MERCHANDISE BOOKING TOKEN', 55, 85);
-    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: E-3892/MUM | Instagram: @mumbaicentralcharajaofficial', 55, 106);
+    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | Instagram: @mumbaicentralcharajaofficial', 55, 106);
 
     // Main Receipt Body
     doc.rect(40, 155, 515, 340).lineWidth(1.5).strokeColor('#800020').stroke();

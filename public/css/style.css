@@ -96,6 +96,15 @@ textarea {
   touch-action: manipulation;
 }
 
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Dynamic Font Scaling & Boosting for Marathi Devanagari Script */
 html[lang="mr"],
 body[data-lang="mr"] {
@@ -1144,12 +1153,15 @@ section {
   .brand-text {
     text-align: center;
     min-width: 0;
+    max-width: 100%;
   }
 
   .brand-text h2 {
-    font-size: clamp(0.85rem, 3.8vw, 1.15rem);
-    white-space: nowrap;
+    font-size: clamp(0.72rem, 3.5vw, 1.05rem);
+    white-space: normal;
     line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .brand-text p {
@@ -1269,9 +1281,11 @@ section {
   }
 
   .brand-text h2 {
-    /* Very small scale for phones to guarantee single line without wrap */
-    font-size: clamp(0.7rem, 4.5vw, 0.95rem);
-    white-space: nowrap;
+    font-size: clamp(0.68rem, 4vw, 0.88rem);
+    white-space: normal;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
 
   .brand-text p {
@@ -2937,22 +2951,30 @@ section {
 
   .brand-logo {
     margin: 0 auto !important;
-    gap: 0.4rem !important;
+    gap: 0.5rem !important;
+    max-width: 100% !important;
+  }
+
+  .brand-text {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
   }
 
   .brand-text h2 {
-    font-size: clamp(0.78rem, 4.3vw, 0.98rem) !important;
+    font-size: clamp(0.9rem, 4.5vw, 1.15rem) !important;
     white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
   }
 
-  .mandal-banner-3d-text {
-    font-size: clamp(0.6rem, 2.7vw, 0.8rem) !important;
-    letter-spacing: -0.2px !important;
-    line-height: 1.25 !important;
-    margin: 2px 0 0 0 !important;
-    white-space: normal !important;
-    text-align: center !important;
-    padding: 0 4px !important;
+  .brand-text p {
+    font-size: clamp(0.52rem, 2.3vw, 0.68rem) !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
   }
 
   .hero-content h1 {

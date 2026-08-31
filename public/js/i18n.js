@@ -33,8 +33,8 @@ const translations = {
     hero_subtitle: "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1929.",
     btn_hero_live: "Watch Live Darshan",
     btn_hero_donate: "Donate Seva Online",
-    countdown_badge: "Ganeshotsav 2026 Arrival",
-    countdown_title: "Awaiting Divine Arrival",
+    countdown_badge: "Grand Aagman: 12th Sept (12:00 PM)",
+    countdown_title: "Aagman Soon on 12th Sept",
     label_days: "Days",
     label_hours: "Hours",
     label_mins: "Mins",
@@ -42,7 +42,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "FESTIVAL UPDATES",
-    ticker_text: "🌸 Ganeshotsav 2026 Grand Aagman 12th September! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌸",
+    ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (12:00 PM AFTERNOON)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌺",
 
     // President Message & Counters
     pres_badge: "President & Executive Message",
@@ -242,8 +242,8 @@ const translations = {
     hero_subtitle: "बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ. १९२९ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
     btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",
-    countdown_badge: "गणेशोत्सव २०२६ आगमन",
-    countdown_title: "श्रींच्या आगमनासाठी उत्सुकता",
+    countdown_badge: "श्रींचे भव्य आगमन: १२ सप्टेंबर (दुपारी १२:०० वा.)",
+    countdown_title: "१२ सप्टेंबर रोजी श्रींचे भव्य आगमन!",
     label_days: "दिवस",
     label_hours: "तास",
     label_mins: "मिनाटे",
@@ -251,7 +251,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "ताजी अपडेट्स",
-    ticker_text: "🌸 गणेशोत्सव २०२६ आगमन १२ सप्टेंबर! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌸",
+    ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी १२:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌺",
 
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",

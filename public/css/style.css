@@ -1106,26 +1106,35 @@ section {
 @media (max-width: 768px) {
   .site-header {
     padding-top: max(0.45rem, env(safe-area-inset-top, 0px));
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.45rem;
   }
 
   .header-inner {
-    gap: 0.65rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding-left: 0.5rem;
+    padding-right: 2.75rem;
   }
 
   .brand-logo {
-    min-width: 0;
-    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 0.5rem;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .brand-text {
+    text-align: center;
     min-width: 0;
   }
 
   .brand-text h2 {
-    /* Slightly smaller clamp for tablets */
-    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+    font-size: clamp(0.85rem, 3.8vw, 1.15rem);
     white-space: nowrap;
     line-height: 1.2;
   }
@@ -1135,49 +1144,48 @@ section {
   }
 
   .logo-motion-wrapper {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
+  }
+
+  .mobile-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  /* Topbar Mobile Banner Layout */
+  .topbar-chintamani {
+    padding: 6px 0 8px !important;
+  }
+
+  .mandal-top-banner-flex {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
   }
 
   .mandal-top-meta {
-    width: 100%;
-    display: grid !important;
-    grid-template-columns: auto auto;
-    justify-content: center;
-    align-items: center;
-    row-gap: 0.35rem;
-    column-gap: 0.5rem;
-    font-size: 0.76rem;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.35rem !important;
+    font-size: 0.76rem !important;
   }
 
-  .mandal-top-meta > .est-text {
-    grid-column: 1;
-    grid-row: 1;
-    justify-self: end;
-  }
-
-  .mandal-top-meta > .est-text::after {
-    content: "  |";
-    opacity: 0.4;
-    margin-left: 0.5rem;
-  }
-
-  .mandal-top-meta > .reg-text {
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: start;
-  }
-
-  /* Social links + language switcher */
   .mandal-top-meta-actions {
-    grid-column: 1 / -1;
-    grid-row: 2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.4rem;
-    width: 100%;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
   }
 
   .social-link {
@@ -1204,16 +1212,21 @@ section {
     display: inline;
   }
 
-  /* Language switcher wraps nicely below */
   .mandal-top-meta-actions > .lang-switcher-container {
-    flex-basis: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 0.05rem;
+    display: inline-flex !important;
+    justify-content: center !important;
+    margin-top: 0 !important;
   }
 
   .mandal-banner-3d-text {
-    font-size: 0.85rem;
+    font-size: clamp(0.68rem, 2.8vw, 0.85rem) !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    text-align: center !important;
+    padding: 0 4px !important;
+    margin: 2px 0 0 0 !important;
+    position: relative !important;
+    z-index: 2 !important;
   }
 
   .footer-grid {
@@ -2547,30 +2560,21 @@ section {
   /* Header Top Utility Bar */
   .mandal-top-meta {
     width: 100%;
-    display: grid !important;
-    grid-template-columns: auto auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    row-gap: 0.35rem;
-    column-gap: 0.5rem;
+    gap: 0.35rem;
     font-size: 0.76rem;
   }
 
-  .mandal-top-meta > .est-text {
-    grid-column: 1 !important;
-    grid-row: 1 !important;
-    justify-self: end !important;
-  }
-
-  .mandal-top-meta > .reg-text {
-    grid-column: 2 !important;
-    grid-row: 1 !important;
-    justify-self: start !important;
-  }
-
   .mandal-top-meta-actions {
-    grid-column: 1 / -1 !important;
-    grid-row: 2 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .mandal-banner-3d-text {
@@ -2782,17 +2786,32 @@ section {
   }
 
   .topbar-chintamani {
-    padding: 3px 0 4px !important;
+    padding: 5px 0 6px !important;
+  }
+
+  .header-inner {
+    padding-left: 0.25rem !important;
+    padding-right: 2.5rem !important;
+  }
+
+  .brand-logo {
+    margin: 0 auto !important;
+    gap: 0.4rem !important;
+  }
+
+  .brand-text h2 {
+    font-size: clamp(0.78rem, 4.3vw, 0.98rem) !important;
+    white-space: nowrap !important;
   }
 
   .mandal-banner-3d-text {
-    font-size: clamp(0.55rem, 2.7vw, 0.85rem) !important;
-    letter-spacing: -0.3px !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
+    font-size: clamp(0.6rem, 2.7vw, 0.8rem) !important;
+    letter-spacing: -0.2px !important;
+    line-height: 1.25 !important;
+    margin: 2px 0 0 0 !important;
     white-space: normal !important;
-    text-align: center;
-    padding: 0 5px;
+    text-align: center !important;
+    padding: 0 4px !important;
   }
 
   .hero-content h1 {

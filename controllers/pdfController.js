@@ -13,7 +13,7 @@ module.exports = {
 
     // Header Box
     doc.rect(40, 40, 515, 100).fill('#4A0404');
-    doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('B.I.T CHAWL BELASIS ROAD SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
+    doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('BELASIS ROAD, B.I.T. CHAWL SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
     doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('MUMBAI CENTRAL CHA RAJA (SEC 80G TAX EXEMPT)', 55, 85);
     doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | 80G Approval: CIT(E)/80G/2024-25/A-1029 | @mumbaicentralcharajaofficial', 55, 106);
 
@@ -47,7 +47,7 @@ module.exports = {
     doc.fillColor('#B45309').fontSize(20).font('Helvetica-Bold').text(`₹ ${parseFloat(donation.amount).toLocaleString('en-IN')}/-`, 75, 427);
 
     // Tax Exemption Note
-    doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('All donations made to B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal are 50% tax exempt under Section 80G of the Income Tax Act, 1961.', 40, 505, { align: 'center', width: 515 });
+    doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('All donations made to Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal are 50% tax exempt under Section 80G of the Income Tax Act, 1961.', 40, 505, { align: 'center', width: 515 });
 
     // Signatures
     doc.fillColor('#4A0404').fontSize(10).font('Helvetica-Bold').text('For Mumbai Central Cha Raja Mandal', 350, 570);
@@ -68,7 +68,7 @@ module.exports = {
 
     // Header Banner
     doc.rect(40, 40, 515, 100).fill('#800020');
-    doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('B.I.T CHAWL BELASIS ROAD SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
+    doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('BELASIS ROAD, B.I.T. CHAWL SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
     doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('OFFICIAL T-SHIRT & MERCHANDISE BOOKING TOKEN', 55, 85);
     doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | Instagram: @mumbaicentralcharajaofficial', 55, 106);
 
@@ -118,7 +118,7 @@ module.exports = {
       instY += 20;
     });
 
-    doc.fillColor('#94A3B8').fontSize(8).font('Helvetica').text('Ganpati Bappa Morya! B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal', 40, 750, { align: 'center', width: 515 });
+    doc.fillColor('#94A3B8').fontSize(8).font('Helvetica').text('Ganpati Bappa Morya! Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal', 40, 750, { align: 'center', width: 515 });
 
     doc.end();
   }

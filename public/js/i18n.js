@@ -42,7 +42,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "FESTIVAL UPDATES",
-    ticker_text: "🌸 Ganeshotsav 2026 Procession Coming Soon! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 50,000+ Daily Annadan Mahaprasad • 80G Tax Exempt Donations Open 🌸",
+    ticker_text: "🌸 Ganeshotsav 2026 Procession Coming Soon! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌸",
 
     // President Message & Counters
     pres_badge: "President & Executive Message",
@@ -53,7 +53,7 @@ const translations = {
     pres_role: "President, B.I.T Chawl Belasis Road Mandal",
     stat_year_label: "Founding Year",
     stat_service_label: "Years of Continuous Service",
-    stat_prasadam_label: "Daily Mahaprasad Devotees",
+    stat_prasadam_label: "Devotees Served Annually",
     stat_visitors_label: "Annual Visiting Devotees",
 
     // Indie Mandala Timeline
@@ -92,10 +92,10 @@ const translations = {
     // Social Work Section
     social_section_tag: "COMMUNITY SERVICES",
     social_section_title: "Social Work & Seva Initiatives",
-    social_section_sub: "Serving humanity through Annadan Mahaprasad, Blood Donation, Free Healthcare, and Student Education support.",
-    social1_tag: "FOOD DISTRIBUTION",
-    social1_title: "Annadan Mahaprasad Seva Drive",
-    social1_desc: "Serving hot nutritious meals, fresh breakfast, and purified drinking water to over 50,000+ devotees daily during Ganeshotsav.",
+    social_section_sub: "Serving humanity through Blood Donation, Free Healthcare, Medical Aid, and Student Education support.",
+    social1_tag: "HEALTHCARE SEVA",
+    social1_title: "Grand Blood Donation & Health Camp",
+    social1_desc: "Organizing annual blood donation drives in partnership with KEM & Nair Hospitals along with healthcare checkups.",
     social2_tag: "HEALTHCARE SEVA",
     social2_title: "Grand Blood Donation & Medical Camp",
     social2_desc: "Collecting 500+ blood units annually in partnership with KEM & Nair Hospitals alongside free healthcare checkup camps.",
@@ -104,7 +104,7 @@ const translations = {
     // Donation Section
     donate_section_tag: "SACRED CONTRIBUTION",
     donate_section_title: "Support Mumbai Central Cha Raja Seva",
-    donate_section_sub: "Your contributions support community welfare, free meals, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
+    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
     btn_donate_80g: "Donate Online (With 80G Receipt)",
 
     // Location & Contact
@@ -154,7 +154,7 @@ const translations = {
     // Donate CTA section
     donate_section_tag: "SACRED CONTRIBUTION",
     donate_section_title: "Support Mumbai Central Cha Raja Seva",
-    donate_section_sub: "Your contributions support community welfare, free meals, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
+    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
 
     // Location & Contact
     location_tag: "MANDAP LOCATION & CONTACT",
@@ -167,12 +167,12 @@ const translations = {
     // Social Work section
     social_section_tag: "COMMUNITY SERVICES",
     social_section_title: "Social Work & Seva Initiatives",
-    social_section_sub: "Serving humanity through Annadan Mahaprasad, Blood Donation, Free Healthcare, and Student Education support.",
+    social_section_sub: "Serving humanity through Blood Donation, Free Healthcare, Medical Aid, and Student Education support.",
     // Timeline Milestone Cards
     milestone_1929_title: "Mandal Founded & First Idol Consecration",
     milestone_1929_desc: "Residents of B.I.T Chawl Belasis Road united to establish the Sarvajanik Ganeshotsav Mandal.",
-    milestone_2000_title: "Annadan Mahaprasad & Social Initiatives",
-    milestone_2000_desc: "Expanded social service: Annadan Mahaprasad, student support, and free health camps launched.",
+    milestone_2000_title: "Healthcare & Social Initiatives",
+    milestone_2000_desc: "Expanded social service: student support, medical aid, and free health camps launched.",
     milestone_2015_title: "Decade Milestone & 12-Foot Royal Form",
     milestone_2015_desc: "Master sculptor Shri Santosh Kambli further enriched the 12-foot royal idol tradition.",
     milestone_2025_title: "Wooden Throne & Digital Temple Portal",
@@ -195,7 +195,7 @@ const translations = {
     // Donate Page Form & Modal
     badge_80g: "80G Tax Exempt Eligible",
     donate_title: "Online Donation Portal",
-    donate_sub: "Support social initiatives, Annadan Mahaprasad, and mandap management of Mumbai Central Cha Raja.",
+    donate_sub: "Support social initiatives, healthcare camps, and mandap management of Mumbai Central Cha Raja.",
     donate_form_title: "Donation Form",
     lbl_select_amount: "Select Donation Amount (₹) *",
     lbl_custom_amount: "Or Enter Custom Amount (₹) *",
@@ -251,7 +251,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "ताजी अपडेट्स",
-    ticker_text: "🌸 गणेशोत्सव २०२६ आगमन लवकरच! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ५०,०००+ दैनिक अन्नदान महाप्रसाद • ८०जी कर सवलत देणगी उपलब्ध 🌸",
+    ticker_text: "🌸 गणेशोत्सव २०२६ आगमन लवकरच! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌸",
 
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",
@@ -262,7 +262,7 @@ const translations = {
     pres_role: "अध्यक्ष, बी.आय.टी चाळ बेलासिस रोड मंडळ",
     stat_year_label: "स्थापना वर्ष",
     stat_service_label: "अखंड सेवेची वर्षे",
-    stat_prasadam_label: "दैनिक महाप्रसाद भाविक",
+    stat_prasadam_label: "अखंड सेवेचे उपक्रम",
     stat_visitors_label: "वार्षिक दर्शनार्थी भाविक",
 
     // Indie Mandala Timeline
@@ -299,10 +299,10 @@ const translations = {
     // Social Work Section
     social_section_tag: "समाजोपयोगी उपक्रम",
     social_section_title: "सामाजिक कार्य व सेवा",
-    social_section_sub: "अन्नदान महाप्रसाद, रक्तदान शिबीर, मोफत आरोग्य तपासणी आणि शैक्षणिक मदतीतून समाजसेवा.",
-    social1_tag: "अन्नछत्र सेवा",
-    social1_title: "अन्नदान महाप्रसाद सेवा ड्राइव्ह",
-    social1_desc: "गणेशोत्सवाच्या १० दिवसांत दररोज ५०,००० हून अधिक भाविकांना गरम महाप्रसाद, अल्पोपहार आणि पिण्याचे शुद्ध पाणी मोफत पुरवले जाते.",
+    social_section_sub: "रक्तदान शिबीर, मोफत आरोग्य तपासणी, वैद्यकीय मदत आणि शैक्षणिक मदतीतून समाजसेवा.",
+    social1_tag: "आरोग्य सेवा",
+    social1_title: "भव्य रक्तदान व आरोग्य शिबीर",
+    social1_desc: "के.ई.एम. व नायर रुग्णालयाच्या सहकार्याने दरवर्षी ५०० हून अधिक रक्त युनिट्स संकलित केले जातात आणि मोफत आरोग्य तपासणी केली जाते.",
     social2_tag: "आरोग्य सेवा",
     social2_title: "भव्य रक्तदान व आरोग्य शिबीर",
     social2_desc: "के.ई.एम. व नायर रुग्णालयाच्या सहकार्याने दरवर्षी ५०० हून अधिक रक्त युनिट्स संकलित केले जातात आणि मोफत आरोग्य तपासणी केली जाते.",
@@ -311,7 +311,7 @@ const translations = {
     // Donation Section
     donate_section_tag: "सेवा योगदान",
     donate_section_title: "मुंबई सेंट्रलचा राजा सेवेला पाठिंबा द्या",
-    donate_section_sub: "तुमची देणगी सामाजिक कार्य, अन्नदान महाप्रसाद व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
+    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
     btn_donate_80g: "ऑनलाइन देणगी द्या (८०जी पावतीसह)",
 
     // Location & Contact
@@ -361,7 +361,7 @@ const translations = {
     // Donate CTA section
     donate_section_tag: "सेवा योगदान",
     donate_section_title: "मुंबई सेंट्रलचा राजा सेवेला पाठिंबा द्या",
-    donate_section_sub: "तुमची देणगी सामाजिक कार्य, अन्नदान महाप्रसाद व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
+    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
 
     // Location & Contact
     location_tag: "मंडप स्थान व संपर्क",
@@ -374,20 +374,20 @@ const translations = {
     // Social Work section
     social_section_tag: "समाजोपयोगी उपक्रम",
     social_section_title: "सामाजिक कार्य व सेवा",
-    social_section_sub: "अन्नदान महाप्रसाद, रक्तदान शिबीर, मोफत आरोग्य तपासणी आणि शैक्षणिक मदतीतून समाजसेवा.",
-    social1_tag: "अन्नछत्र सेवा",
-    social1_title: "अन्नदान महाप्रसाद सेवा ड्राइव्ह",
-    social1_desc: "गणेशोत्सवाच्या १० दिवसांत दररोज ५०,००० हून अधिक भाविकांना गरम महाप्रसाद, अल्पोपहार आणि पिण्याचे शुद्ध पाणी मोफत पुरवले जाते.",
+    social_section_sub: "रक्तदान शिबीर, मोफत आरोग्य तपासणी, वैद्यकीय मदत आणि शैक्षणिक मदतीतून समाजसेवा.",
+    social1_tag: "आरोग्य सेवा",
+    social1_title: "भव्य रक्तदान व आरोग्य शिबीर",
+    social1_desc: "के.ई.एम. व नायर रुग्णालयाच्या सहकार्याने दरवर्षी ५०० हून अधिक रक्त युनिट्स संकलित केले जातात आणि मोफत आरोग्य तपासणी केली जाते.",
     social2_tag: "आरोग्य सेवा",
-    social2_title: "भव्य रक्तदान व आरोग्य शिबीर",
-    social2_desc: "के.ई.एम. व नायर रुग्णालयाच्या सहकार्याने दरवर्षी ५०० हून अधिक रक्त युनिट्स संकलित केले जातात आणि मोफत आरोग्य तपासणी केली जाते.",
+    social2_title: "वैद्यकीय मदत व रुग्णवाहिका",
+    social2_desc: "गरजू रुग्णांसाठी मोफत रुग्णवाहिका व तातडीची वैद्यकीय मदत उपलब्ध करून दिली जाते.",
     btn_all_social: "सर्व सामाजिक उपक्रम पाहा",
 
     // Timeline Milestone Cards
     milestone_1929_title: "मंडळ स्थापना व प्रथम श्री स्थापना",
     milestone_1929_desc: "बी.आय.टी चाळ बेलासिस रोड येथील रहिवाशांनी एकत्र येऊन सार्वजनिक गणेशोत्सव मंडळाची स्थापना केली.",
-    milestone_2000_title: "अन्नदान महाप्रसाद व सामाजिक उपक्रम",
-    milestone_2000_desc: "सामाजिक सेवेचा विस्तार करत अन्नदान महाप्रसाद, विद्यार्थी मदत आणि मोफत आरोग्य शिबीरांची सुरुवात.",
+    milestone_2000_title: "आरोग्य शिबीर व सामाजिक उपक्रम",
+    milestone_2000_desc: "सामाजिक सेवेचा विस्तार करत विद्यार्थी मदत, वैद्यकीय साहाय्य आणि मोफत आरोग्य शिबीरांची सुरुवात.",
     milestone_2015_title: "दशकपूर्ती व १२ फूट राजेशाही रूप",
     milestone_2015_desc: "मास्टर मूर्तिकार श्री. संतोष कांबळी यांच्या हस्तकलेतून १२ फुटी राजेशाही मूर्तीची परंपरा अधिक समृद्ध झाली.",
     milestone_2025_title: "काष्ठ सिंहासन व डिजिटल मंदिर",
@@ -404,7 +404,7 @@ const translations = {
     about_vision_title: "आमची दृष्टी (Vision)",
     about_vision_desc: "महाराष्ट्राची थोर गणेशोत्सव परंपरा जागतिक पातळीवर पोहोचवणे आणि भक्तीच्या माध्यमातून सामाजिक ऐक्य व बंधुता वाढवणे.",
     about_mission_title: "आमचे ध्येय (Mission)",
-    about_mission_desc: "दरवर्षी ३६५ दिवस वैद्यकीय मदत, अन्नदान, शिक्षण मदत आणि पर्यावरण रक्षण यासारख्या सामाजिक उपक्रमांतून समाजाची अखंड सेवा करणे.",
+    about_mission_desc: "दरवर्षी ३६५ दिवस वैद्यकीय मदत, शिक्षण मदत आणि पर्यावरण रक्षण यासारख्या सामाजिक उपक्रमांतून समाजाची अखंड सेवा करणे.",
     about_gallery_title: "उत्सव क्षणचित्रे व मण्डप कला",
   }
 };

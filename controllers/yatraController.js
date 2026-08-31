@@ -40,14 +40,14 @@ const scheduleData = [
   },
   {
     day: 4,
-    titleMr: 'अन्नदान महाप्रसाद सेवा',
-    titleEn: 'Annadan Mahaprasad Seva',
+    titleMr: 'विशेष भजन व सांस्कृतिक संध्या',
+    titleEn: 'Special Bhajan & Cultural Evening',
     dateMr: 'दिवस ४',
     dateEn: 'Day 4',
-    halt_locationMr: 'बीआयटी चाळ सेवा मैदान',
-    halt_locationEn: 'BIT Chawl Seva Ground',
-    facilitiesMr: ['गरम महाप्रसाद भोजन', 'पिण्याचे पाणी', 'वैद्यकीय प्रथमोपचार'],
-    facilitiesEn: ['Hot Mahaprasad Meals', 'Drinking Water Booths', 'Medical First Aid Desk'],
+    halt_locationMr: 'मुख्य मंडप परिसर, बीआयटी चाळ',
+    halt_locationEn: 'Main Mandap Premises, BIT Chawl',
+    facilitiesMr: ['भजन संध्या मंच', 'भाविक बैठक व्यवस्था', 'प्रथमोपचार केंद्र'],
+    facilitiesEn: ['Bhajan Stage', 'Devotee Seating Desk', 'Medical First Aid Desk'],
     emergency_contact: '+91 98765 44444'
   },
   {
@@ -322,8 +322,8 @@ const socialWorkData = [
     categoryMr: 'आरोग्य',
     categoryEn: 'Healthcare',
     image: '/images/social_3.png',
-    descMr: 'कोविड-१९ महामारीच्या कठीण काळात गरजूंना अन्नदान, वैद्यकीय मदत आणि जीवनावश्यक वस्तूंचे वाटप.',
-    descEn: 'Providing food, medical assistance, and essential supplies to the needy during the challenging times of the COVID-19 pandemic.'
+    descMr: 'कोविड-१९ महामारीच्या कठीण काळात गरजूंना वैद्यकीय मदत, औषधे आणि जीवनावश्यक वस्तूंचे वाटप.',
+    descEn: 'Providing medical assistance, medicines, and essential supplies to the needy during the challenging times of the COVID-19 pandemic.'
   },
   {
     id: 'social-4',

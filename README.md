@@ -3,30 +3,29 @@
 > **BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav**  
 > *Reg No: A/3141/Mumbai/77 • Estd. 1929 • Mumbai Central, Mumbai - 400008*
 
-Official digital web portal for **Mumbai Central Cha Raja**, providing global devotees with 24/7 Live Darshan, online Seva donations with instant 80G tax exemption receipts, official T-Shirt merchandise booking, interactive schedule & yatra timelines, and an executive administration management system.
+Official digital web portal for **Mumbai Central Cha Raja**. Powered end-to-end by **Google Sheets & Drive Integration** as its primary cloud data engine, providing seamless real-time record synchronization for donations, T-shirt bookings, and contact inquiries without requiring a traditional SQL database setup!
 
 ---
 
 ## 🌟 Key Features
 
-- **🏛️ 24/7 Digital Temple & Live Darshan**: High-definition live stream embedding and real-time festival notifications.
-- **🌐 100% Bilingual (English & Marathi)**: Instant zero-leakage language switcher engine.
-- **💳 Online Seva & Donation Gateway (`Razorpay`)**: Custom & preset donation tiers supporting Mandap Seva, Medical Camps, and Blood Donation.
+- **📊 End-to-End Google Sheets Database**: Live synchronization of all transactions, inquiries, and bookings directly into organized Google Spreadsheets and Drive storage.
+- **🏛️ 24/7 Digital Temple & Live Darshan**: High-definition live stream embedding and real-time festival updates.
+- **🌐 100% Bilingual (English & Marathi)**: Instant zero-leakage language translation engine.
+- **💳 Online Seva & Donation Gateway (`Razorpay`)**: Preset & custom donation options for Mandap Seva, Medical Camps, and Blood Donation.
 - **📜 Instant 80G Tax Exemption Receipts (`PDFKit`)**: Automated PDF receipt generation containing official 80G tax deduction details.
 - **👕 Official T-Shirt Merchandise Store**: Size-wise stock booking with instant downloadable PDF pickup tokens.
-- **📊 Automated Google Sheets Logging (`googleapis`)**: Real-time logging of Donations, Contact Inquiries, and T-Shirt Bookings directly to Google Sheets & Drive.
-- **📧 Nodemailer Email Notifications**: Automated email confirmation alerts sent to devotees and mandal executives.
-- **🛡️ Executive Admin Control Panel (`/admin`)**: Real-time stats dashboard, interactive log viewer, and data management.
+- **📧 Email Notifications (`Nodemailer`)**: Automated email alerts for donations, bookings, and executive mailbox notifications.
+- **🛡️ Executive Admin Control Panel (`/admin`)**: Real-time stats dashboard, spreadsheet data sync, and interactive log viewer.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Backend**: Node.js, Express.js
+- **Primary Cloud Database**: Google Sheets API & Google Drive API (`googleapis`)
+- **Backend**: Node.js & Express.js
 - **Frontend / Templating**: EJS (Embedded JavaScript), Vanilla CSS3 (Formal Royal Design System), Anime.js
-- **Database**: MySQL2 (with offline fallback data store)
 - **Payment Processing**: Razorpay SDK
-- **Cloud & Automation**: Google Sheets API & Google Drive API (`googleapis`), Node-Cron
 - **Email & PDF Engine**: Nodemailer (SMTP), PDFKit
 - **Deployment**: Vercel ready (`vercel.json`)
 
@@ -36,7 +35,7 @@ Official digital web portal for **Mumbai Central Cha Raja**, providing global de
 
 ```
 mcrexcel-main/
-├── config/             # Database, Mailer, SEO, and Google API configurations
+├── config/             # Google Sheets API, Mailer, and SEO configurations
 ├── controllers/        # Express controllers (Donations, PDF, Yatra, Contact, T-Shirt)
 ├── modules/            # Helper utilities and background jobs
 ├── public/             # Static assets (CSS, JS, Images, Logo, Audio)
@@ -45,7 +44,7 @@ mcrexcel-main/
 │   └── images/         # Mandal crest, murti photos, committee images
 ├── routes/             # Express routing endpoints
 ├── views/              # EJS template views (Home, About, Donate, T-Shirt, Admin)
-├── .env.example        # Environment variable template
+├── credentials.json    # Google Service Account Credentials
 ├── server.js           # Main application entry point
 ├── vercel.json         # Vercel deployment configuration
 └── package.json        # Node dependencies and scripts
@@ -59,6 +58,7 @@ mcrexcel-main/
 
 - **Node.js**: v18.x or higher
 - **npm**: v9.x or higher
+- **Google Cloud Service Account**: `credentials.json` for Google Sheets API integration
 
 ### 2. Installation
 
@@ -84,12 +84,13 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_app_password
+GOOGLE_SPREADSHEET_ID=your_google_sheet_id
 ```
 
 ### 4. Run Locally
 
 ```bash
-# Start development server
+# Start server
 npm start
 ```
 

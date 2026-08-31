@@ -1,6 +1,7 @@
 const db = require('../config/db');
 const googleSheets = require('../config/googleSheets');
 const mailer = require('../config/mailer');
+const seo = require('../config/seo');
 
 // Ganeshotsav Event Schedule Data for Mumbai Central Cha Raja
 const scheduleData = [
@@ -468,7 +469,8 @@ module.exports = {
   renderHomePage(req, res) {
     const status = db.getYatraStatus();
     res.render('index', {
-      title: 'Mumbai Central Cha Raja | B.I.T Chawl Belasis Road Sarvajanik Shri Ganeshotsav Mandal',
+      title: seo.pageMetadata.home.title,
+      description: seo.pageMetadata.home.description,
       activeTab: 'home',
       yatraStatus: status,
       scheduleData: scheduleData.slice(0, 4),
@@ -480,7 +482,8 @@ module.exports = {
   // Render About Us Page
   renderAboutPage(req, res) {
     res.render('about', {
-      title: 'आमच्याबद्दल | Mumbai Central Cha Raja Official',
+      title: seo.pageMetadata.about.title,
+      description: seo.pageMetadata.about.description,
       activeTab: 'about'
     });
   },
@@ -489,7 +492,8 @@ module.exports = {
   renderSchedulePage(req, res) {
     const status = db.getYatraStatus();
     res.render('schedule', {
-      title: 'गणेशोत्सव कार्यसूची व आरती वेळ | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.schedule.title,
+      description: seo.pageMetadata.schedule.description,
       activeTab: 'schedule',
       yatraStatus: status,
       scheduleData
@@ -499,7 +503,8 @@ module.exports = {
   // Render Glimpses Page
   renderGlimpsesPage(req, res) {
     res.render('glimpses', {
-      title: 'वर्षभरातील क्षणचित्रे | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.glimpses.title,
+      description: seo.pageMetadata.glimpses.description,
       activeTab: 'glimpses',
       glimpsesData
     });
@@ -508,7 +513,8 @@ module.exports = {
   // Render Decade Gallery (Renamed from Photo Booth)
   renderPhotoBoothPage(req, res) {
     res.render('photo-booth', {
-      title: 'दशकातील क्षणचित्रे (२०१५-२०२५) | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.glimpses.title,
+      description: seo.pageMetadata.glimpses.description,
       activeTab: 'photobooth',
       glimpsesData
     });
@@ -517,7 +523,8 @@ module.exports = {
   // Render Social Work Page
   renderSocialWorkPage(req, res) {
     res.render('social-work', {
-      title: 'सामाजिक कार्य व सेवा | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.socialwork.title,
+      description: seo.pageMetadata.socialwork.description,
       activeTab: 'socialwork',
       socialWorkData
     });
@@ -525,7 +532,8 @@ module.exports = {
 
   renderCommitteePage(req, res) {
     res.render('committee', {
-      title: 'कार्यकारिणी समिती | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.committee.title,
+      description: seo.pageMetadata.committee.description,
       activeTab: 'committee',
       committeeData
     });

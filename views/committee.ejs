@@ -309,7 +309,7 @@
             <!-- MEMBER ICON -->
             <div class="committee-icon">
               <% if (member.image) { %>
-                <img src="<%= member.image %>" alt="<%= member.nameEn %>" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                <img src="<%= member.image %>" alt="<%= member.nameEn %> - <%= member.designationEn %>" loading="lazy" decoding="async" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
               <% } else { %>
                 <i class="fa-solid fa-user-tie"></i>
               <% } %>

@@ -2,12 +2,14 @@ const db = require('../config/db');
 const razorpay = require('../config/razorpay');
 const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
+const seo = require('../config/seo');
 
 module.exports = {
   // Render Official T-Shirt Store Page
   renderTshirtPage(req, res) {
     res.render('tshirt', {
-      title: 'Official T-Shirt & Merchandise Store | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.tshirt.title,
+      description: seo.pageMetadata.tshirt.description,
       activeTab: 'tshirt',
       razorpayKeyId: razorpay.getKeyId()
     });

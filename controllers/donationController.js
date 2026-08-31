@@ -2,12 +2,14 @@ const db = require('../config/db');
 const razorpay = require('../config/razorpay');
 const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
+const seo = require('../config/seo');
 
 module.exports = {
   // Render Donation Page
   renderDonationPage(req, res) {
     res.render('donate', {
-      title: 'ऑनलाइन देणगी पोर्टल (८०जी कर सवलत) | Mumbai Central Cha Raja',
+      title: seo.pageMetadata.donate.title,
+      description: seo.pageMetadata.donate.description,
       activeTab: 'donate',
       razorpayKeyId: razorpay.getKeyId()
     });

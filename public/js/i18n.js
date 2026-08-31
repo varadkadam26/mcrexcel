@@ -42,7 +42,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "FESTIVAL UPDATES",
-    ticker_text: "🌸 Ganeshotsav 2026 Procession Coming Soon! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌸",
+    ticker_text: "🌸 Ganeshotsav 2026 Grand Aagman 12th September! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌸",
 
     // President Message & Counters
     pres_badge: "President & Executive Message",
@@ -251,7 +251,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "ताजी अपडेट्स",
-    ticker_text: "🌸 गणेशोत्सव २०२६ आगमन लवकरच! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌸",
+    ticker_text: "🌸 गणेशोत्सव २०२६ आगमन १२ सप्टेंबर! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌸",
 
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",

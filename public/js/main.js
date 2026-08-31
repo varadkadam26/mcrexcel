@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   // GANESHOTSAV 3D RETRO FLIP-CLOCK COUNTDOWN TIMER
   // ==========================================================================
-  const countdownTarget = new Date('2026-09-14T00:00:00+05:30').getTime();
+  const countdownTarget = new Date('2026-09-12T12:00:00+05:30').getTime();
   const countdownElements = {
     days: document.getElementById('countDays'),
     hours: document.getElementById('countHours'),

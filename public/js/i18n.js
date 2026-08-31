@@ -185,7 +185,7 @@ const translations = {
     about_history_title: "Our Legacy",
     about_history_p1: "Public Ganeshotsav is a special feature of Maharashtra. The public Ganeshotsav, started by Lokmanya Tilak with the aim of organizing people and inculcating a feeling of national integration among them, did valuable work of social awakening in the pre-independence period. Carrying forward this rich legacy, the B.I.T Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal was established to unite the community.",
     about_history_p2: "The work of public Ganeshotsav Mandals is no longer limited to the festival alone. It has acquired the nature of social work that runs throughout the year, which is certainly a welcome thing. The B.I.T Chawl Belasis Road Sarvajanik Shree Ganeshutsav Mandal has earned a reputation as an institution doing excellent work in the socio-cultural field. Besides, the B.I.T Chawl Belasis Road Sarvajanik Shree Ganeshutsav has also provided an excellent platform for budding artists.",
-    about_history_p3: "In July 1929, through the efforts of Shri K. B. Kadam, Datar, the then Chawl Superintendent Shri Vaidya, and other volunteers, a meeting of the local residents was held under the chairmanship of Swatantryaveer Savarkar. With his holy touch and blessings, the Shree Ganeshotsav Mandal was established. Since then, the Shree Ganeshotsav has been celebrated uninterruptedly by the Mandal.",
+    about_history_p3: "In July 1929, through the efforts of Shri K. B. Kadam, Datar, the then Chawl Superintendent Shri Vaidya, and other volunteers, a meeting of the local residents was held under the chairmanship of <mark class=\"savarkar-highlight\">Swatantryaveer Savarkar</mark>. With his holy touch and blessings, the Shree Ganeshotsav Mandal was established. Since then, the Shree Ganeshotsav has been celebrated uninterruptedly by the Mandal.",
     about_vision_title: "Our Vision",
     about_vision_desc: "Taking Maharashtra's rich Ganeshotsav tradition to global heights while fostering social unity and brotherhood through devotion.",
     about_mission_title: "Our Mission",
@@ -400,7 +400,7 @@ const translations = {
     about_history_title: "गौरवशाली परंपरा",
     about_history_p1: "सार्वजनिक गणेशोत्सव हे महाराष्ट्राचे खास वैशिष्ट्य आहे. लोकमान्य टिळकांनी लोकांना संघटित करून त्यांच्यामध्ये राष्ट्रीय एकात्मतेची भावना वाढीस लागण्याच्या उद्देशाने सुरु केलेल्या सार्वजनिक गणेशोत्सवाने स्वातंत्र्यपूर्व काळात समाजप्रबोधनाचे मोलाचे कार्य केले. हाच भव्य वारसा पुढे नेत, समाजाला एकत्र आणण्यासाठी बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळाची स्थापना करण्यात आली.",
     about_history_p2: "सार्वजनिक गणेशोत्सव मंडळांचे कार्य हे आता केवळ उत्सवापुरतेच मर्यादित राहिलेले नाही. वर्षभर चालणाऱ्या सामाजिक कार्याचे स्वरूप त्याला प्राप्त झाले आहे ही निश्चितच स्वागतार्ह बाब आहे. बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळाने सामाजिक-सांस्कृतिक क्षेत्रात उत्तम कार्य करणारी संस्था म्हणून नावलौकिक मिळविला आहेच. शिवाय बी.आय.टी चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळाने नवोदित कलाकारांना एक उत्तम व्यासपीठही मिळवून दिले आहे.",
-    about_history_p3: "जुलै १९२९ साली श्री. के. बी. कदम, दातार व त्यावेळचे चाळ अधिक्षक श्री. वैद्य तसेच अन्य कार्यकर्ते यांच्या प्रयत्नाने वस्तीतील रहिवाशांची सभा स्वातंत्र्यवीर सावरकर यांच्या अध्यक्षतेखाली होऊन त्यांच्या पुण्यस्पर्शाने व आशिर्वादाने श्री गणेशोत्सव मंडळाची स्थापना झाली. तेव्हापासून अव्याहतपणे मंडळातर्फे श्री गणेशोत्सव साजरा होत आहे.",
+    about_history_p3: "जुलै १९२९ साली श्री. के. बी. कदम, दातार व त्यावेळचे चाळ अधिक्षक श्री. वैद्य तसेच अन्य कार्यकर्ते यांच्या प्रयत्नाने वस्तीतील रहिवाशांची सभा <mark class=\"savarkar-highlight\">स्वातंत्र्यवीर सावरकर</mark> यांच्या अध्यक्षतेखाली होऊन त्यांच्या पुण्यस्पर्शाने व आशिर्वादाने श्री गणेशोत्सव मंडळाची स्थापना झाली. तेव्हापासून अव्याहतपणे मंडळातर्फे श्री गणेशोत्सव साजरा होत आहे.",
     about_vision_title: "आमची दृष्टी (Vision)",
     about_vision_desc: "महाराष्ट्राची थोर गणेशोत्सव परंपरा जागतिक पातळीवर पोहोचवणे आणि भक्तीच्या माध्यमातून सामाजिक ऐक्य व बंधुता वाढवणे.",
     about_mission_title: "आमचे ध्येय (Mission)",
@@ -445,6 +445,8 @@ function setLanguage(lang) {
         const icon = el.querySelector('i, svg');
         if (icon) {
           el.innerHTML = icon.outerHTML + ' ' + textVal;
+        } else if (textVal.includes('<')) {
+          el.innerHTML = textVal;
         } else {
           el.textContent = textVal;
         }

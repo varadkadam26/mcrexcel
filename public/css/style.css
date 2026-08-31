@@ -545,6 +545,19 @@ body[data-lang="mr"] .brand-text h2 {
   cursor: pointer;
 }
 
+/* Swatantra Veer Savarkar Highlight Style */
+.savarkar-highlight {
+  background: linear-gradient(120deg, rgba(212, 175, 55, 0.28) 0%, rgba(127, 29, 29, 0.12) 100%);
+  color: var(--temple-maroon);
+  font-weight: 800;
+  padding: 0.15rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--royal-gold);
+  box-shadow: 0 2px 6px rgba(212, 175, 55, 0.2);
+  display: inline-block;
+  white-space: nowrap;
+}
+
 /* ==========================================================================
    SECTIONS & TYPOGRAPHY ALIGNMENT
    ========================================================================== */

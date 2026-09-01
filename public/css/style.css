@@ -2962,9 +2962,9 @@ section {
   }
 
   .brand-text h2 {
-    font-size: clamp(0.52rem, 2.65vw, 0.82rem) !important;
+    font-size: clamp(0.4rem, 2.1vw, 0.78rem) !important;
     white-space: nowrap !important;
-    letter-spacing: -0.3px !important;
+    letter-spacing: -0.2px !important;
     line-height: 1.1 !important;
     overflow: hidden !important;
     text-overflow: clip !important;

@@ -2951,7 +2951,7 @@ section {
 
   .brand-logo {
     margin: 0 auto !important;
-    gap: 0.5rem !important;
+    gap: 0.3rem !important;
     max-width: 100% !important;
   }
 
@@ -2962,11 +2962,12 @@ section {
   }
 
   .brand-text h2 {
-    font-size: clamp(0.65rem, 3.1vw, 0.88rem) !important;
-    white-space: normal !important;
-    line-height: 1.22 !important;
-    overflow-wrap: break-word !important;
-    word-break: break-word !important;
+    font-size: clamp(0.52rem, 2.65vw, 0.82rem) !important;
+    white-space: nowrap !important;
+    letter-spacing: -0.3px !important;
+    line-height: 1.1 !important;
+    overflow: hidden !important;
+    text-overflow: clip !important;
     max-width: 100% !important;
     text-align: left !important;
   }

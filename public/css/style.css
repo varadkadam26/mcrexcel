@@ -2962,19 +2962,13 @@ section {
   }
 
   .brand-text h2 {
-    font-size: clamp(0.68rem, 3.2vw, 0.9rem) !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    font-size: clamp(0.65rem, 3.1vw, 0.88rem) !important;
+    white-space: normal !important;
+    line-height: 1.22 !important;
+    overflow-wrap: break-word !important;
+    word-break: break-word !important;
     max-width: 100% !important;
-  }
-
-  .brand-text p {
-    font-size: clamp(0.52rem, 2.3vw, 0.68rem) !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    max-width: 100% !important;
+    text-align: left !important;
   }
 
   .hero-content h1 {

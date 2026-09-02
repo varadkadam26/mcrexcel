@@ -375,6 +375,11 @@ a:hover {
   gap: 0.5rem;
 }
 
+.site-header .container {
+  max-width: 98%;
+  padding: 0 0.5rem;
+}
+
 .brand-logo {
   display: flex;
   align-items: center;

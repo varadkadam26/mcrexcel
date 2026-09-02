@@ -39,14 +39,7 @@
               <span class="lang-mr"><%= evt.halt_locationMr %></span>
             </p>
 
-            <div class="schedule-tags">
-              <% evt.facilitiesEn.forEach((fac, idx) => { %>
-                <span style="font-size: 0.82rem; background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 4px 12px; border-radius: var(--radius-full); font-weight: 600;">
-                  <span class="lang-en"><%= fac %></span>
-                  <span class="lang-mr"><%= evt.facilitiesMr[idx] %></span>
-                </span>
-              <% }); %>
-            </div>
+
           </div>
         </div>
       <% }); %>

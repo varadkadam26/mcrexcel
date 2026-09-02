@@ -1065,22 +1065,35 @@ section {
    ========================================================================== */
 @media (max-width: 1440px) {
   .header-inner {
-    padding: 0 1rem;
-    gap: 0.5rem;
+    padding: 0 0.5rem;
+    gap: 0.25rem;
+  }
+
+  .brand-logo {
+    gap: 0.25rem;
   }
 
   .nav-link {
-    font-size: 0.8rem;
-    padding: 0.35rem 0.45rem;
+    font-size: 0.65rem;
+    padding: 0.25rem 0.35rem;
+  }
+
+  .nav-live-btn {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4rem;
   }
 
   .main-nav ul {
-    gap: 0.15rem;
+    gap: 0.1rem;
+  }
+
+  .brand-text h2 {
+    font-size: clamp(0.55rem, 1vw, 0.75rem);
   }
 
   html[lang="mr"] .brand-text h2,
   body[data-lang="mr"] .brand-text h2 {
-    font-size: clamp(0.9rem, 1.8vw, 1.15rem);
+    font-size: clamp(0.6rem, 1.1vw, 0.85rem);
   }
 }
 

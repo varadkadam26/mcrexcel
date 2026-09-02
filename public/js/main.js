@@ -206,64 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ==========================================================================
-  // GANESHOTSAV 3D RETRO FLIP-CLOCK COUNTDOWN TIMER
-  // ==========================================================================
-  const countdownTarget = new Date('2026-09-12T12:00:00+05:30').getTime();
-  const countdownElements = {
-    days: document.getElementById('countDays'),
-    hours: document.getElementById('countHours'),
-    mins: document.getElementById('countMins'),
-    secs: document.getElementById('countSecs')
-  };
-
-  function animateCountdownUnit(key, value) {
-    const targetEl = countdownElements[key];
-    const parentEl = targetEl?.closest('.flip-clock-unit');
-    if (!targetEl) return;
-
-    const previousValue = targetEl.dataset.value || '';
-    if (previousValue !== value) {
-      targetEl.textContent = value;
-      targetEl.dataset.value = value;
-      if (parentEl) {
-        parentEl.classList.remove('fade-update');
-        void parentEl.offsetWidth;
-        parentEl.classList.add('fade-update');
-      }
-    }
-  }
-
-  function updateCountdown() {
-    const now = Date.now();
-    const diff = countdownTarget - now;
-    const safeDiff = diff > 0 ? diff : 0;
-
-    const values = {
-      days: String(Math.floor(safeDiff / 86400000)).padStart(2, '0'),
-      hours: String(Math.floor((safeDiff % 86400000) / 3600000)).padStart(2, '0'),
-      mins: String(Math.floor((safeDiff % 3600000) / 60000)).padStart(2, '0'),
-      secs: String(Math.floor((safeDiff % 60000) / 1000)).padStart(2, '0')
-    };
-
-    Object.entries(values).forEach(([key, value]) => animateCountdownUnit(key, value));
-  }
-
-  const startCountdown = () => {
-    if (Object.values(countdownElements).some(Boolean)) {
-      updateCountdown();
-      window.clearInterval(window.countdownTimer);
-      window.countdownTimer = window.setInterval(updateCountdown, 1000);
-    }
-  };
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', startCountdown, { once: true });
-  } else {
-    startCountdown();
-  }
-
-  window.setTimeout(startCountdown, 120);
 
   // ==========================================================================
   // TOP UTILITY BAR SCROLL COLLAPSE LOGIC

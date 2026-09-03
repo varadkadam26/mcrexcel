@@ -23,7 +23,8 @@ const translations = {
     nav_socialwork: "Social Work",
     nav_tshirt: "Official T-Shirt",
     nav_committee: "Committee",
-    nav_idcard: "ID Card Form",
+    nav_idcard: "ID Card",
+    nav_memories: "Memories",
     nav_contact: "Contact",
     nav_donate: "Donate Now",
 
@@ -230,7 +231,8 @@ const translations = {
     nav_socialwork: "सामाजिक कार्य",
     nav_tshirt: "टी-शर्ट",
     nav_committee: "कार्यकारिणी",
-    nav_idcard: "आयडी कार्ड फॉर्म",
+    nav_idcard: "आयडी कार्ड",
+    nav_memories: "स्मृती",
     nav_contact: "संपर्क",
     nav_donate: "देणगी",
 

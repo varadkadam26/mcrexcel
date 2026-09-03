@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalAmountText) modalAmountText.textContent = `₹${parseFloat(amount).toLocaleString('en-IN')}`;
 
     // Generate Dynamic UPI QR Code
-    const upiString = `upi://pay?pa=saileelatrust@upi&pn=Shri%20Sai%20Leela%20Seva%20Trust&am=${amount}&cu=INR`;
+    const upiString = `upi://pay?pa=boim-000589313602@boi&pn=BIT%20CHAWL%20BELASIS%20ROAD%20SARVAJANIK%20SHREE%20GANESHOTSAV%20MANDAL&am=${amount}&cu=INR`;
     if (upiQrCodeImg) {
       upiQrCodeImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=190x190&data=${encodeURIComponent(upiString)}`;
     }

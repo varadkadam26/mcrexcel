@@ -1,0 +1,186 @@
+<%- include('partials/header') %>
+
+<section class="page-hero-banner">
+  <div class="container">
+    <span class="section-badge">
+      <span class="lang-en">Contact & Location</span>
+      <span class="lang-mr">संपर्क व पत्ता</span>
+    </span>
+    <h1>
+      <span class="lang-en">Contact Us</span>
+      <span class="lang-mr">आमचे संपर्क</span>
+    </h1>
+    <p>
+      <span class="lang-en">Get in touch with the working committee of Belasis Road, B.I.T. Chawl Mandal.</span>
+      <span class="lang-mr">बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ कार्यकारिणीशी संपर्क साधा.</span>
+    </p>
+  </div>
+</section>
+
+<section style="background: var(--bg-cream); padding: 5rem 0;">
+  <div class="container">
+    
+    <div class="grid-2" style="margin-bottom: 4rem;">
+      <!-- Contact Info Box -->
+      <div class="card-temple" style="padding: 2.5rem;">
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1.5rem; border-left: 4px solid var(--royal-gold); padding-left: 1rem;">
+          <span class="lang-en">Mandal Head Office</span>
+          <span class="lang-mr">मंडळ मुख्य कार्यालय</span>
+        </h2>
+
+        <div style="margin-bottom: 1.8rem;">
+          <h4 style="color: var(--primary-saffron); font-size: 1.05rem; margin-bottom: 0.4rem;">
+            <i class="fa-solid fa-building-columns" style="margin-right: 8px;"></i>
+            <span class="lang-en">Mandap & Office Address</span>
+            <span class="lang-mr">मण्डप व मुख्य कार्यालय पत्ता</span>
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;" data-i18n="footer_address">
+            बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 1.8rem;">
+          <h4 style="color: var(--primary-saffron); font-size: 1.05rem; margin-bottom: 0.6rem;">
+            <i class="fa-solid fa-phone" style="margin-right: 8px;"></i>
+            <span class="lang-en">Mandal Contact Numbers</span>
+            <span class="lang-mr">मंडळ संपर्क क्रमांक</span>
+          </h4>
+          <div style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.8;">
+            <div style="margin-bottom: 0.6rem;">
+              <strong style="color: var(--temple-maroon);">
+                <span class="lang-en">1) Shri Murari Pradip Tawde (President):</span>
+                <span class="lang-mr">१) श्री. मुरारी प्रदीप तावडे (अध्यक्ष):</span>
+              </strong><br>
+              <a href="tel:+917666695958" style="color: var(--primary-saffron); font-weight: 700; text-decoration: none;">+91 76666 95958</a>
+            </div>
+            <div>
+              <strong style="color: var(--temple-maroon);">
+                <span class="lang-en">2) Shri Sameer Sadanand Patil (Publicity Advisor):</span>
+                <span class="lang-mr">२) श्री. समीर सदानंद पाटील (प्रचार-प्रसार सल्लागार):</span>
+              </strong><br>
+              <a href="tel:+919967638687" style="color: var(--primary-saffron); font-weight: 700; text-decoration: none;">+91 99676 38687</a>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="color: var(--primary-saffron); font-size: 1.05rem; margin-bottom: 0.4rem;">
+            <i class="fa-solid fa-envelope" style="margin-right: 8px;"></i>
+            <span class="lang-en">Official Email ID</span>
+            <span class="lang-mr">अधिकृत ईमेल पत्ता</span>
+          </h4>
+          <p style="color: var(--text-muted); font-size: 0.98rem; line-height: 1.7;">
+            mumbaicentralcharaja@gmail.com<br>
+            Instagram: @mumbaicentralcharajaofficial
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact Inquiry Form -->
+      <div class="card-temple" style="padding: 2.5rem;">
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1.5rem;">
+          <span class="lang-en">Send a Message</span>
+          <span class="lang-mr">संदेश पाठवा</span>
+        </h2>
+
+        <form id="contactForm">
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);">
+              <span class="lang-en">Full Name *</span>
+              <span class="lang-mr">तुमचे नाव *</span>
+            </label>
+            <input type="text" id="cName" required placeholder="Name / संपूर्ण नाव टाका" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
+          </div>
+
+          <div style="margin-bottom: 1.2rem;">
+            <label style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);">
+              <span class="lang-en">Email or Mobile *</span>
+              <span class="lang-mr">ईमेल किंवा मोबाईल *</span>
+            </label>
+            <input type="text" id="cContact" required placeholder="Email or Mobile / ईमेल किंवा मोबाईल" style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);">
+              <span class="lang-en">Your Message / Query *</span>
+              <span class="lang-mr">तुमचा संदेश / प्रश्न *</span>
+            </label>
+            <textarea id="cMessage" rows="4" required placeholder="Message / येथे संदेश लिहा..." style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-size: 1.05rem;">
+            <span class="lang-en">Send Message to Mandal</span>
+            <span class="lang-mr">मंडळाला संदेश पाठवा</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Embedded Google Maps at Bottom -->
+    <div style="background: var(--bg-white); border-radius: var(--radius-lg); border: 2px solid var(--royal-gold); padding: 2rem; box-shadow: var(--shadow-md);">
+      <h3 style="font-size: 1.6rem; color: var(--temple-maroon); margin-bottom: 1rem; text-align: center;">
+        <span class="lang-en">Google Maps - Mandap Location (Mumbai Central)</span>
+        <span class="lang-mr">गूगल मॅप्स - मण्डप स्थान (Mumbai Central)</span>
+      </h3>
+
+      <div style="position: relative; width: 100%; height: 400px; border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border-gold);">
+        <a href="https://maps.app.goo.gl/aU8xN8pStBv1gHZb8" target="_blank" rel="noopener noreferrer" 
+           style="position: absolute; top: 10px; left: 10px; z-index: 10; background: white; padding: 8px 12px; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.2); color: #1a73e8; text-decoration: none; font-family: Roboto, Arial, sans-serif; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 6px;">
+          Open in Maps <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+        <iframe 
+          src="https://maps.google.com/maps?q=Mumbai%20Centralcha%20Raja&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = e.target.querySelector('button[type="submit"]');
+    const origText = btn.innerHTML;
+    
+    try {
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> संदेश पाठवत आहे...';
+      
+      const payload = {
+        name: document.getElementById('cName').value,
+        contact: document.getElementById('cContact').value,
+        message: document.getElementById('cMessage').value,
+        mandal: 'Mumbai Central'
+      };
+
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        alert('तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे! मंडळ प्रतिनिधी लवकरच संपर्क करतील.');
+        document.getElementById('contactForm').reset();
+      } else {
+        alert('त्रुटी: ' + (data.message || 'संदेश पाठवता आला नाही.'));
+      }
+    } catch(err) {
+      console.error(err);
+      alert('नेटवर्क त्रुटी! कृपया थोड्या वेळाने प्रयत्न करा.');
+    } finally {
+      btn.disabled = false;
+      btn.innerHTML = origText;
+    }
+  });
+</script>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,323 @@
+<%- include('partials/header') %>
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+  <section class="page-hero-banner">
+    <div class="container">
+      <span class="section-badge" data-i18n="badge_80g">
+        ८०जी कर सवलत प्राप्त
+      </span>
+      <h1 data-i18n="donate_title">ऑनलाइन देणगी पोर्टल</h1>
+      <p data-i18n="donate_sub">
+        मुंबई सेंट्रलच्या राजाच्या सामाजिक कार्याला आणि मण्डप व्यवस्थेला आपले पवित्र सहकार्य द्या.
+      </p>
+    </div>
+  </section>
+
+  <section style="background: var(--bg-cream); padding: 5rem 0;">
+    <div class="container" style="max-width: 850px;">
+
+      <div class="card-temple" style="padding: 3rem;">
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1.5rem; text-align: center;"
+          data-i18n="donate_form_title">
+          देणगी फॉर्म
+        </h2>
+
+        <form id="donationForm">
+          <!-- Preset Amount Pills -->
+          <div style="margin-bottom: 2rem;">
+            <label
+              style="display: block; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--text-main); text-align: center;"
+              data-i18n="lbl_select_amount">
+              देणगी रक्कम निवडा (₹) *
+            </label>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;" id="presetBtns">
+              <button type="button" class="btn btn-outline preset-btn" data-val="501">
+                <span class="lang-en">₹ 501/-</span><span class="lang-mr">₹ ५०१/-</span>
+              </button>
+              <button type="button" class="btn btn-outline preset-btn active" data-val="1008"
+                style="background: var(--temple-maroon); color: var(--gold-soft); border-color: var(--royal-gold);">
+                <span class="lang-en">₹ 1008/-</span><span class="lang-mr">₹ १००८/-</span>
+              </button>
+              <button type="button" class="btn btn-outline preset-btn" data-val="2100">
+                <span class="lang-en">₹ 2100/-</span><span class="lang-mr">₹ २१००/-</span>
+              </button>
+              <button type="button" class="btn btn-outline preset-btn" data-val="5001">
+                <span class="lang-en">₹ 5001/-</span><span class="lang-mr">₹ ५००१/-</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Custom Amount -->
+          <div style="margin-bottom: 1.5rem;">
+            <label
+              style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);"
+              data-i18n="lbl_custom_amount">
+              किंवा तुमची रक्कम टाका (₹) *
+            </label>
+            <input type="number" id="donationAmount" value="1008" min="11" required
+              style="width: 100%; padding: 0.85rem 1.2rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 1.1rem; font-weight: 700; color: var(--temple-maroon);">
+          </div>
+
+          <!-- Donor Name -->
+          <div style="margin-bottom: 1.5rem;">
+            <label
+              style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);"
+              data-i18n="lbl_donor_name">
+              देणगीदाराचे संपूर्ण नाव *
+            </label>
+            <input type="text" id="donorName" required placeholder="संपूर्ण नाव टाका" data-i18n="ph_donor_name"
+              style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
+          </div>
+
+          <!-- Contact Phone -->
+          <div class="form-grid-2" style="margin-bottom: 1.5rem;">
+            <div>
+              <label
+                style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);"
+                data-i18n="lbl_mobile">
+                मोबाईल नंबर *
+              </label>
+              <input type="tel" id="donorPhone" required placeholder="१० अंकी मोबाईल नंबर" data-i18n="ph_mobile"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
+            </div>
+
+            <div>
+              <label
+                style="display: block; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--text-main);"
+                data-i18n="lbl_email">
+                ईमेल आयडी (पर्यायी)
+              </label>
+              <input type="email" id="donorEmail" placeholder="पावतीसाठी ईमेल" data-i18n="ph_email"
+                style="width: 100%; padding: 0.75rem 1rem; border-radius: var(--radius-sm); border: 1px solid var(--border-gold); font-size: 0.95rem;">
+            </div>
+          </div>
+
+          <!-- PAN Card (Hidden) -->
+          <input type="hidden" id="donorPan" value="">
+
+          <button type="submit" class="btn btn-primary"
+            style="width: 100%; padding: 1rem; font-size: clamp(0.9rem, 3.5vw, 1.1rem); font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="btnDonateSubmit">
+            <span data-i18n="btn_donate_submit">सुरक्षित देणगी द्या व PDF पावती मिळवा</span> <i
+              class="bi bi-shield-check"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- Official Bank UPI QR Code Scanner Card -->
+      <div class="card-temple" style="padding: 3rem; margin-top: 3rem; text-align: center;">
+        <span class="section-badge" style="margin-bottom: 0.8rem; display: inline-block;">
+          <span class="lang-en">Bank of India Official Scanner</span>
+          <span class="lang-mr">बँक ऑफ इंडिया अधिकृत क्यूआर स्कॅनर</span>
+        </span>
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1rem;">
+          <span class="lang-en">Scan & Pay via UPI</span>
+          <span class="lang-mr">क्यूआर कोड स्कॅन करून देणगी द्या</span>
+        </h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.8rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <span class="lang-en">Scan the official Mandal QR Code using any UPI App (GPay, PhonePe, Paytm, BHIM, BOI Mobile)</span>
+          <span class="lang-mr">कोणत्याही UPI अ‍ॅपद्वारे (Google Pay, PhonePe, Paytm, BHIM, BOI Mobile) खालील अधिकृत QR कोड स्कॅन करून देणगी द्या:</span>
+        </p>
+
+        <div style="display: inline-block; padding: 1.2rem; background: #FFFFFF; border: 2px solid var(--royal-gold); border-radius: var(--radius-lg); box-shadow: 0 12px 35px rgba(0,0,0,0.18); max-width: 360px; width: 100%;">
+          <img src="/images/mandal_bank_qr.jpg" alt="Bank of India Mandal Official UPI QR Code" style="width: 100%; border-radius: var(--radius-sm); border: 1px solid #CBD5E1;">
+          <div style="margin-top: 1rem; padding: 0.75rem 1rem; background: #FFF8E7; border-radius: var(--radius-sm); border: 1px dashed var(--royal-gold);">
+            <span style="color: var(--temple-maroon); font-size: 0.82rem; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 2px;">
+              <span class="lang-en">Official Mandal UPI VPA</span>
+              <span class="lang-mr">अधिकृत UPI VPA</span>
+            </span>
+            <code style="font-size: 1.1rem; font-weight: 800; color: #0F172A; letter-spacing: 0.5px; user-select: all;">boim-000589313602@boi</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Bank Transfer Option -->
+      <div class="card-temple" style="padding: 3rem; margin-top: 3rem;">
+        <h2 style="font-size: 1.8rem; color: var(--temple-maroon); margin-bottom: 1.5rem; text-align: center;">
+          <span class="lang-en">Direct Bank Transfer</span>
+          <span class="lang-mr">थेट बँक ट्रान्सफर</span>
+        </h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem;">
+          <span class="lang-en">You can also donate directly to our bank account using the details below:</span>
+          <span class="lang-mr">तुम्ही खालील बँक तपशील वापरून थेट आमच्या बँक खात्यात देणगी देऊ शकता:</span>
+        </p>
+
+        <div style="background: var(--bg-white); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-gold); font-size: 1.1rem; line-height: 1.8; color: var(--text-main);">
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Account Name:</span><span class="lang-mr">खातेदाराचे नाव:</span>
+            </strong>
+            <span class="lang-en">B.I.T CHAWL BELASIS ROAD SARVAJANIK SHREE GANESHOTSAV MANDAL</span><span class="lang-mr">बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Bank Name:</span><span class="lang-mr">बँकेचे नाव:</span>
+            </strong>
+            <span class="lang-en">Bank of India (BOI)</span><span class="lang-mr">बँक ऑफ इंडिया (BOI)</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Branch:</span><span class="lang-mr">शाखा:</span>
+            </strong>
+            <span class="lang-en">Mumbai Central Branch, Mumbai, Maharashtra - 400007</span><span class="lang-mr">मुंबई सेंट्रल शाखा, मुंबई, महाराष्ट्र - ४००००७</span>
+          </div>
+          <div style="margin-bottom: 0.5rem;">
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">Account Number:</span><span class="lang-mr">खाते क्रमांक:</span>
+            </strong>
+            <span style="font-weight: 700;">
+              <span class="lang-en">000510100013602</span><span class="lang-mr">०००५१०१०००१३६०२</span>
+            </span>
+          </div>
+          <div>
+            <strong style="color: var(--temple-maroon);">
+              <span class="lang-en">IFSC Code:</span><span class="lang-mr">IFSC कोड:</span>
+            </strong>
+            <span style="font-weight: 700;">BKID0000005</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const presetBtns = document.querySelectorAll('.preset-btn');
+      const amountInput = document.getElementById('donationAmount');
+
+      presetBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          presetBtns.forEach(b => {
+            b.style.background = 'transparent';
+            b.style.color = 'var(--temple-maroon)';
+          });
+          btn.style.background = 'var(--temple-maroon)';
+          btn.style.color = 'var(--gold-soft)';
+          btn.style.borderColor = 'var(--royal-gold)';
+          amountInput.value = btn.getAttribute('data-val');
+        });
+      });
+
+      document.getElementById('donationForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = document.getElementById('btnDonateSubmit');
+        const btnTextSpan = btn.querySelector('span');
+        btn.disabled = true;
+
+        const currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('mcc_lang')) || 'mr';
+        const processingMsg = currentLang === 'en' ? 'Donation processing in progress...' : 'देणगी प्रक्रिया सुरू आहे...';
+        const successMsg = currentLang === 'en' ? 'Donation successful! Your 80G PDF receipt is downloading.' : 'देणगी यशस्वी झाली! तुमची ८०जी पावती डाऊनलोड होत आहे.';
+
+        if (btnTextSpan) {
+          btnTextSpan.textContent = processingMsg;
+        } else {
+          btn.textContent = processingMsg;
+        }
+
+        const amountVal = parseFloat(amountInput.value);
+        const donorName = document.getElementById('donorName').value;
+        const donorPhone = document.getElementById('donorPhone').value;
+        const donorEmail = document.getElementById('donorEmail').value;
+        const donorPan = document.getElementById('donorPan').value;
+
+        try {
+          // Step 1: Create Order via Backend Razorpay SDK
+          const orderRes = await fetch('/api/create-donation-order', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ amount: amountVal })
+          });
+          const orderData = await orderRes.json();
+
+          if (!orderData.success) {
+            alert(orderData.message || 'Failed to initiate donation.');
+            btn.disabled = false;
+            if (typeof setLanguage === 'function') setLanguage(currentLang);
+            return;
+          }
+
+          // Helper to finalize confirmation
+          async function completeDonation(payId, ordId, sig) {
+            const confirmRes = await fetch('/api/confirm-donation', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                receipt_no: orderData.receipt_no,
+                donor_name: donorName,
+                phone: donorPhone,
+                email: donorEmail,
+                amount: amountVal,
+                pan_number: donorPan,
+                payment_id: payId,
+                order_id: ordId,
+                signature: sig
+              })
+            });
+            const confirmData = await confirmRes.json();
+            if (confirmData.success) {
+              alert(successMsg);
+              window.location.href = `/download-receipt/${confirmData.receipt_no}`;
+            } else {
+              alert(confirmData.message || 'Payment verification failed.');
+              btn.disabled = false;
+              if (typeof setLanguage === 'function') setLanguage(currentLang);
+            }
+          }
+
+          // Step 2: Open Razorpay Official Checkout UI Popup if script loaded
+          const razorpayKey = (orderData.order && orderData.order.key_id) || '<%= typeof razorpayKeyId !== "undefined" ? razorpayKeyId : "" %>';
+
+          if (typeof window.Razorpay !== 'undefined' && razorpayKey) {
+            const options = {
+              key: razorpayKey,
+              amount: orderData.order ? orderData.order.amount : Math.round(amountVal * 100),
+              currency: 'INR',
+              name: 'Mumbai Central Cha Raja',
+              description: 'Ganeshotsav Seva Donation (80G Tax Exempt)',
+              image: '/images/logo.png',
+              order_id: orderData.order ? orderData.order.order_id : '',
+              prefill: {
+                name: donorName,
+                email: donorEmail,
+                contact: donorPhone
+              },
+              theme: {
+                color: '#7F1D1D'
+              },
+              handler: function (response) {
+                completeDonation(
+                  response.razorpay_payment_id,
+                  response.razorpay_order_id,
+                  response.razorpay_signature
+                );
+              },
+              modal: {
+                ondismiss: function () {
+                  btn.disabled = false;
+                  if (typeof setLanguage === 'function') setLanguage(currentLang);
+                }
+              }
+            };
+
+            const rzp = new window.Razorpay(options);
+            rzp.open();
+          } else {
+            // Fallback test simulation if Checkout JS is blocked
+            await completeDonation(
+              `pay_sim_${Date.now()}`,
+              orderData.order ? orderData.order.order_id : `order_sim_${Date.now()}`,
+              `sig_sim_${Date.now()}`
+            );
+          }
+
+        } catch (err) {
+          console.error('Donation error:', err);
+          alert('Error submitting donation.');
+          btn.disabled = false;
+          if (typeof setLanguage === 'function') setLanguage(currentLang);
+        }
+      });
+    });
+  </script>
+
+  <%- include('partials/footer') %>

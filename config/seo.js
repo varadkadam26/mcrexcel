@@ -1,6 +1,6 @@
 const path = require('path');
 
-const DEFAULT_SITE_URL = process.env.PUBLIC_SITE_URL || 'https://mcrexcel.vercel.app';
+const DEFAULT_SITE_URL = process.env.PUBLIC_SITE_URL || 'https://mumbaicentralcharaja.com';
 
 /**
  * Metadata configuration for all public pages

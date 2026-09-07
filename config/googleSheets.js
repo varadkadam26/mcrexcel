@@ -12,7 +12,14 @@ function getSheetsClient() {
   try {
     let auth;
     if (process.env.GOOGLE_CREDENTIALS_JSON) {
-      const credentials = JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON);
+      let credentials = typeof process.env.GOOGLE_CREDENTIALS_JSON === 'string'
+        ? JSON.parse(process.env.GOOGLE_CREDENTIALS_JSON)
+        : process.env.GOOGLE_CREDENTIALS_JSON;
+
+      if (credentials && credentials.private_key) {
+        credentials.private_key = credentials.private_key.replace(/\\n/g, '\n');
+      }
+
       auth = new google.auth.GoogleAuth({
         credentials,
         scopes: [

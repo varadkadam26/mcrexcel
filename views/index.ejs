@@ -53,6 +53,16 @@
         </div>
       </div>
 
+      <%
+        const serverNow = Date.now();
+        // Target: 12th September 2026 16:00:00 IST (10:30:00 UTC)
+        const serverTarget = Date.UTC(2026, 8, 12, 10, 30, 0);
+        const serverDiff = Math.max(0, serverTarget - serverNow);
+        const initDays = String(Math.floor(serverDiff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        const initHours = String(Math.floor((serverDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        const initMins = String(Math.floor((serverDiff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const initSecs = String(Math.floor((serverDiff % (1000 * 60)) / 1000)).padStart(2, '0');
+      %>
       <!-- Right Side Countdown Card & Celebration Widget -->
       <div class="hero-countdown-card" id="heroCountdownCard">
         <span class="countdown-badge-pill">
@@ -68,28 +78,28 @@
         <div class="flip-clock-grid" id="countdownClockGrid">
           <div class="flip-unit-wrap">
             <div class="flip-clock-unit">
-              <span class="flip-val" id="countDays">00</span>
+              <span class="flip-val" id="countDays"><%= initDays %></span>
             </div>
             <span class="timer-label-txt" data-i18n="label_days" style="margin-top: 6px; font-weight: 700; color: var(--gold-soft);">Days</span>
           </div>
 
           <div class="flip-unit-wrap">
             <div class="flip-clock-unit">
-              <span class="flip-val" id="countHours">00</span>
+              <span class="flip-val" id="countHours"><%= initHours %></span>
             </div>
             <span class="timer-label-txt" data-i18n="label_hours" style="margin-top: 6px; font-weight: 700; color: var(--gold-soft);">Hours</span>
           </div>
 
           <div class="flip-unit-wrap">
             <div class="flip-clock-unit">
-              <span class="flip-val" id="countMins">00</span>
+              <span class="flip-val" id="countMins"><%= initMins %></span>
             </div>
             <span class="timer-label-txt" data-i18n="label_mins" style="margin-top: 6px; font-weight: 700; color: var(--gold-soft);">Mins</span>
           </div>
 
           <div class="flip-unit-wrap">
             <div class="flip-clock-unit">
-              <span class="flip-val" id="countSecs">00</span>
+              <span class="flip-val" id="countSecs"><%= initSecs %></span>
             </div>
             <span class="timer-label-txt" data-i18n="label_secs" style="margin-top: 6px; font-weight: 700; color: var(--gold-soft);">Secs</span>
           </div>

@@ -280,10 +280,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const countSecsEl = document.getElementById('countSecs');
   const btnTriggerConfetti = document.getElementById('btnTriggerConfetti');
 
-  // Target Date: September 12, 2026 at 4:00 PM IST (16:00:00)
-  // Uses cross-browser integer components (Year, Month index 8 = Sept, Day, Hour, Min, Sec)
-  const targetYear = Math.max(2026, new Date().getFullYear());
-  const targetDate = new Date(targetYear, 8, 12, 16, 0, 0).getTime();
+  // Target Date: September 12, 2026 at 4:00 PM IST (16:00:00 IST = 10:30:00 UTC)
+  // Date.UTC(2026, 8, 12, 10, 30, 0) returns exact UNIX timestamp (1789209000000)
+  const targetDate = Date.UTC(2026, 8, 12, 10, 30, 0);
 
   function triggerAagmanConfetti() {
     // 1. Canvas Confetti Fireworks Explosion

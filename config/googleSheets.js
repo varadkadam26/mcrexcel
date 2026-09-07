@@ -130,11 +130,34 @@ async function appendTshirtBooking(order) {
   return appendRow('TShirtBookings', rowValues);
 }
 
+/**
+ * Clear all data rows (preserving header row) from connected Google Sheets tabs
+ */
+async function clearAllSheets() {
+  try {
+    const client = getSheetsClient();
+    if (!client) return false;
+    const tabs = ['Donations', 'ContactUs', 'TShirtBookings'];
+    for (const tab of tabs) {
+      await client.spreadsheets.values.clear({
+        spreadsheetId: SPREADSHEET_ID,
+        range: `${tab}!A2:Z10000`
+      });
+    }
+    console.log('✅ Cleared all data rows in Google Sheets tabs');
+    return true;
+  } catch (err) {
+    console.error('❌ Error clearing Google Sheets:', err.message);
+    return false;
+  }
+}
+
 module.exports = {
   getSheetsClient,
   appendRow,
   appendDonation,
   appendContact,
   appendTshirtBooking,
+  clearAllSheets,
   SPREADSHEET_ID
 };

@@ -8,7 +8,12 @@
           <span class="section-badge">मंंडळ कार्यकारिणी डेस्क</span>
           <h1 style="font-size: 2.2rem; color: var(--temple-maroon); margin: 0;">ॲडमिन कंट्रोल पॅनेल</h1>
         </div>
-        <div style="display: flex; gap: 0.8rem; align-items: center;">
+        <div style="display: flex; gap: 0.8rem; align-items: center; flex-wrap: wrap;">
+          <form action="/admin/clear-all-data" method="POST" onsubmit="return confirm('Are you sure you want to delete all test entries from Admin Panel and connected Google Sheets?');" style="margin:0;">
+            <button type="submit" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.88rem; color: #DC2626; border-color: #FCA5A5;">
+              <i class="fa-solid fa-trash-can"></i> सर्व डेटा हटवा (Clear Entries)
+            </button>
+          </form>
           <a href="/admin/logout" class="btn btn-outline" style="padding: 0.5rem 1.2rem; font-size: 0.88rem;">
             <i class="fa-solid fa-right-from-bracket"></i> लॉगआउट (Logout)
           </a>

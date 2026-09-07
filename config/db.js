@@ -3,87 +3,9 @@ require('dotenv').config();
 
 // In-memory fallback data store for offline / demo execution
 const mockStore = {
-  passes: [
-    {
-      id: 1,
-      pass_code: 'MCC-2026-8942',
-      full_name: 'Rahul Ramesh Sharma',
-      phone: '9876543210',
-      email: 'rahul.sharma@example.com',
-      age: 34,
-      gender: 'Male',
-      city: 'Mumbai Central',
-      batch: 'VIP Mandap Entry & Aarti Pass',
-      emergency_contact: '9876543211',
-      id_proof_type: 'Aadhaar Card',
-      id_proof_number: 'XXXX-XXXX-4812',
-      status: 'Confirmed',
-      created_at: new Date('2026-07-20T10:30:00Z')
-    },
-    {
-      id: 2,
-      pass_code: 'MCC-2026-9104',
-      full_name: 'Priya Sunil Patil',
-      phone: '9123456789',
-      email: 'priya.patil@example.com',
-      age: 28,
-      gender: 'Female',
-      city: 'Byculla, Mumbai',
-      batch: 'Karyakarta / Sevak Pass',
-      emergency_contact: '9123456780',
-      id_proof_type: 'PAN Card',
-      id_proof_number: 'ABCDE1234F',
-      status: 'Confirmed',
-      created_at: new Date('2026-07-21T14:15:00Z')
-    }
-  ],
-  donations: [
-    {
-      id: 1,
-      receipt_no: 'MCC-REC-2026-101',
-      donor_name: 'Anand V. Deshmukh',
-      phone: '9988776655',
-      email: 'anand.deshmukh@example.com',
-      amount: 5001,
-      category: 'Modak & Mahaprasad Seva',
-      payment_id: 'pay_Mock101MCC',
-      order_id: 'order_Mock101Order',
-      pan_number: 'APZPD8923K',
-      status: 'SUCCESS',
-      created_at: new Date('2026-07-19T09:00:00Z')
-    },
-    {
-      id: 2,
-      receipt_no: 'MCC-REC-2026-102',
-      donor_name: 'Sunita M. Kulkarni',
-      phone: '9876123456',
-      email: 'sunita.k@example.com',
-      amount: 2100,
-      category: 'Mandap & Pushpa Alankar Seva',
-      payment_id: 'pay_Mock102MCC',
-      order_id: 'order_Mock102Order',
-      pan_number: 'BKPKS4129L',
-      status: 'SUCCESS',
-      created_at: new Date('2026-07-22T16:45:00Z')
-    }
-  ],
-  tshirt_orders: [
-    {
-      id: 1,
-      receipt_no: 'MCC-TSHIRT-2026-101',
-      buyer_name: 'Vikram A. Salunkhe',
-      phone: '9820098200',
-      email: 'vikram.salunkhe@example.com',
-      size: 'L',
-      color: 'Royal Maroon',
-      quantity: 2,
-      total_amount: 998,
-      address: 'BIT Chawl No 4, Mumbai Central, Mumbai - 400008',
-      payment_id: 'pay_MockTshirt101',
-      status: 'SUCCESS',
-      created_at: new Date('2026-07-25T11:20:00Z')
-    }
-  ],
+  passes: [],
+  donations: [],
+  tshirt_orders: [],
   offline_excel_sheets: [],
   offline_excel_rows: [],
   yatra_status: {
@@ -545,5 +467,25 @@ module.exports = {
 
   getLogs() {
     return mockStore.logs;
+  },
+
+  async clearAllEntries() {
+    mockStore.passes = [];
+    mockStore.donations = [];
+    mockStore.tshirt_orders = [];
+    mockStore.offline_excel_sheets = [];
+    mockStore.offline_excel_rows = [];
+    if (dbPool && !useMock) {
+      try {
+        await dbPool.query('TRUNCATE TABLE passes');
+        await dbPool.query('TRUNCATE TABLE donations');
+        await dbPool.query('TRUNCATE TABLE tshirt_orders');
+        await dbPool.query('DELETE FROM offline_excel_rows');
+        await dbPool.query('DELETE FROM offline_excel_sheets');
+      } catch (err) {
+        console.error('Error clearing MySQL tables:', err.message);
+      }
+    }
+    return true;
   }
 };

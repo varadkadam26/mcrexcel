@@ -134,5 +134,18 @@ module.exports = {
       console.error('Broadcast error:', err);
       res.redirect('/admin?broadcast_error=Failed to dispatch broadcast messages.');
     }
+  },
+
+  async clearAllData(req, res) {
+    try {
+      const googleSheets = require('../config/googleSheets');
+      await db.clearAllEntries();
+      await googleSheets.clearAllSheets();
+      db.addLog('SYSTEM', 'All test entries and connected Excel/Google Sheets data cleared by admin.');
+      res.redirect('/admin?broadcast_success=All test entries and connected Google Sheets data deleted successfully.');
+    } catch (err) {
+      console.error('Clear data error:', err);
+      res.redirect('/admin?broadcast_error=Failed to clear entries.');
+    }
   }
 };

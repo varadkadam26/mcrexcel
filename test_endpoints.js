@@ -67,13 +67,9 @@ async function runTests() {
     { method: 'GET', path: '/committee', expectedStatus: 200, name: 'Committee Page' },
     { method: 'GET', path: '/contact', expectedStatus: 200, name: 'Contact Page' },
     
-    // Donation Pages
+    // Donation & Merch Pages
     { method: 'GET', path: '/donate', expectedStatus: 200, name: 'Donation View' },
-    { method: 'GET', path: '/download-receipt/MCC-REC-2026-101', expectedStatus: 200, name: 'Download Donation PDF Receipt' },
-
-    // Merch Page
     { method: 'GET', path: '/tshirt', expectedStatus: 200, name: 'T-Shirt Booking View' },
-    { method: 'GET', path: '/download-tshirt-receipt/MCC-TSHIRT-2026-101', expectedStatus: 200, name: 'Download T-Shirt Receipt PDF' },
 
     // Admin Access Controls
     { method: 'GET', path: '/admin/login', expectedStatus: 200, name: 'Admin Login View' },
@@ -99,6 +95,7 @@ async function runTests() {
   // Test API Endpoints
   console.log('\n🧪 Testing API Post/Submit Actions...');
 
+  let testDonationReceipt = '';
   // 1. Donation Order Creation
   try {
     const res = await request('POST', '/api/create-donation-order', { amount: 1500 });
@@ -116,8 +113,9 @@ async function runTests() {
 
   // 2. Donation Confirmation
   try {
+    testDonationReceipt = `MCC-REC-2026-TEST-${Math.floor(100+Math.random()*900)}`;
     const res = await request('POST', '/api/confirm-donation', {
-      receipt_no: `MCC-REC-2026-TEST-${Math.floor(100+Math.random()*900)}`,
+      receipt_no: testDonationReceipt,
       donor_name: 'Test Donor Name',
       phone: '9988776655',
       email: 'test@example.com',
@@ -139,6 +137,21 @@ async function runTests() {
     passed = false;
   }
 
+  // Test downloading donation receipt PDF
+  try {
+    const res = await request('GET', `/download-receipt/${testDonationReceipt}`);
+    if (res.statusCode === 200) {
+      console.log(`✅ Passed: GET /download-receipt/${testDonationReceipt} - Downloaded PDF`);
+    } else {
+      console.error(`❌ Failed: GET /download-receipt/${testDonationReceipt} - Got status ${res.statusCode}`);
+      passed = false;
+    }
+  } catch (err) {
+    console.error(`❌ Error downloading donation receipt: ${err.message}`);
+    passed = false;
+  }
+
+  let testTshirtReceipt = '';
   // 3. T-Shirt Order Creation
   try {
     const res = await request('POST', '/tshirt/create-order', {
@@ -162,6 +175,7 @@ async function runTests() {
 
   // 4. T-Shirt Order Confirmation
   try {
+    testTshirtReceipt = `MCC-TSHIRT-2026-TEST-${Math.floor(100+Math.random()*900)}`;
     const res = await request('POST', '/tshirt/confirm', {
       buyer_name: 'Test Merch Buyer',
       phone: '9820012345',
@@ -170,7 +184,7 @@ async function runTests() {
       quantity: 2,
       total_amount: 998,
       address: 'Test Address Line 1',
-      receipt_no: `MCC-TSHIRT-2026-TEST-${Math.floor(100+Math.random()*900)}`,
+      receipt_no: testTshirtReceipt,
       payment_id: 'pay_sim_test',
       order_id: 'order_sim_test',
       signature: 'sig_sim_test'
@@ -184,6 +198,20 @@ async function runTests() {
     }
   } catch (err) {
     console.error(`❌ Error testing T-Shirt order confirmation: ${err.message}`);
+    passed = false;
+  }
+
+  // Test downloading tshirt receipt PDF
+  try {
+    const res = await request('GET', `/download-tshirt-receipt/${testTshirtReceipt}`);
+    if (res.statusCode === 200) {
+      console.log(`✅ Passed: GET /download-tshirt-receipt/${testTshirtReceipt} - Downloaded PDF`);
+    } else {
+      console.error(`❌ Failed: GET /download-tshirt-receipt/${testTshirtReceipt} - Got status ${res.statusCode}`);
+      passed = false;
+    }
+  } catch (err) {
+    console.error(`❌ Error downloading tshirt receipt: ${err.message}`);
     passed = false;
   }
 

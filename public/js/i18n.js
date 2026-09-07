@@ -44,7 +44,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "FESTIVAL UPDATES",
-    ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (12:00 PM AFTERNOON)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • 80G Tax Exempt Donations Open 🌺",
+    ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (12:00 PM AFTERNOON)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • Online Donations Open 🌺",
 
     // President Message & Counters
     pres_badge: "President & Executive Message",
@@ -106,8 +106,8 @@ const translations = {
     // Donation Section
     donate_section_tag: "SACRED CONTRIBUTION",
     donate_section_title: "Support Mumbai Central Cha Raja Seva",
-    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
-    btn_donate_80g: "Donate Online (With 80G Receipt)",
+    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements.",
+    btn_donate_online: "Donate Online",
 
     // Location & Contact
     location_tag: "MANDAP LOCATION & CONTACT",
@@ -156,7 +156,7 @@ const translations = {
     // Donate CTA section
     donate_section_tag: "SACRED CONTRIBUTION",
     donate_section_title: "Support Mumbai Central Cha Raja Seva",
-    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements. All donations are 50% Tax Exempt under Section 80G.",
+    donate_section_sub: "Your contributions support community welfare, healthcare camps, and mandap arrangements.",
 
     // Location & Contact
     location_tag: "MANDAP LOCATION & CONTACT",
@@ -195,7 +195,7 @@ const translations = {
     about_gallery_title: "Festival Glimpses & Mandap Art",
 
     // Donate Page Form & Modal
-    badge_80g: "80G Tax Exempt Eligible",
+    badge_mandal_donate: "Official Mandal Donation",
     donate_title: "Online Donation Portal",
     donate_sub: "Support social initiatives, healthcare camps, and mandap management of Mumbai Central Cha Raja.",
     donate_form_title: "Donation Form",
@@ -206,12 +206,12 @@ const translations = {
     lbl_mobile: "Mobile Number *",
     ph_mobile: "10-digit mobile number",
     lbl_email: "Email ID (Optional)",
-    ph_email: "Email for 80G PDF receipt",
-    lbl_pan: "PAN Card Number (For 80G Tax Exemption Receipt)",
+    ph_email: "Email for PDF receipt",
+    lbl_pan: "PAN Card Number (Optional)",
     ph_pan: "e.g. ABCDE1234F",
     btn_donate_submit: "Donate & Get Receipt",
     msg_donation_processing: "Donation processing in progress...",
-    msg_donation_success: "Donation successful! Your 80G receipt is downloading."
+    msg_donation_success: "Donation successful! Your receipt is downloading."
   },
 
   mr: {
@@ -255,7 +255,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "ताजी अपडेट्स",
-    ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी १२:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ८०जी कर सवलत देणगी उपलब्ध 🌺",
+    ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी १२:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ऑनलाईन देणगी उपलब्ध 🌺",
 
     // President Message & Counters
     pres_badge: "अध्यक्षीय संदेश",
@@ -315,8 +315,8 @@ const translations = {
     // Donation Section
     donate_section_tag: "सेवा योगदान",
     donate_section_title: "मुंबई सेंट्रलचा राजा सेवेला पाठिंबा द्या",
-    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
-    btn_donate_80g: "ऑनलाइन देणगी द्या (८०जी पावतीसह)",
+    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते.",
+    btn_donate_online: "ऑनलाइन देणगी द्या",
 
     // Location & Contact
     location_tag: "मंडप स्थान व संपर्क",
@@ -324,7 +324,7 @@ const translations = {
     location_sub: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
     contact_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
-    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
+    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७)",
     visitor_count_label: "एकूण दर्शनार्थी भेट :",
 
     // Schedule Page Titles
@@ -351,7 +351,7 @@ const translations = {
     footer_col_initiatives: "उपक्रम व देणगी",
     footer_col_location: "मंडप स्थान व नकाशा",
     footer_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
-    footer_reg_tax: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
+    footer_reg_tax: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७)",
     footer_desc: "बी.आय.टी. चाळ, बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ (स्थापना १९२९). भक्ती, संस्कृती आणि समाजसेवेचा अखंड वसा.",
     footer_copyright: "© बी.आय.टी. चाळ, बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई. सर्व हक्क सुरक्षित.",
 
@@ -365,7 +365,7 @@ const translations = {
     // Donate CTA section
     donate_section_tag: "सेवा योगदान",
     donate_section_title: "मुंबई सेंट्रलचा राजा सेवेला पाठिंबा द्या",
-    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते. सर्व देणग्यांना कलम 80G अंतर्गत ५०% कर सवलत मिळतो.",
+    donate_section_sub: "तुमची देणगी सामाजिक कार्य, आरोग्य शिबीर व मंडप व्यवस्थापनासाठी वापरली जाते.",
 
     // Location & Contact
     location_tag: "मंडप स्थान व संपर्क",
@@ -373,7 +373,7 @@ const translations = {
     location_sub: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
     contact_box_title: "संपर्क माहिती",
     contact_address: "बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ, मुंबई सेंट्रलचा राजा सभागृह, मुंबई - ४००००८.",
-    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७) (८०जी कर सवलत प्राप्त)",
+    contact_reg: "नोंदणी क्र. : (ए/३१४१/मुंबई/७७)",
 
     // Social Work section
     social_section_tag: "समाजोपयोगी उपक्रम",

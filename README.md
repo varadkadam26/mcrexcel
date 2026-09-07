@@ -13,7 +13,7 @@ Official digital web portal for **Mumbai Central Cha Raja**. Powered end-to-end 
 - **🏛️ 24/7 Digital Temple & Live Darshan**: High-definition live stream embedding and real-time festival updates.
 - **🌐 100% Bilingual (English & Marathi)**: Instant zero-leakage language translation engine.
 - **💳 Online Seva & Donation Gateway (`Razorpay`)**: Preset & custom donation options for Mandap Seva, Medical Camps, and Blood Donation.
-- **📜 Instant 80G Tax Exemption Receipts (`PDFKit`)**: Automated PDF receipt generation containing official 80G tax deduction details.
+- **📜 Instant PDF Receipts (`PDFKit`)**: Automated PDF receipt generation containing official donation details.
 - **👕 Official T-Shirt Merchandise Store**: Size-wise stock booking with instant downloadable PDF pickup tokens.
 - **📧 Email Notifications (`Nodemailer`)**: Automated email alerts for donations, bookings, and executive mailbox notifications.
 - **🛡️ Executive Admin Control Panel (`/admin`)**: Real-time stats dashboard, spreadsheet data sync, and interactive log viewer.

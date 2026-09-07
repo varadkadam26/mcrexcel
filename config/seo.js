@@ -8,7 +8,7 @@ const DEFAULT_SITE_URL = process.env.PUBLIC_SITE_URL || 'https://mumbaicentralch
 const pageMetadata = {
   home: {
     title: 'Mumbai Central Cha Raja | Official Ganeshotsav Mandal, Mumbai',
-    description: 'Official Portal of Mumbai Central Cha Raja - Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Live Darshan, 10-day event schedule, 80G tax exempt online donation & social work.',
+    description: 'Official Portal of Mumbai Central Cha Raja - Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Live Darshan, 10-day event schedule, online donation & social work.',
     path: '/'
   },
   about: {
@@ -52,8 +52,8 @@ const pageMetadata = {
     path: '/tshirt'
   },
   donate: {
-    title: 'Mumbai Central Cha Raja | Online 80G Tax Exempt Donation Portal',
-    description: 'Support Mandal Seva & Social Welfare. Donate online securely to Mumbai Central Cha Raja with instant downloadable 80G tax exemption PDF receipt (Reg No: A/3141/Mumbai/77).',
+    title: 'Mumbai Central Cha Raja | Online Donation Portal',
+    description: 'Support Mandal Seva & Social Welfare. Donate online securely to Mumbai Central Cha Raja with instant downloadable PDF receipt (Reg No: A/3141/Mumbai/77).',
     path: '/donate'
   }
 };

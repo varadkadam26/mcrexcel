@@ -14,8 +14,8 @@ module.exports = {
     // Header Box
     doc.rect(40, 40, 515, 100).fill('#4A0404');
     doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('BELASIS ROAD, B.I.T. CHAWL SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
-    doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('MUMBAI CENTRAL CHA RAJA (SEC 80G TAX EXEMPT)', 55, 85);
-    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | 80G Approval: CIT(E)/80G/2024-25/A-1029 | @mumbaicentralcharajaofficial', 55, 106);
+    doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('MUMBAI CENTRAL CHA RAJA', 55, 85);
+    doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | @mumbaicentralcharajaofficial', 55, 106);
 
     // Main Receipt Body
     doc.rect(40, 155, 515, 335).lineWidth(1.5).strokeColor('#800020').stroke();
@@ -46,8 +46,8 @@ module.exports = {
     doc.fillColor('#92400E').fontSize(10).font('Helvetica-Bold').text('CONTRIBUTION AMOUNT RECEIVED', 75, 408);
     doc.fillColor('#B45309').fontSize(20).font('Helvetica-Bold').text(`₹ ${parseFloat(donation.amount).toLocaleString('en-IN')}/-`, 75, 427);
 
-    // Tax Exemption Note
-    doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('All donations made to Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal are 50% tax exempt under Section 80G of the Income Tax Act, 1961.', 40, 505, { align: 'center', width: 515 });
+    // Thank You Note
+    doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('Thank you for your generous contribution to Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal.', 40, 505, { align: 'center', width: 515 });
 
     // Signatures
     doc.fillColor('#4A0404').fontSize(10).font('Helvetica-Bold').text('For Mumbai Central Cha Raja Mandal', 350, 570);

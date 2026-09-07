@@ -3,8 +3,8 @@
 
   <section class="page-hero-banner">
     <div class="container">
-      <span class="section-badge" data-i18n="badge_80g">
-        ८०जी कर सवलत प्राप्त
+      <span class="section-badge" data-i18n="badge_mandal_donate">
+        अधिकृत देणगी पावती
       </span>
       <h1 data-i18n="donate_title">ऑनलाइन देणगी पोर्टल</h1>
       <p data-i18n="donate_sub">
@@ -206,7 +206,7 @@
 
         const currentLang = (typeof localStorage !== 'undefined' && localStorage.getItem('mcc_lang')) || 'mr';
         const processingMsg = currentLang === 'en' ? 'Donation processing in progress...' : 'देणगी प्रक्रिया सुरू आहे...';
-        const successMsg = currentLang === 'en' ? 'Donation successful! Your 80G PDF receipt is downloading.' : 'देणगी यशस्वी झाली! तुमची ८०जी पावती डाऊनलोड होत आहे.';
+        const successMsg = currentLang === 'en' ? 'Donation successful! Your PDF receipt is downloading.' : 'देणगी यशस्वी झाली! तुमची पावती डाऊनलोड होत आहे.';
 
         if (btnTextSpan) {
           btnTextSpan.textContent = processingMsg;
@@ -273,7 +273,7 @@
               amount: orderData.order ? orderData.order.amount : Math.round(amountVal * 100),
               currency: 'INR',
               name: 'Mumbai Central Cha Raja',
-              description: 'Ganeshotsav Seva Donation (80G Tax Exempt)',
+              description: 'Ganeshotsav Seva Donation',
               image: '/images/logo.png',
               order_id: orderData.order ? orderData.order.order_id : '',
               prefill: {

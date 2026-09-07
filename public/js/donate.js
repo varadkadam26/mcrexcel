@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const confirmData = await confirmRes.json();
       if (confirmData.success) {
-        alert('देणगी यशस्वी झाली! ८०जी कर सवलत पावती तयार होत आहे...');
+        alert('देणगी यशस्वी झाली! अधिकृत देणगी पावती तयार होत आहे...');
         setTimeout(() => {
           window.location.href = `/download-receipt/${confirmData.receipt_no}`;
         }, 800);

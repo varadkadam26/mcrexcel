@@ -46,8 +46,8 @@ const translations = {
     ticker_badge: "FESTIVAL UPDATES",
     ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (12:00 PM AFTERNOON)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • Online Donations Open 🌺",
 
-    // President Message & Counters
-    pres_badge: "President & Executive Message",
+    // Executive Committee Message & Counters
+    pres_badge: "Executive Committee Message",
     pres_title: "Warm Welcome & Divine Blessings",
     pres_desc: "Welcome to the official digital temple portal of Mumbai Central Cha Raja, BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav. Serving society with faith, culture, and unity since 1929.",
     pres_quote: '"Faith, service, and social commitment are the core pillars of Mumbai Central Cha Raja Mandal."',
@@ -257,8 +257,8 @@ const translations = {
     ticker_badge: "ताजी अपडेट्स",
     ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी १२:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ऑनलाईन देणगी उपलब्ध 🌺",
 
-    // President Message & Counters
-    pres_badge: "अध्यक्षीय संदेश",
+    // Executive Committee Message & Counters
+    pres_badge: "कार्याकारिणी संदेश",
     pres_title: "हार्दिक स्वागत व श्रींचे आशीर्वाद",
     pres_desc: "मुंबई सेंट्रलचा राजा, बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेश उत्सव मंडळाच्या अधिकृत डिजिटल मंदिर पोर्टलवर आपले हार्दिक स्वागत.",
     pres_quote: '"भक्ती, सेवा आणि सामाजिक बांधिलकी हेच मंडळाचे मुख्य आधारस्तंभ आहेत."',

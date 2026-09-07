@@ -34,9 +34,10 @@ const translations = {
     hero_sub_tag: "Eco Friendly Murti",
     hero_subtitle: "Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal. A timeless tradition of faith, royal heritage, and community service since 1929.",
     btn_hero_live: "Watch Live Darshan",
-    btn_hero_donate: "Donate Seva Online",
-    countdown_badge: "Grand Aagman: 12th Sept (12:00 PM)",
-    countdown_title: "Aagman Soon on 12th Sept",
+    countdown_badge: "Grand Aagman: 12th Sept (4:00 PM)",
+    countdown_title: "Grand Aagman Soon on 12th Sept!",
+    btn_celebrate: "✨ 🌺 Celebrate Aagman! 🌺 ✨",
+    aagman_arrived_msg: "🎉 🌺 Mumbai Central Cha Raja Has Arrived! 🌺 🎉",
     label_days: "Days",
     label_hours: "Hours",
     label_mins: "Mins",
@@ -44,7 +45,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "FESTIVAL UPDATES",
-    ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (12:00 PM AFTERNOON)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • Online Donations Open 🌺",
+    ticker_text: "🌺 GRAND AAGMAN SOON ON 12TH SEPTEMBER (4:00 PM)! • Welcome Mumbai Central Cha Raja! • Daily Maha Aarti Morning 8:00 AM & Evening 8:00 PM • Online Donations Open 🌺",
 
     // Executive Committee Message & Counters
     pres_badge: "Executive Committee Message",
@@ -245,9 +246,10 @@ const translations = {
     hero_sub_tag: "पर्यावरणपूरक मूर्ती",
     hero_subtitle: "बेलासिस रोड, बी.आय.टी. चाळ सार्वजनिक श्री गणेशोत्सव मंडळ. १९२९ पासून भक्ती, संस्कृती आणि सामाजिक सेवेचा अखंड वसा.",
     btn_hero_live: "थेट दर्शन पहा",
-    btn_hero_donate: "सेवा देणगी ऑनलाइन द्या",
-    countdown_badge: "श्रींचे भव्य आगमन: १२ सप्टेंबर (दुपारी १२:०० वा.)",
+    countdown_badge: "श्रींचे भव्य आगमन: १२ सप्टेंबर (दुपारी ४:०० वा.)",
     countdown_title: "१२ सप्टेंबर रोजी श्रींचे भव्य आगमन!",
+    btn_celebrate: "✨ 🌺 श्रींचे आगमन उत्सव साजरा करा! 🌺 ✨",
+    aagman_arrived_msg: "🎉 🌺 मुंबई सेंट्रलच्या राजाचे आगमन झाले आहे! 🌺 🎉",
     label_days: "दिवस",
     label_hours: "तास",
     label_mins: "मिनाटे",
@@ -255,7 +257,7 @@ const translations = {
 
     // Ticker Marquee
     ticker_badge: "ताजी अपडेट्स",
-    ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी १२:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ऑनलाईन देणगी उपलब्ध 🌺",
+    ticker_text: "🌺 श्रींचे भव्य आगमन लवकरच - १२ सप्टेंबर दुपारी ४:०० वाजता! • मुंबई सेंट्रलचा राजा आगमन सोहळा! • दैनिक महाआरती सकाळी ८:०० व संध्याकाळी ८:०० वाजता • ऑनलाईन देणगी उपलब्ध 🌺",
 
     // Executive Committee Message & Counters
     pres_badge: "कार्याकारिणी संदेश",

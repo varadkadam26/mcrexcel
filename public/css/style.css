@@ -2539,6 +2539,78 @@ section {
 }
 
 /* ==========================================================================
+   CELEBRATION CONFETTI & STARS BUTTON
+   ========================================================================== */
+.btn-celebrate-aagman {
+  background: linear-gradient(135deg, #C9A227 0%, #FFD700 50%, #E8C766 100%);
+  color: #4A0E0E !important;
+  border: 2px solid #FFF8DC !important;
+  border-radius: var(--radius-full) !important;
+  padding: 0.75rem 1.6rem !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  box-shadow: 0 8px 25px rgba(201, 162, 39, 0.4), 0 0 15px rgba(255, 215, 0, 0.6);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  animation: celebratePulse 2.5s infinite ease-in-out;
+}
+
+.btn-celebrate-aagman:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(201, 162, 39, 0.6), 0 0 25px rgba(255, 215, 0, 0.9);
+  background: linear-gradient(135deg, #FFD700 0%, #FFF8DC 50%, #C9A227 100%);
+}
+
+.btn-celebrate-aagman:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.spark-star {
+  color: #7F1D1D;
+  font-size: 1.1rem;
+  animation: starTwinkle 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes celebratePulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(201, 162, 39, 0.4), 0 0 5px rgba(255, 215, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(201, 162, 39, 0.8), 0 0 20px rgba(255, 215, 0, 0.9);
+  }
+}
+
+@keyframes starTwinkle {
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0.7; }
+  100% { transform: scale(1.25) rotate(45deg); opacity: 1; }
+}
+
+.aagman-arrived-banner {
+  background: linear-gradient(135deg, rgba(127, 29, 29, 0.95), rgba(74, 14, 14, 0.95));
+  border: 2px solid var(--royal-gold);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  color: var(--gold-soft);
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+  animation: bannerGlow 2s infinite alternate;
+}
+
+@keyframes bannerGlow {
+  0% { border-color: var(--royal-gold); }
+  100% { border-color: #FFF8DC; box-shadow: 0 0 20px rgba(212, 175, 55, 0.8); }
+}
+
+/* ==========================================================================
    INDIE TIMELINE & SHOWCASE (TRANSPARENT TIMELINE)
    ========================================================================== */
 .mandala-art-section {

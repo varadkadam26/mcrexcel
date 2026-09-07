@@ -272,6 +272,119 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==========================================================================
+  // GANESHOTSAV 2026 AAGMAN COUNTDOWN TIMER & CONFETTI CELEBRATION
+  // ==========================================================================
+  const countDaysEl = document.getElementById('countDays');
+  const countHoursEl = document.getElementById('countHours');
+  const countMinsEl = document.getElementById('countMins');
+  const countSecsEl = document.getElementById('countSecs');
+  const btnTriggerConfetti = document.getElementById('btnTriggerConfetti');
+
+  // Target Date: September 12, 2026 at 4:00 PM IST (16:00:00)
+  const targetDate = new Date('2026-09-12T16:00:00+05:30').getTime();
+
+  function triggerAagmanConfetti() {
+    // 1. Canvas Confetti Fireworks Explosion
+    if (typeof confetti === 'function') {
+      const colors = ['#D4AF37', '#FF9933', '#C9A227', '#7F1D1D', '#FFF8DC', '#FFD700'];
+      
+      // Center burst
+      confetti({
+        particleCount: 100,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: colors
+      });
+
+      // Side cannons for extra grand effect
+      setTimeout(() => {
+        confetti({
+          particleCount: 50,
+          angle: 60,
+          spread: 55,
+          origin: { x: 0 },
+          colors: colors
+        });
+        confetti({
+          particleCount: 50,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors
+        });
+      }, 250);
+    }
+
+    // 2. Floating Star & Flower Particle Shower on Card
+    const card = document.getElementById('heroCountdownCard');
+    if (card) {
+      for (let i = 0; i < 16; i++) {
+        const star = document.createElement('div');
+        star.innerHTML = i % 2 === 0 ? '✨' : '🌺';
+        star.style.position = 'absolute';
+        star.style.left = Math.random() * 90 + 5 + '%';
+        star.style.top = Math.random() * 80 + 10 + '%';
+        star.style.fontSize = (Math.random() * 1.2 + 1) + 'rem';
+        star.style.pointerEvents = 'none';
+        star.style.zIndex = '20';
+        star.style.transition = 'all 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+        star.style.opacity = '1';
+        star.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+        card.appendChild(star);
+
+        setTimeout(() => {
+          star.style.opacity = '0';
+          star.style.transform = `translateY(-70px) scale(1.6) rotate(${Math.random() * 360}deg)`;
+        }, 50);
+
+        setTimeout(() => {
+          if (star.parentNode) star.parentNode.removeChild(star);
+        }, 1600);
+      }
+    }
+  }
+
+  if (btnTriggerConfetti) {
+    btnTriggerConfetti.addEventListener('click', triggerAagmanConfetti);
+  }
+
+  if (countDaysEl && countHoursEl && countMinsEl && countSecsEl) {
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const secs = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const format = (n) => String(n).padStart(2, '0');
+
+        if (countDaysEl.innerText !== format(days)) countDaysEl.innerText = format(days);
+        if (countHoursEl.innerText !== format(hours)) countHoursEl.innerText = format(hours);
+        if (countMinsEl.innerText !== format(mins)) countMinsEl.innerText = format(mins);
+        if (countSecsEl.innerText !== format(secs)) countSecsEl.innerText = format(secs);
+      } else {
+        countDaysEl.innerText = '00';
+        countHoursEl.innerText = '00';
+        countMinsEl.innerText = '00';
+        countSecsEl.innerText = '00';
+
+        const titleEl = document.querySelector('.countdown-card-title');
+        if (titleEl && !titleEl.classList.contains('arrived')) {
+          titleEl.classList.add('arrived');
+          titleEl.innerHTML = '<span data-i18n="aagman_arrived_msg">🎉 🌺 Mumbai Central Cha Raja Has Arrived! 🌺 🎉</span>';
+          triggerAagmanConfetti();
+        }
+      }
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+
+  // ==========================================================================
   // ANIMATED STAT NUMBER COUNTERS (Intersection Observer)
   // ==========================================================================
   const statNumElements = document.querySelectorAll('.stat-num-value[data-target]');

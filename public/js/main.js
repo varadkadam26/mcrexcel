@@ -281,7 +281,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnTriggerConfetti = document.getElementById('btnTriggerConfetti');
 
   // Target Date: September 12, 2026 at 4:00 PM IST (16:00:00)
-  const targetDate = new Date('2026-09-12T16:00:00+05:30').getTime();
+  // Uses cross-browser integer components (Year, Month index 8 = Sept, Day, Hour, Min, Sec)
+  const targetYear = Math.max(2026, new Date().getFullYear());
+  const targetDate = new Date(targetYear, 8, 12, 16, 0, 0).getTime();
 
   function triggerAagmanConfetti() {
     // 1. Canvas Confetti Fireworks Explosion

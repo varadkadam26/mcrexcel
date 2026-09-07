@@ -117,7 +117,7 @@ function getJsonLdSchemas(siteUrl, pageKey = 'home') {
     '@type': 'Event',
     '@id': `${siteUrl}/#event-2026`,
     'name': 'Mumbai Central Cha Raja Ganeshotsav 2026',
-    'startDate': '2026-09-12T12:00:00+05:30',
+    'startDate': '2026-09-12T16:00:00+05:30',
     'endDate': '2026-09-23T22:00:00+05:30',
     'eventStatus': 'https://schema.org/EventScheduled',
     'eventAttendanceMode': 'https://schema.org/MixedEventAttendanceMode',

@@ -268,13 +268,13 @@ module.exports = {
     }
     try {
       const query = `
-        INSERT INTO donations (receipt_no, donor_name, phone, email, amount, category, payment_id, order_id, pan_number, status)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO donations (receipt_no, donor_name, phone, email, amount, category, payment_id, order_id, status)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
       `;
       const values = [
         donationData.receipt_no, donationData.donor_name, donationData.phone, donationData.email || '',
         donationData.amount, donationData.category, donationData.payment_id || '',
-        donationData.order_id || '', donationData.pan_number || '', donationData.status || 'SUCCESS'
+        donationData.order_id || '', donationData.status || 'SUCCESS'
       ];
       const [result] = await dbPool.query(query, values);
       return { id: result.insertId, ...donationData, created_at: new Date() };

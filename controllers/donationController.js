@@ -38,7 +38,7 @@ module.exports = {
     try {
       const {
         receipt_no, donor_name, phone, email, amount,
-        payment_id, order_id, pan_number
+        payment_id, order_id
       } = req.body;
 
       if (!donor_name || !phone || !amount) {
@@ -54,7 +54,6 @@ module.exports = {
         category: 'General Mandal Donation & Seva',
         payment_id: payment_id || `upi_direct_${Date.now()}`,
         order_id: order_id || `order_direct_${Date.now()}`,
-        pan_number: (pan_number || '').toUpperCase().trim(),
         status: 'SUCCESS'
       };
 

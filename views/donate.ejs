@@ -91,9 +91,6 @@
             </div>
           </div>
 
-          <!-- PAN Card (Hidden) -->
-          <input type="hidden" id="donorPan" value="">
-
           <button type="submit" class="btn btn-primary"
             style="width: 100%; padding: 1rem; font-size: clamp(0.9rem, 3.5vw, 1.1rem); font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" id="btnDonateSubmit">
             <span data-i18n="btn_donate_submit">सुरक्षित देणगी द्या व PDF पावती मिळवा</span> <i
@@ -217,7 +214,6 @@
         const donorName = document.getElementById('donorName').value;
         const donorPhone = document.getElementById('donorPhone').value;
         const donorEmail = document.getElementById('donorEmail').value;
-        const donorPan = document.getElementById('donorPan').value;
 
         try {
           const confirmRes = await fetch('/api/confirm-donation', {
@@ -229,7 +225,6 @@
               phone: donorPhone,
               email: donorEmail,
               amount: amountVal,
-              pan_number: donorPan,
               payment_id: `upi_direct_${Date.now()}`
             })
           });

@@ -208,8 +208,6 @@ const translations = {
     ph_mobile: "10-digit mobile number",
     lbl_email: "Email ID (Optional)",
     ph_email: "Email for PDF receipt",
-    lbl_pan: "PAN Card Number (Optional)",
-    ph_pan: "e.g. ABCDE1234F",
     btn_donate_submit: "Donate & Get Receipt",
     msg_donation_processing: "Donation processing in progress...",
     msg_donation_success: "Donation successful! Your receipt is downloading."

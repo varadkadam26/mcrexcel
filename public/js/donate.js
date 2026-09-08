@@ -94,8 +94,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const phone = document.getElementById('phone').value.trim();
     const email = document.getElementById('email').value.trim();
     const amount = amountInput.value.trim();
-    const panEl = document.getElementById('pan_number');
-    const panNumber = panEl ? panEl.value.trim() : '';
 
     if (!donorName || !phone || !amount || parseFloat(amount) <= 0) {
       alert('कृपया तुमचे नाव, मोबाईल नंबर आणि वैध रक्कम प्रविष्ट करा.');
@@ -111,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
       email,
       amount,
       category,
-      pan_number: panNumber,
       payment_id: `pay_seva_${Date.now()}`,
       order_id: `order_seva_${Date.now()}`,
       signature: `mock_sig_${Date.now()}`

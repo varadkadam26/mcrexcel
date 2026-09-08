@@ -122,8 +122,7 @@ async function runTests() {
       amount: 1500,
       payment_id: 'pay_sim_test',
       order_id: 'order_sim_test',
-      signature: 'sig_sim_test',
-      pan_number: 'ABCDE1234F'
+      signature: 'sig_sim_test'
     });
     const json = JSON.parse(res.body);
     if (res.statusCode === 200 && json.success) {

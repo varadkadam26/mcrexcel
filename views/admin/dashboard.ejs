@@ -225,7 +225,6 @@
                     <th style="padding: 10px 14px;">देणगीदाराचे नाव</th>
                     <th style="padding: 10px 14px;">मोबाईल</th>
                     <th style="padding: 10px 14px;">रक्कम (₹)</th>
-                    <th style="padding: 10px 14px;">पॅन कार्ड</th>
                     <th style="padding: 10px 14px;">पावती डाऊनलोड</th>
                   </tr>
                 </thead>
@@ -243,9 +242,6 @@
                       </td>
                       <td style="padding: 10px 14px; font-weight: 800; color: var(--temple-maroon);">₹ <%=
                           parseFloat(d.amount).toLocaleString('en-IN') %>
-                      </td>
-                      <td style="padding: 10px 14px;">
-                        <%= d.pan_number || 'N/A' %>
                       </td>
                       <td style="padding: 10px 14px;">
                         <a href="/download-receipt/<%= d.receipt_no %>" class="btn btn-outline"

@@ -588,29 +588,6 @@ section {
   margin: 0 auto 3.5rem;
 }
 
-/* Homepage Hero Grid Container */
-.hero-grid-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-@media (max-width: 768px) {
-  .hero-grid-container {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    flex-direction: column;
-    width: 100% !important;
-    padding: 1rem;
-  }
-}
 
 /* Compact & Sleek Page Hero Banner System */
 .page-hero-banner {
@@ -2191,8 +2168,8 @@ section {
 @media (max-width: 768px) {
 
   .hero-carousel {
-    height: 78vh;
-    min-height: 620px;
+    height: auto;
+    min-height: 100vh;
   }
 
   .hero-slide-bg {
@@ -3415,8 +3392,22 @@ section {
   }
 
   .hero-grid-container {
-    padding: 1rem;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 2rem 1rem;
     text-align: center;
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+  }
+
+  .hero-countdown-card {
+    width: 100% !important;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
   .hero-actions {
@@ -3429,6 +3420,13 @@ section {
     width: 100%;
     margin-bottom: 10px;
     justify-content: center;
+  }
+
+  .hero-carousel-dots {
+    position: relative;
+    bottom: auto;
+    padding: 1rem 0;
+    background: #1C1917;
   }
 }
 

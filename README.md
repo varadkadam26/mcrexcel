@@ -12,7 +12,7 @@ Official digital web portal for **Mumbai Central Cha Raja**. Powered end-to-end 
 - **📊 End-to-End Google Sheets Database**: Live synchronization of all transactions, inquiries, and bookings directly into organized Google Spreadsheets and Drive storage.
 - **🏛️ 24/7 Digital Temple & Live Darshan**: High-definition live stream embedding and real-time festival updates.
 - **🌐 100% Bilingual (English & Marathi)**: Instant zero-leakage language translation engine.
-- **💳 Online Seva & Donation Gateway (`Razorpay`)**: Preset & custom donation options for Mandap Seva, Medical Camps, and Blood Donation.
+- **💳 Online Seva & Donation Portal**: Preset & custom donation options for Mandap Seva, Medical Camps, and Blood Donation with official Bank of India UPI QR scanner and direct bank transfer details.
 - **📜 Instant PDF Receipts (`PDFKit`)**: Automated PDF receipt generation containing official donation details.
 - **👕 Official T-Shirt Merchandise Store**: Size-wise stock booking with instant downloadable PDF pickup tokens.
 - **📧 Email Notifications (`Nodemailer`)**: Automated email alerts for donations, bookings, and executive mailbox notifications.
@@ -25,7 +25,7 @@ Official digital web portal for **Mumbai Central Cha Raja**. Powered end-to-end 
 - **Primary Cloud Database**: Google Sheets API & Google Drive API (`googleapis`)
 - **Backend**: Node.js & Express.js
 - **Frontend / Templating**: EJS (Embedded JavaScript), Vanilla CSS3 (Formal Royal Design System), Anime.js
-- **Payment Processing**: Razorpay SDK
+- **Payment & Seva System**: Official Bank of India UPI QR & Direct Bank Transfer
 - **Email & PDF Engine**: Nodemailer (SMTP), PDFKit
 - **Deployment**: Vercel ready (`vercel.json`)
 
@@ -78,8 +78,6 @@ Create a `.env` file in the root directory:
 ```env
 PORT=3000
 SESSION_SECRET=your_secret_key
-RAZORPAY_KEY_ID=your_razorpay_key
-RAZORPAY_KEY_SECRET=your_razorpay_secret
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com

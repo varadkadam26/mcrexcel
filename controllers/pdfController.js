@@ -36,7 +36,7 @@ module.exports = {
 
     drawField('Seva Category', donation.category, 60, 295, 440);
 
-    drawField('Razorpay Payment ID', donation.payment_id || 'pay_Simulated123', 60, 340);
+    drawField('Transaction ID / Ref', donation.payment_id || 'upi_direct', 60, 340);
     drawField('Transaction Status', donation.status || 'SUCCESS', 300, 340);
 
     // Amount Highlight Card

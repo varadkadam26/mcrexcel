@@ -1,5 +1,4 @@
 const db = require('../config/db');
-const razorpay = require('../config/razorpay');
 const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
 const seo = require('../config/seo');
@@ -10,12 +9,11 @@ module.exports = {
     res.render('tshirt', {
       title: seo.pageMetadata.tshirt.title,
       description: seo.pageMetadata.tshirt.description,
-      activeTab: 'tshirt',
-      razorpayKeyId: razorpay.getKeyId()
+      activeTab: 'tshirt'
     });
   },
 
-  // Create Razorpay Payment Order for T-Shirt
+  // Create Payment Order Reference for T-Shirt
   async createPaymentOrder(req, res) {
     try {
       const { quantity, size, color, buyer_name, phone } = req.body;
@@ -24,17 +22,15 @@ module.exports = {
       const totalAmount = qty * pricePerUnit;
 
       const tempReceiptNo = `MCC-TSHIRT-2026-${Math.floor(100 + Math.random() * 900)}`;
-      const orderResponse = await razorpay.createOrder(totalAmount, tempReceiptNo);
 
       res.json({
         success: true,
         receipt_no: tempReceiptNo,
-        total_amount: totalAmount,
-        order: orderResponse
+        total_amount: totalAmount
       });
     } catch (err) {
       console.error('Create tshirt payment order error:', err);
-      res.status(500).json({ success: false, message: 'Failed to initiate T-Shirt payment.' });
+      res.status(500).json({ success: false, message: 'Failed to initiate T-Shirt booking.' });
     }
   },
 
@@ -43,16 +39,11 @@ module.exports = {
     try {
       const {
         receipt_no, buyer_name, phone, email, size, color, quantity, total_amount, address,
-        payment_id, order_id, signature
+        payment_id
       } = req.body;
 
       if (!buyer_name || !phone || !size || !color || !quantity || !total_amount) {
         return res.status(400).json({ success: false, message: 'Missing required T-Shirt order details.' });
-      }
-
-      const isValidSignature = razorpay.verifyPaymentSignature(order_id, payment_id, signature);
-      if (!isValidSignature) {
-        return res.status(400).json({ success: false, message: 'Payment verification failed.' });
       }
 
       const orderData = {
@@ -65,7 +56,7 @@ module.exports = {
         quantity: parseInt(quantity, 10),
         total_amount: parseFloat(total_amount),
         address: (address || '').trim(),
-        payment_id: payment_id || `pay_tshirt_${Date.now()}`,
+        payment_id: payment_id || `upi_tshirt_${Date.now()}`,
         status: 'SUCCESS'
       };
 

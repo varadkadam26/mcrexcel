@@ -270,7 +270,7 @@ const serverProcess = spawn('node', ['server.js'], {
 serverProcess.stdout.on('data', (data) => {
   const output = data.toString().toLowerCase();
   console.log(`[Server Stdout] ${data.toString().trim()}`);
-  if (output.includes('server started') || output.includes('connected to mysql') || output.includes('running with high-performance in-memory')) {
+  if (output.includes('web server started') || output.includes('server started') || output.includes('connected to mysql') || output.includes('running with high-performance in-memory')) {
     triggerTests();
   }
 });
@@ -279,13 +279,13 @@ serverProcess.stderr.on('data', (data) => {
   console.error(`[Server Error] ${data}`);
 });
 
-// Fallback: trigger tests after 3 seconds if stdout matching did not fire due to buffering
+// Fallback: trigger tests after 5 seconds if stdout matching did not fire due to buffering
 const fallbackTimer = setTimeout(() => {
   if (!testsStarted) {
-    console.log('⏰ Stdout matching did not fire (likely due to buffering). Running tests using 3-second fallback...');
+    console.log('⏰ Stdout matching did not fire (likely due to buffering). Running tests using 5-second fallback...');
     triggerTests();
   }
-}, 3000);
+}, 5000);
 
 const startupTimeout = setTimeout(() => {
   console.error('Timeout waiting for server to start');

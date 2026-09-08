@@ -240,7 +240,7 @@ function getJsonLdSchemas(siteUrl, pageKey = 'home') {
           'name': 'How can devotees donate online to Mumbai Central Cha Raja?',
           'acceptedAnswer': {
             '@type': 'Answer',
-            'text': 'Devotees can donate online securely via UPI QR Code, Razorpay online portal, or direct Bank of India transfer with instant downloadable official PDF receipts.'
+            'text': 'Devotees can donate online securely via UPI QR Code or direct Bank of India transfer with instant downloadable official PDF receipts.'
           }
         }
       ]

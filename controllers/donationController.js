@@ -1,5 +1,4 @@
 const db = require('../config/db');
-const razorpay = require('../config/razorpay');
 const googleSheets = require('../config/googleSheets');
 const pdfController = require('./pdfController');
 const seo = require('../config/seo');
@@ -10,12 +9,11 @@ module.exports = {
     res.render('donate', {
       title: seo.pageMetadata.donate.title,
       description: seo.pageMetadata.donate.description,
-      activeTab: 'donate',
-      razorpayKeyId: razorpay.getKeyId()
+      activeTab: 'donate'
     });
   },
 
-  // Create Razorpay Payment Order
+  // Create Donation Order Receipt Reference
   async createPaymentOrder(req, res) {
     try {
       const { amount } = req.body;
@@ -24,16 +22,14 @@ module.exports = {
       }
 
       const tempReceiptNo = `MCC-REC-2026-${Math.floor(100 + Math.random() * 900)}`;
-      const orderResponse = await razorpay.createOrder(amount, tempReceiptNo);
 
       res.json({
         success: true,
-        receipt_no: tempReceiptNo,
-        order: orderResponse
+        receipt_no: tempReceiptNo
       });
     } catch (err) {
-      console.error('Create payment order error:', err);
-      res.status(500).json({ success: false, message: 'Failed to initiate donation payment.' });
+      console.error('Create donation receipt reference error:', err);
+      res.status(500).json({ success: false, message: 'Failed to initiate donation receipt.' });
     }
   },
 
@@ -42,16 +38,11 @@ module.exports = {
     try {
       const {
         receipt_no, donor_name, phone, email, amount,
-        payment_id, order_id, signature, pan_number
+        payment_id, order_id, pan_number
       } = req.body;
 
       if (!donor_name || !phone || !amount) {
         return res.status(400).json({ success: false, message: 'Missing required donation details.' });
-      }
-
-      const isValidSignature = razorpay.verifyPaymentSignature(order_id, payment_id, signature);
-      if (!isValidSignature) {
-        return res.status(400).json({ success: false, message: 'Payment verification failed.' });
       }
 
       const donationData = {
@@ -61,8 +52,8 @@ module.exports = {
         email: (email || '').trim(),
         amount: parseFloat(amount),
         category: 'General Mandal Donation & Seva',
-        payment_id: payment_id || `pay_sim_${Date.now()}`,
-        order_id: order_id || `order_sim_${Date.now()}`,
+        payment_id: payment_id || `upi_direct_${Date.now()}`,
+        order_id: order_id || `order_direct_${Date.now()}`,
         pan_number: (pan_number || '').toUpperCase().trim(),
         status: 'SUCCESS'
       };
@@ -76,11 +67,11 @@ module.exports = {
       res.json({
         success: true,
         receipt_no: createdDonation.receipt_no,
-        message: 'Donation successfully processed. Thank you for your Seva!'
+        message: 'Donation successfully recorded. Thank you for your Seva!'
       });
     } catch (err) {
       console.error('Confirm donation error:', err);
-      res.status(500).json({ success: false, message: 'Error recording donation payment.' });
+      res.status(500).json({ success: false, message: 'Error recording donation.' });
     }
   },
 

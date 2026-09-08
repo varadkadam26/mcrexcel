@@ -33,7 +33,24 @@ const seo = require('./config/seo');
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public')));
+
+// Security & Cache-Control Middleware
+app.use((req, res, next) => {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+
+  // Cache static assets (images, css, js) for 7 days
+  if (req.path.match(/\.(png|jpg|jpeg|gif|ico|svg|css|js|webp|woff|woff2|ttf|eot)$/)) {
+    res.setHeader('Cache-Control', 'public, max-age=604800, immutable');
+  }
+  next();
+});
+
+app.use(express.static(path.join(__dirname, 'public'), {
+  maxAge: '7d',
+  etag: true
+}));
 
 // SEO & i18n Middleware
 app.use((req, res, next) => {
@@ -49,7 +66,13 @@ app.use((req, res, next) => {
 
   const siteUrl = seo.getSiteUrl(req);
   res.locals.siteUrl = siteUrl;
-  res.locals.canonicalUrl = `${siteUrl}${req.path === '/' ? '' : req.path}`;
+  
+  // Clean self-referencing canonical URL
+  let cleanPath = req.path;
+  if (cleanPath.length > 1 && cleanPath.endsWith('/')) {
+    cleanPath = cleanPath.slice(0, -1);
+  }
+  res.locals.canonicalUrl = `${siteUrl}${cleanPath === '/' ? '' : cleanPath}`;
   res.locals.seo = seo;
   next();
 });
@@ -80,7 +103,7 @@ Sitemap: ${siteUrl}/sitemap.xml
 // Dynamic XML Sitemap
 app.get('/sitemap.xml', (req, res) => {
   const siteUrl = res.locals.siteUrl;
-  const lastmod = '2026-08-31';
+  const lastmod = '2026-09-08';
   
   const publicPaths = [
     { path: '/', priority: '1.0', changefreq: 'daily' },
@@ -127,15 +150,11 @@ app.use((err, req, res, next) => {
   `);
 });
 
-// 404 Handler
+// Dedicated SEO 404 Handler
 app.use((req, res) => {
-  res.status(404).render('index', {
+  res.status(404).render('404', {
     title: '404 - Page Not Found | Mumbai Central Cha Raja',
-    activeTab: 'home',
-    yatraStatus: db.getYatraStatus(),
-    scheduleData: [],
-    glimpsesData: [],
-    socialWorkData: []
+    activeTab: '404'
   });
 });
 

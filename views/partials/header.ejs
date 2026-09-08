@@ -1,32 +1,39 @@
 <!DOCTYPE html>
-<html lang="<%= typeof lang !== 'undefined' ? lang : 'mr' %>">
+<html lang="<%= typeof lang !== 'undefined' ? lang : 'en' %>">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="theme-color" content="#7F1D1D">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Mumbai Central Cha Raja">
 
-  <title><%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Official Ganeshotsav Mandal, Mumbai' %></title>
+  <title><%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Mumbai Central Ganpati & Ganeshotsav 2026' %></title>
   <meta name="description" content="<%= typeof description !== 'undefined' ? description : 'Official Portal of Mumbai Central Cha Raja - Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal (Est. 1929). Live Darshan, 10-day event schedule, online donation & social work.' %>">
   <link rel="canonical" href="<%= typeof canonicalUrl !== 'undefined' ? canonicalUrl : 'https://mumbaicentralcharaja.com' %>">
   <meta name="google-site-verification" content="hK1BJ9L9puzoNHTLuSJvdE8Mdqj2Ef2opz6Kg7Hc0eM" />
 
+  <% if (typeof activeTab !== 'undefined' && activeTab === 'home') { %>
+  <!-- LCP Image Preload for Core Web Vitals -->
+  <link rel="preload" as="image" href="/images/ganpati_slide_1.jpg" fetchpriority="high">
+  <% } %>
+
   <!-- Open Graph & Social Sharing Meta Tags -->
-  <meta property="og:title" content="<%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Official Ganeshotsav Mandal, Mumbai' %>">
+  <meta property="og:title" content="<%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Mumbai Central Ganpati & Ganeshotsav 2026' %>">
   <meta property="og:description" content="<%= typeof description !== 'undefined' ? description : 'Official Portal of Mumbai Central Cha Raja (Est. 1929, Reg. A/3141/Mumbai/77). Live Ganeshotsav Aarti Darshan, 10-year historical photo archive, social work & online donations.' %>">
   <meta property="og:image" content="<%= (typeof siteUrl !== 'undefined' ? siteUrl : 'https://mumbaicentralcharaja.com') %>/images/raja_real_1.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Mumbai Central Cha Raja Official Idol">
   <meta property="og:url" content="<%= typeof canonicalUrl !== 'undefined' ? canonicalUrl : 'https://mumbaicentralcharaja.com' %>">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Mumbai Central Cha Raja">
-  <meta property="og:locale" content="en_IN">
+  <meta property="og:locale" content="<%= typeof lang !== 'undefined' && lang === 'mr' ? 'mr_IN' : 'en_IN' %>">
 
   <!-- Twitter / X Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="<%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Official Ganeshotsav Mandal, Mumbai' %>">
+  <meta name="twitter:title" content="<%= typeof title !== 'undefined' ? title : 'Mumbai Central Cha Raja | Mumbai Central Ganpati & Ganeshotsav 2026' %>">
   <meta name="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'Official Portal of Mumbai Central Cha Raja (Est. 1929). Live Ganeshotsav Aarti Darshan, 10-year historical photo archive & social work.' %>">
   <meta name="twitter:image" content="<%= (typeof siteUrl !== 'undefined' ? siteUrl : 'https://mumbaicentralcharaja.com') %>/images/raja_real_1.png">
 
@@ -66,7 +73,7 @@
   </script>
   <script src="/js/i18n.js"></script>
   <!-- Mumbai Central Cha Raja Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css?v=2.2">
+  <link rel="stylesheet" href="/css/style.css?v=2.5">
   <link rel="icon" type="image/png" href="/images/logo.png">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RHXE1KDC8"></script>
@@ -93,19 +100,19 @@
           <span class="est-text" data-i18n="est_label"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'स्थापना : १९२९' : 'Est. Year: 1929' %></span>
           
           <div class="mandal-top-meta-actions">
-            <a href="https://www.youtube.com/channel/UCrijB5WpQhGLfWQT1WSySNg" target="_blank" rel="noopener noreferrer" class="social-link yt-link">
+            <a href="https://www.youtube.com/channel/UCrijB5WpQhGLfWQT1WSySNg" target="_blank" rel="noopener noreferrer" class="social-link yt-link" aria-label="YouTube Channel">
               <i class="fa-brands fa-youtube" style="color: #FF0000;"></i> <span>YouTube</span>
             </a>
-            <a href="https://mumbaicharaja.co/" target="_blank" rel="noopener noreferrer" class="social-link fb-link">
+            <a href="https://mumbaicharaja.co/" target="_blank" rel="noopener noreferrer" class="social-link fb-link" aria-label="Facebook Page">
               <i class="fa-brands fa-facebook" style="color: #1877F2;"></i> <span>Facebook</span>
             </a>
-            <a href="https://www.instagram.com/mumbaicentralcharajaofficial" target="_blank" rel="noopener noreferrer" class="social-link insta-link">
+            <a href="https://www.instagram.com/mumbaicentralcharajaofficial" target="_blank" rel="noopener noreferrer" class="social-link insta-link" aria-label="Instagram Handle">
               <i class="fa-brands fa-instagram" style="color: var(--royal-gold);"></i> <span class="insta-full">@mumbaicentralcharajaofficial</span><span class="insta-short">Instagram</span>
             </a>
             <!-- Language Switcher Pills -->
             <div class="lang-switcher-container">
-              <button class="lang-btn <%= typeof lang !== 'undefined' && lang === 'mr' ? 'active' : '' %>" data-lang="mr">मराठी</button>
-              <button class="lang-btn <%= typeof lang === 'undefined' || lang === 'en' ? 'active' : '' %>" data-lang="en">English</button>
+              <button class="lang-btn <%= typeof lang !== 'undefined' && lang === 'mr' ? 'active' : '' %>" data-lang="mr" aria-label="Switch language to Marathi">मराठी</button>
+              <button class="lang-btn <%= typeof lang === 'undefined' || lang === 'en' ? 'active' : '' %>" data-lang="en" aria-label="Switch language to English">English</button>
             </div>
           </div>
 
@@ -119,10 +126,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <!-- Official Mandal Logo Crest with Motion Frame -->
-      <a href="/" class="brand-logo">
+      <a href="/" class="brand-logo" aria-label="Mumbai Central Cha Raja Homepage">
         <div class="logo-motion-wrapper">
           <div class="logo-motion-ring"></div>
-          <img src="/images/logo.png" alt="Mumbai Central Cha Raja Logo" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; position: relative; z-index: 1;">
+          <img src="/images/logo.png" alt="Mumbai Central Cha Raja Official Logo" width="46" height="46" style="width: 100%; height: 100%; object-fit: cover; border-radius: 50%; position: relative; z-index: 1;">
         </div>
         <div class="brand-text">
           <h2 data-i18n="mandal_name_header"><%= typeof lang !== 'undefined' && lang === 'mr' ? 'बी.आय.टी. चाळ बेलासिस रोड सार्वजनिक श्री गणेशोत्सव मंडळ' : 'BIT Chawl Belasis Road Sarvajanik Shree Ganesh Utsav Mandal' %></h2>

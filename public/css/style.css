@@ -1183,11 +1183,15 @@ section {
     padding: 10px;
     border-radius: var(--radius-sm);
     background: transparent;
-    border: 1px solid var(--royal-gold);
-    color: var(--gold-soft);
-    font-size: 1.5rem;
+    border: none !important;
+    color: var(--temple-maroon) !important;
+    font-size: 1.8rem;
     cursor: pointer;
     touch-action: manipulation;
+  }
+
+  .mobile-toggle i {
+    color: var(--temple-maroon) !important;
   }
 }
 

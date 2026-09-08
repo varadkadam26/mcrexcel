@@ -33,12 +33,36 @@
               <span class="lang-mr"><%= evt.titleMr %></span>
             </h3>
             
-            <p style="color: var(--text-muted); font-size: 0.98rem; margin-bottom: 1rem;">
+            <p style="color: var(--text-muted); font-size: 0.98rem; margin-bottom: 0.8rem;">
               <i class="fa-solid fa-location-dot" style="color: var(--primary-saffron); margin-right: 6px;"></i> 
               <span class="lang-en"><%= evt.halt_locationEn %></span>
               <span class="lang-mr"><%= evt.halt_locationMr %></span>
             </p>
 
+            <% if (evt.facilitiesMr && evt.facilitiesMr.length > 0) { %>
+              <div class="schedule-events-box" style="margin-top: 0.8rem; padding-top: 0.8rem; border-top: 1px dashed rgba(184, 134, 11, 0.3);">
+                <div class="lang-mr">
+                  <ul style="list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <% evt.facilitiesMr.forEach(item => { %>
+                      <li style="font-size: 1rem; color: var(--text-dark); display: flex; align-items: flex-start; gap: 10px; line-height: 1.4;">
+                        <i class="fa-solid fa-om" style="color: var(--primary-saffron); margin-top: 3px; font-size: 0.9rem; flex-shrink: 0;"></i>
+                        <span><%= item %></span>
+                      </li>
+                    <% }); %>
+                  </ul>
+                </div>
+                <div class="lang-en">
+                  <ul style="list-style: none; padding-left: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                    <% evt.facilitiesEn.forEach(item => { %>
+                      <li style="font-size: 1rem; color: var(--text-dark); display: flex; align-items: flex-start; gap: 10px; line-height: 1.4;">
+                        <i class="fa-solid fa-om" style="color: var(--primary-saffron); margin-top: 3px; font-size: 0.9rem; flex-shrink: 0;"></i>
+                        <span><%= item %></span>
+                      </li>
+                    <% }); %>
+                  </ul>
+                </div>
+              </div>
+            <% } %>
 
           </div>
         </div>

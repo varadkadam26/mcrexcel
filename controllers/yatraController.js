@@ -3,127 +3,228 @@ const googleSheets = require('../config/googleSheets');
 const mailer = require('../config/mailer');
 const seo = require('../config/seo');
 
-// Ganeshotsav Event Schedule Data for Mumbai Central Cha Raja
+// Ganeshotsav Event Schedule Data for Mumbai Central Cha Raja (Karyakram Patrika 2026 - Year 98)
 const scheduleData = [
   {
+    day: 'आगमन',
+    titleMr: '"श्रीं"चे आगमन',
+    titleEn: 'Arrival of "Shri"',
+    dateMr: '१२.०९.२०२६ (शनिवार)',
+    dateEn: '12th Sept 2026 (Saturday)',
+    halt_locationMr: 'बी.आय.टी. चाळ, बेलासिस रोड, मुंबई सेंट्रल',
+    halt_locationEn: 'B.I.T. Chawl, Belasis Road, Mumbai Central',
+    facilitiesMr: ['सायं. ४.०० वा. - "श्रीं"चे आगमन'],
+    facilitiesEn: ['4:00 PM - Arrival of "Shri"']
+  },
+  {
     day: 1,
-    titleMr: 'प्रतिष्ठापना व प्रथम महाआरती',
-    titleEn: 'Pratishthapana & First Maha Aarti',
-    dateMr: 'दिवस १ (गणेश चतुर्थी)',
-    dateEn: 'Day 1 (Ganesh Chaturthi)',
-    halt_locationMr: 'मुंबई सेंट्रलचा राजा राजेशाही मंडप',
-    halt_locationEn: 'Mumbai Central Cha Raja Royal Mandap',
-    facilitiesMr: ['सकाळी ८:०० वाजता आरती', 'सामान्य दर्शन रांग', 'संध्याकाळी ८:०० वाजता महाआरती'],
-    facilitiesEn: ['Morning 8:00 AM Aarti', 'General Darshan Queue', 'Evening 8:00 PM Maha Aarti'],
-    emergency_contact: '+91 98765 11111'
+    titleMr: '"श्रीं"ची प्राणप्रतिष्ठा सोहळा व भजन',
+    titleEn: 'Shri Pranpratishtha Sohala & Bhajan',
+    dateMr: '१४.०९.२०२६ (सोमवार)',
+    dateEn: '14th Sept 2026 (Monday)',
+    halt_locationMr: 'राजेशाही मंडप मंच, बीआयटी चाळ',
+    halt_locationEn: 'Royal Mandap Stage, BIT Chawl',
+    facilitiesMr: [
+      'सकाळी ९.०० वा. - "श्रीं"ची प्राणप्रतिष्ठा सोहळा',
+      'रात्री ८.०० वा. - भजन'
+    ],
+    facilitiesEn: [
+      '9:00 AM - "Shri" Pranpratishtha Sohala',
+      '8:00 PM - Bhajan'
+    ]
   },
   {
     day: 2,
-    titleMr: 'लहान मुलांची चित्रकला स्पर्धा',
-    titleEn: 'Kids Drawing Competition',
-    dateMr: 'दिवस २',
-    dateEn: 'Day 2',
-    halt_locationMr: 'बीआयटी चाळ समाज मंदिर',
-    halt_locationEn: 'BIT Chawl Samaj Mandir',
-    facilitiesMr: ['रंग आणि कागद उपलब्ध', 'बक्षीस वितरण', 'अल्पोपहार'],
-    facilitiesEn: ['Colors & Paper Provided', 'Prize Distribution', 'Refreshments'],
-    emergency_contact: '+91 98765 22222'
+    titleMr: 'गण अभिषेक व बृ.मु.म.पा. कर्मचारी आरती',
+    titleEn: 'Gana Abhishek & BMC Staff Aarti',
+    dateMr: '१५.०९.२०२६ (मंगळवार)',
+    dateEn: '15th Sept 2026 (Tuesday)',
+    halt_locationMr: 'मुख्य मंडप, बेलासिस रोड',
+    halt_locationEn: 'Main Mandap, Belasis Road',
+    facilitiesMr: [
+      'सकाळी १०.०० वा. - गण अभिषेक - "श्रीं"चा मंगलमय विधि',
+      'दुपारी १२.०० वा. - बृ.मु.म.पा. कर्मचाऱ्यांकरीता आरती'
+    ],
+    facilitiesEn: [
+      '10:00 AM - Gana Abhishek - Sacred Ritual of "Shri"',
+      '12:00 PM - Special Aarti for BMC Employees'
+    ]
   },
   {
     day: 3,
-    titleMr: 'व्हिडिओ निर्मिती स्पर्धा',
-    titleEn: 'Reel / Video Competition',
-    dateMr: 'दिवस ३',
-    dateEn: 'Day 3',
-    halt_locationMr: 'ऑनलाईन आणि मंडप परिसर',
-    halt_locationEn: 'Online & Mandap Premises',
-    facilitiesMr: ['उत्कृष्ट व्हिडिओसाठी बक्षीस', 'सोशल मीडिया कव्हरेज', 'विशेष प्रमाणपत्र'],
-    facilitiesEn: ['Prizes for Best Video', 'Social Media Coverage', 'Special Certificate'],
-    emergency_contact: '+91 98765 33333'
+    titleMr: 'पुष्प अर्चनम्, आरोग्य कर्मचारी आरती व स्मारिका प्रकाशन',
+    titleEn: 'Pushpa Archanam, Health Staff Aarti & Souvenir Release',
+    dateMr: '१६.०९.२०२६ (बुधवार)',
+    dateEn: '16th Sept 2026 (Wednesday)',
+    halt_locationMr: 'मुख्य मंडप, बीआयटी चाळ',
+    halt_locationEn: 'Main Mandap, BIT Chawl',
+    facilitiesMr: [
+      'सकाळी १०.०० वा. - पुष्प अर्चनम् - "श्रीं"चा मंगलमय विधि',
+      'दुपारी १२.०० वा. - बृ.मु.म.पा. आरोग्य कर्मचाऱ्यांकरीता आरती',
+      'सायं. ७.३० वा. - स्मारिका २०२६ (प्रकाशन सोहळा)'
+    ],
+    facilitiesEn: [
+      '10:00 AM - Pushpa Archanam - Sacred Ritual of "Shri"',
+      '12:00 PM - Special Aarti for BMC Health Staff',
+      '7:30 PM - Souvenir 2026 Release Ceremony'
+    ]
   },
   {
     day: 4,
-    titleMr: 'विशेष भजन व सांस्कृतिक संध्या',
-    titleEn: 'Special Bhajan & Cultural Evening',
-    dateMr: 'दिवस ४',
-    dateEn: 'Day 4',
-    halt_locationMr: 'मुख्य मंडप परिसर, बीआयटी चाळ',
-    halt_locationEn: 'Main Mandap Premises, BIT Chawl',
-    facilitiesMr: ['भजन संध्या मंच', 'भाविक बैठक व्यवस्था', 'प्रथमोपचार केंद्र'],
-    facilitiesEn: ['Bhajan Stage', 'Devotee Seating Desk', 'Medical First Aid Desk'],
-    emergency_contact: '+91 98765 44444'
+    titleMr: 'संध्या आरती व प्रसाद',
+    titleEn: 'Evening Aarti & Prasad',
+    dateMr: '१७.०९.२०२६ (गुरुवार)',
+    dateEn: '17th Sept 2026 (Thursday)',
+    halt_locationMr: 'राजेशाही मंडप मंच',
+    halt_locationEn: 'Royal Mandap Stage',
+    facilitiesMr: [
+      'सायं. ७.०० वा. - संध्या आरती व प्रसाद'
+    ],
+    facilitiesEn: [
+      '7:00 PM - Evening Aarti & Prasad'
+    ]
   },
   {
     day: 5,
-    titleMr: 'सांस्कृतिक व भजन संध्या',
-    titleEn: 'Cultural & Bhajan Sandhya',
-    dateMr: 'दिवस ५',
-    dateEn: 'Day 5',
-    halt_locationMr: 'सांस्कृतिक मंच, बीआयटी चाळ संकुल',
-    halt_locationEn: 'Cultural Stage, BIT Chawl Complex',
-    facilitiesMr: ['पारंपारिक लोककला सादरीकरण', 'कार्यकर्ते मदत कक्ष', 'व्हीलचेअर सुविधा'],
-    facilitiesEn: ['Traditional Folk Performances', 'Karyakarta Assistance Desk', 'Wheelchair Support'],
-    emergency_contact: '+91 98765 55555'
+    titleMr: 'हरिद्रा गणेश - मंगलमय विधि',
+    titleEn: 'Haridra Ganesh Sacred Ritual',
+    dateMr: '१८.०९.२०२६ (शुक्रवार)',
+    dateEn: '18th Sept 2026 (Friday)',
+    halt_locationMr: 'मुख्य मंडप मंच',
+    halt_locationEn: 'Main Mandap Stage',
+    facilitiesMr: [
+      'सकाळी ९.०० वा. - हरिद्रा गणेश - मंगलमय विधि'
+    ],
+    facilitiesEn: [
+      '9:00 AM - Haridra Ganesh Sacred Ritual'
+    ]
   },
   {
     day: 6,
-    titleMr: 'विशेष आरोग्य व रक्तदान शिबीर',
-    titleEn: 'Special Health & Blood Donation Camp',
-    dateMr: 'दिवस ६',
-    dateEn: 'Day 6',
-    halt_locationMr: 'कम्युनिटी हॉल, मुंबई सेंट्रल',
-    halt_locationEn: 'Community Hall, Mumbai Central',
-    facilitiesMr: ['मोफत आरोग्य तपासणी', 'रक्तदान मोहीम', 'भाविक कल्याण कक्ष'],
-    facilitiesEn: ['Free Health Checkup', 'Blood Donation Drive', 'Devotee Welfare Desk'],
-    emergency_contact: '+91 98765 66666'
+    titleMr: 'गणेश सहस्रनामावली मंगलमय विधि',
+    titleEn: 'Ganesh Sahasranamavali Sacred Ritual',
+    dateMr: '१९.०९.२०२६ (शनिवार)',
+    dateEn: '19th Sept 2026 (Saturday)',
+    halt_locationMr: 'मुख्य मंडप मंच',
+    halt_locationEn: 'Main Mandap Stage',
+    facilitiesMr: [
+      'सकाळी १०.०० वा. - गणेश सहस्रनामावली मंगलमय विधि'
+    ],
+    facilitiesEn: [
+      '10:00 AM - Ganesh Sahasranamavali Sacred Ritual'
+    ]
   },
   {
     day: 7,
-    titleMr: 'गौरी गणपती विसर्जन व संध्या आरती',
-    titleEn: 'Gauri Ganpati Visarjan & Evening Aarti',
-    dateMr: 'दिवस ७',
-    dateEn: 'Day 7',
-    halt_locationMr: 'राजेशाही मंडप मंच',
-    halt_locationEn: 'Royal Mandap Stage',
-    facilitiesMr: ['विशेष पुष्प सजावट', 'प्रसाद वाटप', '२४/७ सुरक्षा रक्षक'],
-    facilitiesEn: ['Special Flower Decoration', 'Prasad Distribution', '24/7 Security Patrol'],
-    emergency_contact: '+91 98765 77777'
+    titleMr: 'मेडिकल कॅम्प, ५६ भोग व बाल-युवा सांस्कृतिक स्पर्धा',
+    titleEn: 'Medical Camp, 56 Bhog & Cultural Competitions',
+    dateMr: '२०.०९.२०२६ (रविवार)',
+    dateEn: '20th Sept 2026 (Sunday)',
+    halt_locationMr: 'बीआयटी चाळ परिसर व मुख्य मंडप',
+    halt_locationEn: 'BIT Chawl Premises & Main Mandap',
+    facilitiesMr: [
+      'सकाळी ९.०० वा. - मेडिकल कॅम्प करीता राखीव',
+      'दुपारी ११.३० वा. - ५६ भोग (गोडाधोडाचे नैवेद्य)',
+      'दुपारी ३.०० वा. - बडबडगीत स्पर्धा (बालवाडी बालवर्ग)',
+      'सायं. ५.०० वा. - वेशभूषा (१४ वर्षाखालील मुले/मुली)',
+      'रात्री ८.०० वा. - स्केच आर्ट स्पर्धा (खुला गट)'
+    ],
+    facilitiesEn: [
+      '9:00 AM - Free Medical Camp for Residents',
+      '11:30 AM - 56 Bhog Sweets Offering',
+      '3:00 PM - Nursery Rhymes Contest (Kindergarten)',
+      '5:00 PM - Fancy Dress Contest (Under 14 Years)',
+      '8:00 PM - Sketch Art Contest (Open Group)'
+    ]
   },
   {
     day: 8,
-    titleMr: 'भव्य दीपोत्सव व छप्पन भोग',
-    titleEn: 'Grand Deepotsav & Chappan Bhog',
-    dateMr: 'दिवस ८',
-    dateEn: 'Day 8',
-    halt_locationMr: 'मुंबई सेंट्रलचा राजा गर्भगृह',
-    halt_locationEn: 'Mumbai Central Cha Raja Garbhagriha',
-    facilitiesMr: ['१००८ दिव्यांचा दीपोत्सव', 'पारंपारिक भोग अर्पण', 'थेट प्रक्षेपण कक्ष'],
-    facilitiesEn: ['1008 Diya Deepotsav', 'Traditional Bhog Offering', 'Live Camera Stream Desk'],
-    emergency_contact: '+91 98765 88888'
+    titleMr: 'महिला विशेष आरती, अथर्वशीर्ष पठण व बाल महोत्सव',
+    titleEn: 'Women Special Aarti, Atharvashirsha & Bal Mahotsav',
+    dateMr: '२१.०९.२०२६ (सोमवार)',
+    dateEn: '21st Sept 2026 (Monday)',
+    halt_locationMr: 'मुख्य मंडप, बीआयटी चाळ',
+    halt_locationEn: 'Main Mandap, BIT Chawl',
+    facilitiesMr: [
+      'सायं. ७.०० वा. - महिलांकरीता आरती (विभागातील)',
+      'सायं. ७.३० वा. - सामूहिक अथर्वशीर्ष स्तोत्र पठण (महिलांकरीता)',
+      'रात्री ८.०० वा. - बाल महोत्सव'
+    ],
+    facilitiesEn: [
+      '7:00 PM - Women Special Aarti (Area Residents)',
+      '7:30 PM - Mass Atharvashirsha Stotra Chanting for Women',
+      '8:00 PM - Bal Mahotsav (Children\'s Festival)'
+    ]
   },
   {
     day: 9,
-    titleMr: 'ज्येष्ठ नागरिक व बालकांसाठी विशेष दर्शन',
-    titleEn: 'Senior Citizen & Child Special Darshan',
-    dateMr: 'दिवस ९',
-    dateEn: 'Day 9',
-    halt_locationMr: 'मंडप मुख्य प्रवेशद्वार',
-    halt_locationEn: 'Mandap Main Entrance',
-    facilitiesMr: ['प्राधान्य रांग', 'सहाय्यक शटल सेवा', 'आपत्कालीन रुग्णवाहिका'],
-    facilitiesEn: ['Priority Senior Queue', 'Assisted Shuttle', 'Emergency Ambulance'],
-    emergency_contact: '+91 98765 99999'
+    titleMr: 'फळांची आरास, सांस्कृतिक कार्यक्रम व गुणगौरव समारंभ',
+    titleEn: 'Fruit Decoration & Resident/Student Felicitation',
+    dateMr: '२२.०९.२०२६ (मंगळवार)',
+    dateEn: '22nd Sept 2026 (Tuesday)',
+    halt_locationMr: 'मुख्य मंडप व रंगमंच',
+    halt_locationEn: 'Main Mandap & Stage',
+    facilitiesMr: [
+      'सकाळी १०.०० वा. - फळांची आरास',
+      'रात्री ८.०० वा. - स्थानिक/सांस्कृतिक कार्यक्रम, रहिवासी सत्कार व विद्यार्थी गुणगौरव समारंभ (१०वी व १२वी)'
+    ],
+    facilitiesEn: [
+      '10:00 AM - Fruit Decoration Display',
+      '8:00 PM - Local Cultural Program, Resident Felicitation & Student Awards (10th & 12th)'
+    ]
   },
   {
     day: 10,
-    titleMr: 'अनंत चतुर्दशी उत्तरपूजा व विसर्जन मिरवणूक',
-    titleEn: 'Anant Chaturdashi Uttarpuja & Visarjan Miravnuk',
-    dateMr: 'दिवस १० (भव्य निरोप)',
-    dateEn: 'Day 10 (Grand Farewell)',
-    halt_locationMr: 'मुंबई सेंट्रल ते गिरगाव चौपाटी',
-    halt_locationEn: 'Mumbai Central to Girgaon Chowpatty',
-    facilitiesMr: ['भव्य मिरवणूक रथ', 'जीवरक्षक पथक', 'गिरगाव विसर्जन सेवा'],
-    facilitiesEn: ['Grand Procession Chariot', 'Lifeguard Team', 'Girgaon Visarjan Seva'],
-    emergency_contact: '+91 98765 00000'
+    titleMr: 'श्री सत्यनारायण महापूजा, हळदी-कुंकू, रांगोळी स्पर्धा व भजन',
+    titleEn: 'Satyanarayan Mahapuja, Haldi-Kumkum, Rangoli & Bhajan',
+    dateMr: '२३.०९.२०२६ (बुधवार)',
+    dateEn: '23rd Sept 2026 (Wednesday)',
+    halt_locationMr: 'मुख्य मंडप व बीआयटी चाळ परिसर',
+    halt_locationEn: 'Main Mandap & BIT Chawl Premises',
+    facilitiesMr: [
+      'सकाळी ११.०० वा. - श्री सत्यनारायण महापूजा (प्रतिनिधी)',
+      'सायं. ६.०० वा. - रांगोळी स्पर्धा (विभागातील खुला वर्ग)',
+      'सायं. ७.०० वा. - महिलांसाठी हळदी-कुंकू',
+      'रात्री ८.०० वा. - स्थानिक भजन'
+    ],
+    facilitiesEn: [
+      '11:00 AM - Shri Satyanarayan Mahapuja',
+      '6:00 PM - Rangoli Competition (Open Category)',
+      '7:00 PM - Haldi-Kumkum Ceremony for Women',
+      '8:00 PM - Local Bhajan Night'
+    ]
+  },
+  {
+    day: 11,
+    titleMr: 'स्थानिक सांस्कृतिक कार्यक्रम व बक्षीस समारंभ',
+    titleEn: 'Local Cultural Program & Prize Distribution',
+    dateMr: '२४.०९.२०२६ (गुरुवार)',
+    dateEn: '24th Sept 2026 (Thursday)',
+    halt_locationMr: 'मुख्य मंडप रंगमंच',
+    halt_locationEn: 'Main Mandap Stage',
+    facilitiesMr: [
+      'रात्री ८.०० वा. - स्थानिक/सांस्कृतिक कार्यक्रम व बक्षीस समारंभ'
+    ],
+    facilitiesEn: [
+      '8:00 PM - Local Cultural Program & Competition Prize Distribution Ceremony'
+    ]
+  },
+  {
+    day: 'विसर्जन',
+    titleMr: '"श्रीं"ची महाआरती व भव्य विसर्जन मिरवणूक',
+    titleEn: 'Grand Maha Aarti & Visarjan Procession',
+    dateMr: '२५.०९.२०२६ (शुक्रवार)',
+    dateEn: '25th Sept 2026 (Friday)',
+    halt_locationMr: 'बी.आय.टी. चाळ ते गिरगाव चौपाटी',
+    halt_locationEn: 'BIT Chawl to Girgaon Chowpatty',
+    facilitiesMr: [
+      'दुपारी १२.०० वा. - "श्रीं"ची महाआरती',
+      'सायं. ४.०० वा. - "श्रीं"चे भव्य विसर्जन (मिरवणूक व उत्तरपूजा)'
+    ],
+    facilitiesEn: [
+      '12:00 PM - Final Grand Maha Aarti of "Shri"',
+      '4:00 PM - Grand Visarjan Miravnuk & Uttarpuja'
+    ]
   }
 ];
 

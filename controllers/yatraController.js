@@ -481,7 +481,7 @@ const socialWorkData = [
   }
 ];
 
-// Committee Members Data - 2025-26
+// Committee Members Data - 2026-27 (Official Hierarchy Chronology)
 const committeeData = [
   {
     number: 1,
@@ -501,38 +501,6 @@ const committeeData = [
   },
   {
     number: 3,
-    nameMr: 'श्री. उर्वेश राजेंद्र शिंदे',
-    nameEn: 'Shri Urvesh Rajendra Shinde',
-    designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary',
-    image: '/images/committee_3.png'
-  },
-  {
-    number: 4,
-    nameMr: 'श्री. अविनाश चंद्रकांत पाथरे',
-    nameEn: 'Shri Avinash Chandrakant Pathare',
-    designationMr: 'सहचिटणीस',
-    designationEn: 'Joint Secretary',
-    image: '/images/committee_4.png'
-  },
-  {
-    number: 5,
-    nameMr: 'श्री. प्रसाद विष्णू चव्हाण',
-    nameEn: 'Shri Prasad Vishnu Chavan',
-    designationMr: 'अंतर्गत हिशोब तपासणीस',
-    designationEn: 'Internal Auditor',
-    image: '/images/committee_5.png'
-  },
-  {
-    number: 6,
-    nameMr: 'श्री. सत्यजित बाळासाहेब शिंदे',
-    nameEn: 'Shri Satyajit Balasaheb Shinde',
-    designationMr: 'उपाध्यक्ष',
-    designationEn: 'Vice President',
-    image: '/images/committee_6.png'
-  },
-  {
-    number: 7,
     nameMr: 'श्री. निलेश पांडुरंग कांबळे',
     nameEn: 'Shri Nilesh Pandurang Kamble',
     designationMr: 'खजिनदार',
@@ -540,7 +508,31 @@ const committeeData = [
     image: '/images/committee_7.png'
   },
   {
-    number: 8,
+    number: 4,
+    nameMr: 'श्री. सत्यजित बाळासाहेब शिंदे',
+    nameEn: 'Shri Satyajit Balasaheb Shinde',
+    designationMr: 'उपाध्यक्ष',
+    designationEn: 'Vice President',
+    image: '/images/committee_6.png'
+  },
+  {
+    number: 5,
+    nameMr: 'श्री. अविनाश चंद्रकांत पाथरे',
+    nameEn: 'Shri Avinash Chandrakant Pathare',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_4.png'
+  },
+  {
+    number: 6,
+    nameMr: 'श्री. उर्वेश राजेंद्र शिंदे',
+    nameEn: 'Shri Urvesh Rajendra Shinde',
+    designationMr: 'सहचिटणीस',
+    designationEn: 'Joint Secretary',
+    image: '/images/committee_3.png'
+  },
+  {
+    number: 7,
     nameMr: 'श्री. यश दिनेश पयेर',
     nameEn: 'Shri Yash Dinesh Payer',
     designationMr: 'सहचिटणीस',
@@ -548,20 +540,28 @@ const committeeData = [
     image: '/images/committee_8.png'
   },
   {
-    number: 9,
-    nameMr: 'श्री. दर्शन मंगेश येलवे',
-    nameEn: 'Shri Darshan Mangesh Yelave',
-    designationMr: 'सह अंतर्गत हिशोब तपासणीस',
-    designationEn: 'Joint Internal Auditor',
-    image: '/images/committee_9.png'
-  },
-  {
-    number: 10,
+    number: 8,
     nameMr: 'श्री. विराज विनोद कांबळे',
     nameEn: 'Shri Viraj Vinod Kamble',
     designationMr: 'सहचिटणीस',
     designationEn: 'Joint Secretary',
     image: '/images/committee_10.png'
+  },
+  {
+    number: 9,
+    nameMr: 'श्री. दर्शन मंगेश येलवे',
+    nameEn: 'Shri Darshan Mangesh Yelave',
+    designationMr: 'हिशोब तपासणीस',
+    designationEn: 'Auditor',
+    image: '/images/committee_9.png'
+  },
+  {
+    number: 10,
+    nameMr: 'श्री. प्रसाद विष्णू चव्हाण',
+    nameEn: 'Shri Prasad Vishnu Chavan',
+    designationMr: 'अंतर्गत हिशोब तपासणीस',
+    designationEn: 'Internal Auditor',
+    image: '/images/committee_5.png'
   }
 ];
 

@@ -9,27 +9,60 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = document.getElementById('mobileToggle');
   const mainNav = document.getElementById('mainNav');
 
+  function closeMobileMenu() {
+    if (mainNav && mainNav.classList.contains('active')) {
+      mainNav.classList.remove('active');
+      document.body.style.overflow = '';
+      if (mobileToggle) {
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.add('bi-list');
+          icon.classList.remove('bi-x');
+        }
+      }
+    }
+  }
+
+  function openMobileMenu() {
+    if (mainNav) {
+      mainNav.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      if (mobileToggle) {
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        const icon = mobileToggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('bi-list');
+          icon.classList.add('bi-x');
+        }
+      }
+    }
+  }
+
   if (mobileToggle && mainNav) {
-    mobileToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('active');
-      const icon = mobileToggle.querySelector('i');
-      if (icon) {
-        icon.classList.toggle('bi-list');
-        icon.classList.toggle('bi-x');
+    mobileToggle.setAttribute('aria-controls', 'mainNav');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (mainNav.classList.contains('active')) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
       }
     });
 
     mainNav.querySelectorAll('a, button').forEach((link) => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 1220) {
-          mainNav.classList.remove('active');
-          const icon = mobileToggle.querySelector('i');
-          if (icon) {
-            icon.classList.add('bi-list');
-            icon.classList.remove('bi-x');
-          }
-        }
+        closeMobileMenu();
       });
+    });
+
+    // Close menu on click outside
+    document.addEventListener('click', (e) => {
+      if (mainNav.classList.contains('active') && !mainNav.contains(e.target) && !mobileToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
     });
   }
 
@@ -83,43 +116,23 @@ document.addEventListener('DOMContentLoaded', () => {
     btnLiveDarshanModal.addEventListener('click', (e) => {
       e.preventDefault();
       videoModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
     });
   }
 
   if (btnCloseVideoModal && videoModal) {
     btnCloseVideoModal.addEventListener('click', () => {
       videoModal.classList.remove('active');
+      document.body.style.overflow = '';
     });
   }
 
-  // Close modal when clicking background overlay
   if (videoModal) {
     videoModal.addEventListener('click', (e) => {
       if (e.target === videoModal) {
         videoModal.classList.remove('active');
+        document.body.style.overflow = '';
       }
-    });
-  }
-
-  // GSAP Animations (if loaded)
-  if (typeof gsap !== 'undefined') {
-    if (typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-    }
-
-    gsap.from('.hero-content h1', {
-      opacity: 0,
-      y: 35,
-      duration: 1.2,
-      ease: 'power3.out'
-    });
-
-    gsap.from('.hero-subtitle', {
-      opacity: 0,
-      y: 25,
-      duration: 1,
-      delay: 0.3,
-      ease: 'power3.out'
     });
   }
 
@@ -134,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (window.scrollY > 300 && !sessionStorage.getItem('mcc_popup_dismissed')) {
         scrollInfoPopup.classList.add('visible');
       }
-    });
+    }, { passive: true });
 
     if (btnCloseScrollPopup) {
       btnCloseScrollPopup.addEventListener('click', () => {
@@ -165,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (lightboxTitle) lightboxTitle.innerText = title;
         if (lightboxCaption) lightboxCaption.innerText = caption;
         lightboxModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
     });
   });
@@ -172,14 +186,31 @@ document.addEventListener('DOMContentLoaded', () => {
   if (btnCloseLightbox && lightboxModal) {
     btnCloseLightbox.addEventListener('click', () => {
       lightboxModal.classList.remove('active');
+      document.body.style.overflow = '';
     });
 
     lightboxModal.addEventListener('click', (e) => {
       if (e.target === lightboxModal) {
         lightboxModal.classList.remove('active');
+        document.body.style.overflow = '';
       }
     });
   }
+
+  // ESC Key Listener for Mobile Usability & Accessibility
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMobileMenu();
+      if (videoModal && videoModal.classList.contains('active')) {
+        videoModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+      if (lightboxModal && lightboxModal.classList.contains('active')) {
+        lightboxModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+  });
 
   // ==========================================================================
   // GALLERY CATEGORY FILTER PILLS

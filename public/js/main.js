@@ -408,6 +408,8 @@ document.addEventListener('DOMContentLoaded', () => {
           titleEl.classList.add('arrived');
           titleEl.innerHTML = '<span data-i18n="aagman_arrived_msg">🎉 🌺 Mumbai Central Cha Raja Has Arrived! 🌺 🎉</span>';
           triggerAagmanConfetti();
+          const celebrateBtn = document.getElementById('btnTriggerConfetti');
+          if (celebrateBtn) celebrateBtn.style.display = '';
         }
       }
     }

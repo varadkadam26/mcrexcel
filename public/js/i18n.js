@@ -49,11 +49,11 @@ const translations = {
 
     // Executive Committee Message & Counters
     pres_badge: "Historic 98th Grand Ganeshotsav",
-    pres_title: "Mandal Message & Warm Welcome",
+    pres_title: "Mandal Message",
     pres_desc: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshotsav Mandal warmly welcomes all devotees, residents, and well-wishers to our official digital platform! This is a moment of immense pride as our beloved Mandal steps into its historic 98th grand year. Preserving a legacy of over nine decades of faith, culture, and social responsibility, we continue to fulfill Lokmanya Tilak's noble vision of social unity, awareness, and community service.",
     pres_quote: '"॥ Om Gam Ganapataye Namaha ॥ May Lord Ganesha bless everyone with happiness, prosperity, good health, and peace. Let us all unite in this historic 98th year celebration to serve and seek the divine blessings of Bappa! Ganpati Bappa Morya!"',
-    pres_name: "Festival Committee & Office Bearers",
-    pres_role: "BIT Chawl Belasis Road Sarvajanik Shree Ganeshotsav Mandal",
+    pres_name: "Festival Committee",
+    pres_role: "BIT Chawl Ganeshotsav Mandal",
     stat_year_label: "Founding Year",
     stat_service_label: "Years of Continuous Service",
     stat_prasadam_label: "Devotees Served Annually",

@@ -8,13 +8,13 @@ const scheduleData = [
   {
     day: 'आगमन',
     titleMr: '"श्रीं"चे आगमन',
-    titleEn: 'Arrival of "Shri"',
+    titleEn: 'Arrival of Bappa',
     dateMr: '१२.०९.२०२६ (शनिवार)',
     dateEn: '12th Sept 2026 (Saturday)',
     halt_locationMr: 'बी.आय.टी. चाळ, बेलासिस रोड, मुंबई सेंट्रल',
     halt_locationEn: 'B.I.T. Chawl, Belasis Road, Mumbai Central',
     facilitiesMr: ['सायं. ४.०० वा. - "श्रीं"चे आगमन'],
-    facilitiesEn: ['4:00 PM - Arrival of "Shri"']
+    facilitiesEn: ['4:00 PM - Arrival of Bappa']
   },
   {
     day: 1,

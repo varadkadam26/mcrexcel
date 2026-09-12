@@ -1,7 +1,7 @@
 const db = require('../config/db');
 
-const ADMIN_USER = process.env.ADMIN_USERNAME || 'admin';
-const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'admin123';
+const ADMIN_USER = process.env.ADMIN_USERNAME || 'mcc_admin';
+const ADMIN_PASS = process.env.ADMIN_PASSWORD || 'MccRaja@2026';
 
 let activeAdminSessions = new Set();
 
@@ -33,7 +33,7 @@ module.exports = {
       title: 'Admin Desk | Mumbai Central Cha Raja',
       activeTab: 'admin',
       error: null,
-      username: 'admin'
+      username: ''
     });
   },
 

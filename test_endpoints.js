@@ -217,8 +217,8 @@ async function runTests() {
   // 6. Admin Authentication Login
   try {
     const res = await request('POST', '/admin/login', new URLSearchParams({
-      username: 'admin',
-      password: 'admin123'
+      username: 'mcc_admin',
+      password: 'MccRaja@2026'
     }).toString(), {
       'Content-Type': 'application/x-www-form-urlencoded'
     });

@@ -312,8 +312,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnTriggerConfetti = document.getElementById('btnTriggerConfetti');
 
   // Target Date: September 12, 2026 at 4:00 PM IST (16:00:00 IST = 10:30:00 UTC)
-  // Date.UTC(2026, 8, 12, 10, 30, 0) returns exact UNIX timestamp (1789209000000)
   const targetDate = Date.UTC(2026, 8, 12, 10, 30, 0);
+  // Expiry Date: September 12, 2026 at 9:00 PM IST (21:00:00 IST = 15:30:00 UTC)
+  const expiryDate = Date.UTC(2026, 8, 12, 15, 30, 0);
 
   function triggerAagmanConfetti() {
     // 1. Canvas Confetti Fireworks Explosion
@@ -380,9 +381,20 @@ document.addEventListener('DOMContentLoaded', () => {
     btnTriggerConfetti.addEventListener('click', triggerAagmanConfetti);
   }
 
+  const heroCardEl = document.getElementById('heroCountdownCard');
+  if (heroCardEl && Date.now() >= expiryDate) {
+    heroCardEl.style.display = 'none';
+  }
+
   if (countDaysEl && countHoursEl && countMinsEl && countSecsEl) {
     function updateCountdown() {
-      const now = new Date().getTime();
+      const now = Date.now();
+
+      if (now >= expiryDate) {
+        if (heroCardEl) heroCardEl.style.display = 'none';
+        return;
+      }
+
       const distance = targetDate - now;
 
       if (distance > 0) {

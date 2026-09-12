@@ -57,12 +57,17 @@
         const serverNow = Date.now();
         // Target: 12th September 2026 16:00:00 IST (10:30:00 UTC)
         const serverTarget = Date.UTC(2026, 8, 12, 10, 30, 0);
+        // Expiry Target: 12th September 2026 21:00:00 IST (15:30:00 UTC - 9:00 PM IST)
+        const serverExpiryTarget = Date.UTC(2026, 8, 12, 15, 30, 0);
+        const isCountdownExpired = serverNow >= serverExpiryTarget;
+
         const serverDiff = Math.max(0, serverTarget - serverNow);
         const initDays = String(Math.floor(serverDiff / (1000 * 60 * 60 * 24))).padStart(2, '0');
         const initHours = String(Math.floor((serverDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
         const initMins = String(Math.floor((serverDiff % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
         const initSecs = String(Math.floor((serverDiff % (1000 * 60)) / 1000)).padStart(2, '0');
       %>
+      <% if (!isCountdownExpired) { %>
       <!-- Right Side Countdown Card & Celebration Widget -->
       <div class="hero-countdown-card" id="heroCountdownCard">
         <span class="countdown-badge-pill">
@@ -114,6 +119,7 @@
           </button>
         </div>
       </div>
+      <% } %>
 
     </div>
 

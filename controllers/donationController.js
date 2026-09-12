@@ -33,16 +33,20 @@ module.exports = {
     }
   },
 
-  // Confirm Donation & Save Record
+  // Confirm Donation & Save Record for Admin Approval
   async confirmDonation(req, res) {
     try {
       const {
-        receipt_no, donor_name, phone, email, amount,
-        payment_id, order_id
+        receipt_no, donor_name, phone, email, amount, utr_number, payment_id
       } = req.body;
 
-      if (!donor_name || !phone || !amount) {
+      if (!donor_name || !phone || !amount || parseFloat(amount) <= 0) {
         return res.status(400).json({ success: false, message: 'Missing required donation details.' });
+      }
+
+      const utrVal = (utr_number || payment_id || '').trim();
+      if (!utrVal || utrVal.length < 4) {
+        return res.status(400).json({ success: false, message: 'कृपया वैध १२ अंकी Payment UTR / Transaction Ref No प्रविष्ट करा.' });
       }
 
       const donationData = {
@@ -52,13 +56,13 @@ module.exports = {
         email: (email || '').trim(),
         amount: parseFloat(amount),
         category: 'General Mandal Donation & Seva',
-        payment_id: payment_id || `upi_direct_${Date.now()}`,
-        order_id: order_id || `order_direct_${Date.now()}`,
-        status: 'SUCCESS'
+        payment_id: utrVal,
+        order_id: `utr_${Date.now()}`,
+        status: 'PENDING_APPROVAL'
       };
 
       const createdDonation = await db.createDonation(donationData);
-      db.addLog('DONATION', `New Donation received: ₹${createdDonation.amount} from ${createdDonation.donor_name}`);
+      db.addLog('DONATION', `New Donation submitted (PENDING APPROVAL): ₹${createdDonation.amount} from ${createdDonation.donor_name} (UTR: ${utrVal})`);
 
       // Log to Google Sheets
       googleSheets.appendDonation(createdDonation).catch(err => console.error('GSheets Donation Log Error:', err.message));
@@ -66,7 +70,7 @@ module.exports = {
       res.json({
         success: true,
         receipt_no: createdDonation.receipt_no,
-        message: 'Donation successfully recorded. Thank you for your Seva!'
+        message: 'देणगी अर्ज यशस्वीरीत्या नोंदवला गेला आहे. मंडळ प्रशासकाच्या पडताळणीनंतर अधिकृत पावती तुमच्या ईमेलवर पाठवली जाईल.'
       });
     } catch (err) {
       console.error('Confirm donation error:', err);

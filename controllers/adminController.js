@@ -147,5 +147,45 @@ module.exports = {
       console.error('Clear data error:', err);
       res.redirect('/admin?broadcast_error=Failed to clear entries.');
     }
+  },
+
+  async approveDonation(req, res) {
+    try {
+      const { receipt_no } = req.body;
+      if (!receipt_no) {
+        return res.status(400).json({ success: false, message: 'Receipt number is required.' });
+      }
+
+      const donation = await db.getDonationByReceipt(receipt_no);
+      if (!donation) {
+        return res.status(404).json({ success: false, message: 'Donation receipt not found.' });
+      }
+
+      if (donation.status === 'APPROVED') {
+        return res.json({ success: true, message: 'Donation is already approved.' });
+      }
+
+      await db.updateDonationStatus(receipt_no, 'APPROVED');
+      donation.status = 'APPROVED';
+
+      const pdfController = require('./pdfController');
+      const pdfBuffer = await pdfController.generateDonationPDFBuffer(donation);
+
+      const mailer = require('../config/mailer');
+      await mailer.sendDonationReceiptEmail({ donation, pdfBuffer });
+
+      db.addLog('APPROVAL', `Donation ${receipt_no} approved by Admin. Receipt emailed.`);
+
+      if (req.xhr || req.headers.accept?.includes('json')) {
+        return res.json({ success: true, message: `Donation ${receipt_no} approved & PDF receipt emailed!` });
+      }
+      res.redirect('/admin?broadcast_success=' + encodeURIComponent(`Donation ${receipt_no} approved and PDF receipt emailed!`));
+    } catch (err) {
+      console.error('Approve donation error:', err);
+      if (req.xhr || req.headers.accept?.includes('json')) {
+        return res.status(500).json({ success: false, message: 'Failed to approve donation.' });
+      }
+      res.redirect('/admin?broadcast_error=' + encodeURIComponent('Failed to approve donation: ' + err.message));
+    }
   }
 };

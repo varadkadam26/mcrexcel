@@ -206,11 +206,11 @@ const translations = {
     ph_donor_name: "Enter your full name",
     lbl_mobile: "Mobile Number *",
     ph_mobile: "10-digit mobile number",
-    lbl_email: "Email ID (Optional)",
-    ph_email: "Email for PDF receipt",
-    btn_donate_submit: "Donate & Get Receipt",
-    msg_donation_processing: "Donation processing in progress...",
-    msg_donation_success: "Donation successful! Your receipt is downloading."
+    lbl_email: "Email ID (For Receipt Email) *",
+    ph_email: "Email to receive PDF receipt",
+    btn_donate_submit: "Submit Donation Details",
+    msg_donation_processing: "Submitting donation details...",
+    msg_donation_success: "Donation details submitted! Official receipt will be sent to your email after verification."
   },
 
   mr: {

@@ -29,15 +29,15 @@ module.exports = {
     };
 
     drawField('Receipt Number', donation.receipt_no, 60, 205);
-    drawField('Donation Date', new Date(donation.created_at).toLocaleDateString('en-IN', { dateStyle: 'medium' }), 300, 205);
+    drawField('Donation Date', new Date(donation.created_at || Date.now()).toLocaleDateString('en-IN', { dateStyle: 'medium' }), 300, 205);
 
     drawField('Donor Full Name', donation.donor_name, 60, 250);
     drawField('Contact Phone', donation.phone, 300, 250);
 
-    drawField('Seva Category', donation.category, 60, 295, 440);
+    drawField('Payment UTR / Ref No', donation.payment_id || donation.utr_number || 'N/A', 60, 295, 440);
 
-    drawField('Transaction ID / Ref', donation.payment_id || 'upi_direct', 60, 340);
-    drawField('Transaction Status', donation.status || 'SUCCESS', 300, 340);
+    drawField('Mandal Trust Reg', 'A/3141/Mumbai/77', 60, 340);
+    drawField('Verification Status', donation.status || 'APPROVED', 300, 340);
 
     // Amount Highlight Card
     doc.rect(60, 395, 455, 65).fill('#FFFBEB');
@@ -50,12 +50,70 @@ module.exports = {
     doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('Thank you for your generous contribution to Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal.', 40, 505, { align: 'center', width: 515 });
 
     // Signatures
-    doc.fillColor('#4A0404').fontSize(10).font('Helvetica-Bold').text('For Mumbai Central Cha Raja Mandal', 350, 570);
+    doc.fillColor('#4A0A04').fontSize(10).font('Helvetica-Bold').text('For Mumbai Central Cha Raja Mandal', 350, 570);
     doc.fillColor('#64748B').fontSize(9).font('Helvetica').text('Authorized Trustee / Treasurer', 350, 620);
     
     doc.fillColor('#94A3B8').fontSize(8).font('Helvetica').text('Ganpati Bappa Morya! Follow us on Instagram @mumbaicentralcharajaofficial', 40, 750, { align: 'center', width: 515 });
 
     doc.end();
+  },
+
+  generateDonationPDFBuffer(donation) {
+    return new Promise((resolve, reject) => {
+      const doc = new PDFDocument({ size: 'A4', margin: 40 });
+      const buffers = [];
+      doc.on('data', buffers.push.bind(buffers));
+      doc.on('end', () => {
+        resolve(Buffer.concat(buffers));
+      });
+      doc.on('error', reject);
+
+      // Header Box
+      doc.rect(40, 40, 515, 100).fill('#4A0404');
+      doc.fillColor('#FFD700').fontSize(18).font('Helvetica-Bold').text('BELASIS ROAD, B.I.T. CHAWL SARVAJANIK SHRI GANESHOTSAV MANDAL', 55, 52, { width: 485 });
+      doc.fillColor('#FFFFFF').fontSize(14).font('Helvetica-Bold').text('MUMBAI CENTRAL CHA RAJA', 55, 85);
+      doc.fillColor('#FFC107').fontSize(9).font('Helvetica').text('Reg Trust No: A/3141/Mumbai/77 | @mumbaicentralcharajaofficial', 55, 106);
+
+      // Main Receipt Body
+      doc.rect(40, 155, 515, 335).lineWidth(1.5).strokeColor('#800020').stroke();
+
+      doc.fillColor('#4A0404').fontSize(13).font('Helvetica-Bold').text('OFFICIAL DONATION ACKNOWLEDGEMENT RECEIPT', 60, 172);
+      doc.moveTo(60, 190).lineTo(535, 190).lineWidth(1).strokeColor('#FCD34D').stroke();
+
+      const drawField = (label, value, x, y, width = 220) => {
+        doc.fillColor('#64748B').fontSize(9).font('Helvetica-Bold').text(label.toUpperCase(), x, y);
+        doc.fillColor('#1E293B').fontSize(11).font('Helvetica-Bold').text(value || 'N/A', x, y + 13, { width });
+      };
+
+      drawField('Receipt Number', donation.receipt_no, 60, 205);
+      drawField('Donation Date', new Date(donation.created_at || Date.now()).toLocaleDateString('en-IN', { dateStyle: 'medium' }), 300, 205);
+
+      drawField('Donor Full Name', donation.donor_name, 60, 250);
+      drawField('Contact Phone', donation.phone, 300, 250);
+
+      drawField('Payment UTR / Ref No', donation.payment_id || donation.utr_number || 'N/A', 60, 295, 440);
+
+      drawField('Mandal Trust Reg', 'A/3141/Mumbai/77', 60, 340);
+      drawField('Verification Status', donation.status || 'APPROVED', 300, 340);
+
+      // Amount Highlight Card
+      doc.rect(60, 395, 455, 65).fill('#FFFBEB');
+      doc.rect(60, 395, 455, 65).lineWidth(1.5).strokeColor('#F59E0B').stroke();
+      
+      doc.fillColor('#92400E').fontSize(10).font('Helvetica-Bold').text('CONTRIBUTION AMOUNT RECEIVED', 75, 408);
+      doc.fillColor('#B45309').fontSize(20).font('Helvetica-Bold').text(`₹ ${parseFloat(donation.amount).toLocaleString('en-IN')}/-`, 75, 427);
+
+      // Thank You Note
+      doc.fillColor('#475569').fontSize(9).font('Helvetica-Oblique').text('Thank you for your generous contribution to Belasis Road, B.I.T. Chawl Sarvajanik Shri Ganeshotsav Mandal.', 40, 505, { align: 'center', width: 515 });
+
+      // Signatures
+      doc.fillColor('#4A0404').fontSize(10).font('Helvetica-Bold').text('For Mumbai Central Cha Raja Mandal', 350, 570);
+      doc.fillColor('#64748B').fontSize(9).font('Helvetica').text('Authorized Trustee / Treasurer', 350, 620);
+      
+      doc.fillColor('#94A3B8').fontSize(8).font('Helvetica').text('Ganpati Bappa Morya! Follow us on Instagram @mumbaicentralcharajaofficial', 40, 750, { align: 'center', width: 515 });
+
+      doc.end();
+    });
   },
 
   generateTshirtPDF(order, res) {
